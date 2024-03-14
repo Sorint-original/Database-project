@@ -11,7 +11,7 @@ namespace SomerenUI
         public SomerenUI()
         {
             InitializeComponent();
-            ShowDashboardPanel();
+            ShowRoomsPanel();
         }
 
         private void ShowDashboardPanel()
@@ -27,7 +27,6 @@ namespace SomerenUI
         private void ShowStudentsPanel()
         {
             // hide all other panels
-            pnlDashboard.Hide();
             pnlRooms.Hide();
 
             // show students
@@ -47,9 +46,6 @@ namespace SomerenUI
 
         private void ShowRoomsPanel()
         {
-            // hide all other panels
-            pnlDashboard.Hide();
-            pnlStudents.Hide();
 
             // show students
             pnlRooms.Show();
@@ -62,7 +58,7 @@ namespace SomerenUI
             }
             catch (Exception e)
             {
-                MessageBox.Show("Something went wrong while loading the students: " + e.Message);
+                MessageBox.Show("Something went wrong while loading the rooms: " + e.Message);
             }
         }
 

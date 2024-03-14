@@ -48,6 +48,7 @@
             columnHeader8 = new System.Windows.Forms.ColumnHeader();
             columnHeader9 = new System.Windows.Forms.ColumnHeader();
             columnHeader10 = new System.Windows.Forms.ColumnHeader();
+            columnHeader11 = new System.Windows.Forms.ColumnHeader();
             label2 = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             listViewStudents = new System.Windows.Forms.ListView();
@@ -57,7 +58,6 @@
             columnHeader4 = new System.Windows.Forms.ColumnHeader();
             columnHeader5 = new System.Windows.Forms.ColumnHeader();
             label1 = new System.Windows.Forms.Label();
-            columnHeader11 = new System.Windows.Forms.ColumnHeader();
             menuStrip1.SuspendLayout();
             pnlDashboard.SuspendLayout();
             pnlStudents.SuspendLayout();
@@ -204,6 +204,11 @@
             columnHeader10.Text = "Number of Beds";
             columnHeader10.Width = 100;
             // 
+            // columnHeader11
+            // 
+            columnHeader11.Text = "Room Type";
+            columnHeader11.Width = 100;
+            // 
             // label2
             // 
             label2.AutoSize = true;
@@ -267,11 +272,6 @@
             label1.Size = new System.Drawing.Size(107, 32);
             label1.TabIndex = 0;
             label1.Text = "Students";
-            // 
-            // columnHeader11
-            // 
-            columnHeader11.Text = "Room Type";
-            columnHeader11.Width = 100;
             // 
             // SomerenUI
             // 
