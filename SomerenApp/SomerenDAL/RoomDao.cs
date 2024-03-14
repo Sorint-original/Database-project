@@ -11,7 +11,7 @@ namespace SomerenDAL
 {
     public class RoomDao : BaseDao
     {
-        public List<Room> GetAllStudents()
+        public List<Room> GetAllRooms()
         {
             string query = "SELECT * FROM Room";
             SqlParameter[] sqlParameters = new SqlParameter[0];
@@ -26,7 +26,7 @@ namespace SomerenDAL
             {
                 Room room = new Room()
                 {
-                    RoomCode = (int)dr["[room code]"],
+                    RoomCode = (int)dr["room code"],
                     RoomNumber = (int)dr["[room number]"],
                     Floor = (int)dr["floor"],
                     Building = (char)dr["building"],
