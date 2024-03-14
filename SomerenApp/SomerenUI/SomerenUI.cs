@@ -11,12 +11,14 @@ namespace SomerenUI
         public SomerenUI()
         {
             InitializeComponent();
+            ShowDashboardPanel();
         }
 
         private void ShowDashboardPanel()
         {
             // hide all other panels
             pnlStudents.Hide();
+            pnlRooms.Hide();
 
             // show dashboard
             pnlDashboard.Show();
@@ -26,6 +28,7 @@ namespace SomerenUI
         {
             // hide all other panels
             pnlDashboard.Hide();
+            pnlRooms.Hide();
 
             // show students
             pnlStudents.Show();
