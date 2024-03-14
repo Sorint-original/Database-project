@@ -24,7 +24,7 @@ namespace SomerenDAL
                 {
                     StudentNumber = (int)dr["StudentNumber"],
                     FirstName = (string)dr["FirstName"],
-                    SecondName = (string)dr["SecondName"],
+                    LastName = (string)dr["LastName"],
                     PhoneNumber = (string)dr["TelephoneNumber"],
                     Class = (string)dr["Class"],
                     RoomCode = (int)dr["RoomCode"]
