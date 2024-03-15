@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.IO;
 
 namespace SomerenDAL
 {
@@ -13,7 +14,7 @@ namespace SomerenDAL
     {
         public List<Room> GetAllRooms()
         {
-            string query = "SELECT * FROM Room";
+            string query = "SELECT * FROM Room;";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -24,14 +25,14 @@ namespace SomerenDAL
 
             foreach (DataRow dr in dataTable.Rows)
             {
-                Room room = new Room()
+                    Room room = new Room()
                 {
-                    RoomCode = (int)dr[dr.Table.Columns[0]],
-                    RoomNumber = (int)dr[dr.Table.Columns[1]],
-                    Floor = (int)dr[dr.Table.Columns[2]],
-                    Building = dr[dr.Table.Columns[3]].ToString(),
-                    NumberBeds = (int)dr[dr.Table.Columns[4]],
-                    RoomType = (bool)dr[dr.Table.Columns[5]]
+                    RoomCode = (int)dr[dr.Table.Columns[0].ColumnName],
+                    RoomNumber = (int)dr[dr.Table.Columns[1].ColumnName],
+                    Floor = (int)dr[dr.Table.Columns[2].ColumnName],
+                    Building = (string)dr[dr.Table.Columns[3].ColumnName],
+                    NumberBeds = (int)dr[dr.Table.Columns[4].ColumnName],
+                    RoomType = (bool)dr[dr.Table.Columns[5].ColumnName]
                 };
                 rooms.Add(room);
             }

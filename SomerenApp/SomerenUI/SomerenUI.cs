@@ -114,7 +114,7 @@ namespace SomerenUI
                     li.SubItems.Add("Student");
                 }
                 li.Tag = room;   // link student object to listview item
-                listViewStudents.Items.Add(li);
+                listViewRooms.Items.Add(li);
             }
         }
 
