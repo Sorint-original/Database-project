@@ -1,6 +1,0 @@
-room code
-room number
-floor
-building
-number of beds
-room type
