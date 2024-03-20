@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SomerenModel")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9f4dc88f1d5505de1582a2661c66a13899099df8")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a966c60a892ff55a98317c2f03d26332d96fb038")]
 [assembly: System.Reflection.AssemblyProductAttribute("SomerenModel")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SomerenModel")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
