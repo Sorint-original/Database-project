@@ -19,11 +19,18 @@ namespace SomerenUI
             // hide all other panels
             pnlStudents.Hide();
             pnlRooms.Hide();
+            //pnlLecturers.H
 
             // show dashboard
             pnlDashboard.Show();
         }
+        private void ShowLecturersPanel()
+        {
+            // hide all other panels
+            pnlLecturers.Hide();
 
+
+        }
         private void ShowStudentsPanel()
         {
             // hide all other panels
