@@ -8,5 +8,6 @@ namespace SomerenDAL
 {
     internal class LecturerDao
     {
+
     }
 }

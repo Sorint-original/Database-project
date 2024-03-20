@@ -8,5 +8,6 @@ namespace SomerenService
 {
     internal class LecturerService
     {
+
     }
 }

@@ -8,5 +8,6 @@ namespace SomerenModel
 {
     internal class Lecturer
     {
+
     }
 }
