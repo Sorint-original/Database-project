@@ -31,7 +31,7 @@ namespace SomerenDAL
                     FirstName = (string)dr["FirstName"],
                     LastName = (string)dr["LastName"],
                     Age = (int)dr["Age"],
-                   PhoneNumber= (string)dr["PhoneNumber"],
+                   PhoneNumber= (string)dr["TelephoneNumber"],
                    RoomCode = (int)dr["RoomCode"]
 
                 };

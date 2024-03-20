@@ -16,7 +16,7 @@ namespace SomerenService
         {
             lecturerdb = new LecturerDao();
         }
-        public List<Lecturer> GetLecturer()
+        public List<Lecturer> GetLecturers()
         {
             List<Lecturer> lecturers = lecturerdb.GetAllLecturers();
             return lecturers;
