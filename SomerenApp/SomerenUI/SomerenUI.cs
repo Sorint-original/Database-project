@@ -27,7 +27,7 @@ namespace SomerenUI
         private void ShowLecturersPanel()
         {
             // hide all other panels
-
+            pnlDashboard.Hide();
 
             // show lecturers 
             pnlStudents.Show();
@@ -49,6 +49,7 @@ namespace SomerenUI
         private void ShowStudentsPanel()
         {
             // hide all other panels
+            pnlDashboard.Hide();
             pnlRooms.Hide();
             pnlLecturers.Hide();
 
@@ -70,10 +71,11 @@ namespace SomerenUI
         private void ShowRoomsPanel()
         {
 
+            pnlLecturers.Hide();
+            pnlDashboard.Hide();
+
             // show students
             pnlRooms.Show();
-
-            pnlLecturers.Hide();
 
             try
             {
@@ -117,7 +119,6 @@ namespace SomerenUI
             foreach (Lecturer lecturer in lecturers)
             {
                 ListViewItem li = new ListViewItem(lecturer.LecturerId.ToString());
-                li.SubItems.Add(lecturer.LecturerId.ToString());
                 li.SubItems.Add(lecturer.FirstName);
                 li.SubItems.Add(lecturer.LastName);
                 li.SubItems.Add(lecturer.PhoneNumber);

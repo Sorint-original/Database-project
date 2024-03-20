@@ -27,12 +27,12 @@ namespace SomerenDAL
             {
                     Room room = new Room()
                 {
-                    RoomCode = (int)dr[dr.Table.Columns[0].ColumnName],
-                    RoomNumber = (int)dr[dr.Table.Columns[1].ColumnName],
-                    Floor = (int)dr[dr.Table.Columns[2].ColumnName],
-                    Building = (string)dr[dr.Table.Columns[3].ColumnName],
-                    NumberBeds = (int)dr[dr.Table.Columns[4].ColumnName],
-                    RoomType = (bool)dr[dr.Table.Columns[5].ColumnName]
+                    RoomCode = (int)dr["RoomCode"],
+                    RoomNumber = (int)dr["RoomNumber"],
+                    Floor = (int)dr["Floor"],
+                    Building = (string)dr["Building"],
+                    NumberBeds = (int)dr["NumberBeds"],
+                    RoomType = (bool)dr["RoomType"]
                 };
                 rooms.Add(room);
             }
