@@ -47,7 +47,7 @@ namespace SomerenUI
         private void ShowRoomsPanel()
         {
 
-            // show students
+            pnlStudents.Show();
             pnlRooms.Show();
 
             try
