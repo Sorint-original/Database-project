@@ -111,7 +111,6 @@ namespace SomerenDAL
             {
                 CloseConnection();
             }
-
             return dataTable;
         }
     }
