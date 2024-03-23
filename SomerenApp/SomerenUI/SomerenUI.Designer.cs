@@ -59,6 +59,10 @@
             columnHeader3 = new System.Windows.Forms.ColumnHeader();
             columnHeader4 = new System.Windows.Forms.ColumnHeader();
             columnHeader5 = new System.Windows.Forms.ColumnHeader();
+            columnHeader12 = new System.Windows.Forms.ColumnHeader();
+            columnHeader13 = new System.Windows.Forms.ColumnHeader();
+            columnHeader14 = new System.Windows.Forms.ColumnHeader();
+            columnHeader15 = new System.Windows.Forms.ColumnHeader();
             label1 = new System.Windows.Forms.Label();
             menuStrip1.SuspendLayout();
             pnlDashboard.SuspendLayout();
@@ -288,22 +292,23 @@
             //listViewActivities
             //
             // 
-             listViewActivities.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+            listViewActivities.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader12, columnHeader13, columnHeader14, columnHeader15 });
             listViewActivities.Location = new System.Drawing.Point(16, 42);
             listViewActivities.Name = "listViewActivities";
             listViewActivities.Size = new System.Drawing.Size(766, 307);
             listViewActivities.TabIndex = 1;
             listViewActivities.UseCompatibleStateImageBehavior = false;
-            listViewActivities.View = System.Windows.Forms.View.Details;
+           
+          
 
-            columnHeader1.Text = "Activity ID";
-            columnHeader1.Width = 100;
-            columnHeader2.Text = "Name";
-            columnHeader2.Width = 100;
-            columnHeader3.Text = "Start Time";
-            columnHeader3.Width = 100;
-            columnHeader4.Text = 'End Time';
-            columnHeader4.Width = 100;
+            columnHeader12.Text = "Activity ID";
+            columnHeader12.Width = 100;
+            columnHeader13.Text = "Name";
+            columnHeader13.Width = 100;
+            columnHeader14.Text = "Start Time";
+            columnHeader14.Width = 100;
+            columnHeader15.Text = "End Time";
+            columnHeader15.Width = 100;
             // SomerenUI
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -364,5 +369,10 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;   
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+
     }
 }

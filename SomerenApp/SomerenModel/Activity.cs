@@ -8,5 +8,6 @@ namespace SomerenModel
         public string startTime { get; set; }
         public string endTime { get; set; }
         public string name { get; set; }
+        public string day { get; set; }
     }
 }
