@@ -41,6 +41,7 @@
             lblDashboard = new System.Windows.Forms.Label();
             pnlStudents = new System.Windows.Forms.Panel();
             pnlRooms = new System.Windows.Forms.Panel();
+            pnlActivity = new System.Windows.Forms.Panel();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             listViewRooms = new System.Windows.Forms.ListView();
             columnHeader6 = new System.Windows.Forms.ColumnHeader();
@@ -51,6 +52,7 @@
             columnHeader11 = new System.Windows.Forms.ColumnHeader();
             label2 = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
+            listViewActivities = new System.Windows.Forms.ListView();
             listViewStudents = new System.Windows.Forms.ListView();
             columnHeader1 = new System.Windows.Forms.ColumnHeader();
             columnHeader2 = new System.Windows.Forms.ColumnHeader();
@@ -114,6 +116,7 @@
             activitiesToolStripMenuItem.Name = "activitiesToolStripMenuItem";
             activitiesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             activitiesToolStripMenuItem.Text = "Activities";
+            activitiesToolStripMenuItem.Click += activitiesToolStripMenuItem_Click;
             // 
             // roomsToolStripMenuItem
             // 
@@ -159,6 +162,15 @@
             pnlRooms.Name = "pnlRooms";
             pnlRooms.Size = new System.Drawing.Size(938, 466);
             pnlRooms.TabIndex = 3;
+            //
+            // pnlAactivity
+            //
+            pnlActivity.Controls.Add(listViewActivities);
+            pnlActivity.Location = new System.Drawing.Point(0, 0);
+            pnlActivity.Name = "pnlActivity";
+            pnlActivity.Size = new System.Drawing.Size(938, 466);
+            pnlActivity.TabIndex = 4;
+
             // 
             // pictureBox2
             // 
@@ -272,7 +284,26 @@
             label1.Size = new System.Drawing.Size(107, 32);
             label1.TabIndex = 0;
             label1.Text = "Students";
+            //
+            //listViewActivities
+            //
             // 
+             listViewActivities.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4 });
+            listViewActivities.Location = new System.Drawing.Point(16, 42);
+            listViewActivities.Name = "listViewActivities";
+            listViewActivities.Size = new System.Drawing.Size(766, 307);
+            listViewActivities.TabIndex = 1;
+            listViewActivities.UseCompatibleStateImageBehavior = false;
+            listViewActivities.View = System.Windows.Forms.View.Details;
+
+            columnHeader1.Text = "Activity ID";
+            columnHeader1.Width = 100;
+            columnHeader2.Text = "Name";
+            columnHeader2.Width = 100;
+            columnHeader3.Text = "Start Time";
+            columnHeader3.Width = 100;
+            columnHeader4.Text = 'End Time';
+            columnHeader4.Width = 100;
             // SomerenUI
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
@@ -290,6 +321,8 @@
             pnlDashboard.PerformLayout();
             pnlStudents.ResumeLayout(false);
             pnlStudents.PerformLayout();
+            pnlActivity.ResumeLayout(false);
+            pnlActivity.PerformLayout();
             pnlRooms.ResumeLayout(false);
             pnlRooms.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();

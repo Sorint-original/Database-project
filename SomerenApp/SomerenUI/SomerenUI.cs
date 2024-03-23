@@ -151,9 +151,9 @@ namespace SomerenUI
             foreach (Activity activity in activities)
             {
                 ListViewItem li = new ListViewItem(activity.id.ToString());
-                li.SubItems.Add(activity.Description);
-                li.SubItems.Add(activity.StartTime.ToString());
-                li.SubItems.Add(activity.EndTime.ToString());
+                li.SubItems.Add(activity.name);
+                li.SubItems.Add(activity.startTime.ToString());
+                li.SubItems.Add(activity.endTime.ToString());
             
                 li.Tag = activity;   // link student object to listview item
                 listViewActivities.Items.Add(li);
