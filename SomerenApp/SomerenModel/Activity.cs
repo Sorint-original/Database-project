@@ -1,3 +1,5 @@
+using System;
+
 namespace SomerenModel
 {
     public class Activity
