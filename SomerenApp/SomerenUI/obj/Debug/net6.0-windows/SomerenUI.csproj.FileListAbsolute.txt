@@ -108,3 +108,6 @@ C:\Users\pssor\OneDrive\Desktop\work\github\Database-project\SomerenApp\SomerenU
 C:\Users\pssor\OneDrive\Desktop\work\github\Database-project\SomerenApp\SomerenUI\bin\Debug\net6.0-windows\runtimes\win-x64\native\WebView2Loader.dll
 C:\Users\pssor\OneDrive\Desktop\work\github\Database-project\SomerenApp\SomerenUI\bin\Debug\net6.0-windows\runtimes\win-x86\native\WebView2Loader.dll
 C:\Users\pssor\OneDrive\Desktop\work\github\Database-project\SomerenApp\SomerenUI\bin\Debug\net6.0-windows\runtimes\win\lib\net6.0\System.Runtime.Caching.dll
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\SomerenUI.dll
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\refint\SomerenUI.dll
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\SomerenUI.pdb
