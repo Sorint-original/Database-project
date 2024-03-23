@@ -51,6 +51,7 @@
             columnHeader10 = new System.Windows.Forms.ColumnHeader();
             columnHeader11 = new System.Windows.Forms.ColumnHeader();
             label2 = new System.Windows.Forms.Label();
+            label3 = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             listViewActivities = new System.Windows.Forms.ListView();
             listViewStudents = new System.Windows.Forms.ListView();
@@ -68,6 +69,7 @@
             pnlDashboard.SuspendLayout();
             pnlStudents.SuspendLayout();
             pnlRooms.SuspendLayout();
+            pnlActivity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
@@ -170,6 +172,7 @@
             // pnlAactivity
             //
             pnlActivity.Controls.Add(listViewActivities);
+            pnlActivity.Controls.Add(label3);
             pnlActivity.Location = new System.Drawing.Point(0, 0);
             pnlActivity.Name = "pnlActivity";
             pnlActivity.Size = new System.Drawing.Size(938, 466);
@@ -234,6 +237,18 @@
             label2.Size = new System.Drawing.Size(86, 32);
             label2.TabIndex = 0;
             label2.Text = "Rooms";
+            //
+            //label3
+            //
+            label3.AutoSize = true;
+            label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label3.Location = new System.Drawing.Point(13, 7);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(86, 32);
+            label3.TabIndex = 0;
+            label3.Text = "Activities";
+
+
             // 
             // pictureBox1
             // 
@@ -368,6 +383,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader13;   
