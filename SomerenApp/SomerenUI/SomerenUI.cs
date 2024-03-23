@@ -69,6 +69,8 @@ namespace SomerenUI
             {
                
                 List<Activity> activities = GetActivities();
+
+             
                 DisplayActivities(activities);
             }
             catch (Exception e)
