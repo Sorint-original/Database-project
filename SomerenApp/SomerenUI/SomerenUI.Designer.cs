@@ -41,7 +41,6 @@
             lblDashboard = new System.Windows.Forms.Label();
             pnlStudents = new System.Windows.Forms.Panel();
             pnlRooms = new System.Windows.Forms.Panel();
-            pnlActivity = new System.Windows.Forms.Panel();
             pictureBox2 = new System.Windows.Forms.PictureBox();
             listViewRooms = new System.Windows.Forms.ListView();
             columnHeader6 = new System.Windows.Forms.ColumnHeader();
@@ -50,28 +49,30 @@
             columnHeader9 = new System.Windows.Forms.ColumnHeader();
             columnHeader10 = new System.Windows.Forms.ColumnHeader();
             columnHeader11 = new System.Windows.Forms.ColumnHeader();
+            columnHeader12 = new System.Windows.Forms.ColumnHeader();
+            columnHeader13 = new System.Windows.Forms.ColumnHeader();
+            columnHeader14 = new System.Windows.Forms.ColumnHeader();
+            columnHeader15 = new System.Windows.Forms.ColumnHeader();
+            columnHeader16 = new System.Windows.Forms.ColumnHeader();
             label2 = new System.Windows.Forms.Label();
-            label3 = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
-            listViewActivities = new System.Windows.Forms.ListView();
             listViewStudents = new System.Windows.Forms.ListView();
             columnHeader1 = new System.Windows.Forms.ColumnHeader();
             columnHeader2 = new System.Windows.Forms.ColumnHeader();
             columnHeader3 = new System.Windows.Forms.ColumnHeader();
             columnHeader4 = new System.Windows.Forms.ColumnHeader();
             columnHeader5 = new System.Windows.Forms.ColumnHeader();
-            columnHeader12 = new System.Windows.Forms.ColumnHeader();
-            columnHeader13 = new System.Windows.Forms.ColumnHeader();
-            columnHeader14 = new System.Windows.Forms.ColumnHeader();
-            columnHeader15 = new System.Windows.Forms.ColumnHeader();
             label1 = new System.Windows.Forms.Label();
+            pnlActivity = new System.Windows.Forms.Panel();
+            label3 = new System.Windows.Forms.Label();
+            listViewActivity = new System.Windows.Forms.ListView();
             menuStrip1.SuspendLayout();
             pnlDashboard.SuspendLayout();
             pnlStudents.SuspendLayout();
             pnlRooms.SuspendLayout();
-            pnlActivity.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pnlActivity.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -168,16 +169,6 @@
             pnlRooms.Name = "pnlRooms";
             pnlRooms.Size = new System.Drawing.Size(938, 466);
             pnlRooms.TabIndex = 3;
-            //
-            // pnlAactivity
-            //
-            pnlActivity.Controls.Add(listViewActivities);
-            pnlActivity.Controls.Add(label3);
-            pnlActivity.Location = new System.Drawing.Point(0, 0);
-            pnlActivity.Name = "pnlActivity";
-            pnlActivity.Size = new System.Drawing.Size(938, 466);
-            pnlActivity.TabIndex = 4;
-
             // 
             // pictureBox2
             // 
@@ -227,6 +218,8 @@
             // 
             columnHeader11.Text = "Room Type";
             columnHeader11.Width = 100;
+
+            
             // 
             // label2
             // 
@@ -237,18 +230,6 @@
             label2.Size = new System.Drawing.Size(86, 32);
             label2.TabIndex = 0;
             label2.Text = "Rooms";
-            //
-            //label3
-            //
-            label3.AutoSize = true;
-            label3.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label3.Location = new System.Drawing.Point(13, 7);
-            label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(86, 32);
-            label3.TabIndex = 0;
-            label3.Text = "Activities";
-
-
             // 
             // pictureBox1
             // 
@@ -303,32 +284,54 @@
             label1.Size = new System.Drawing.Size(107, 32);
             label1.TabIndex = 0;
             label1.Text = "Students";
-            //
-            //listViewActivities
-            //
             // 
-            listViewActivities.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader12, columnHeader13, columnHeader14, columnHeader15 });
-            listViewActivities.Location = new System.Drawing.Point(16, 42);
-            listViewActivities.Name = "listViewActivities";
-            listViewActivities.Size = new System.Drawing.Size(766, 307);
-            listViewActivities.TabIndex = 1;
-            listViewActivities.UseCompatibleStateImageBehavior = false;
-           
-          
+            // pnlActivity
+            // 
+            pnlActivity.Controls.Add(listViewActivity);
+            pnlActivity.Controls.Add(label3);
+            pnlActivity.Location = new System.Drawing.Point(12, 19);
+            pnlActivity.Name = "pnlActivity";
+            pnlActivity.Size = new System.Drawing.Size(938, 466);
+            pnlActivity.TabIndex = 3;
+            
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(13, 13);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(208, 15);
+            label3.TabIndex = 0;
+            label3.Text = "Acctivity";
+            // 
+            // listViewActivity
+            // 
+            listViewActivity.Location = new System.Drawing.Point(16, 42);
+            listViewActivity.Name = "listViewActivity";
+            listViewActivity.Size = new System.Drawing.Size(766, 307);
+            listViewActivity.TabIndex = 1;
+            listViewActivity.UseCompatibleStateImageBehavior = false;
+           listViewActivity.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader12, columnHeader13, columnHeader14, columnHeader15, columnHeader16 });
+            listViewActivity.View = System.Windows.Forms.View.Details;
+
 
             columnHeader12.Text = "Activity ID";
             columnHeader12.Width = 100;
-            columnHeader13.Text = "Name";
+            columnHeader13.Text = "Activity Name";
             columnHeader13.Width = 100;
             columnHeader14.Text = "Start Time";
             columnHeader14.Width = 100;
             columnHeader15.Text = "End Time";
             columnHeader15.Width = 100;
+            columnHeader16.Text = "Day";
+            columnHeader16.Width = 100;
+            // 
             // SomerenUI
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(962, 505);
+            Controls.Add(pnlActivity);
             Controls.Add(menuStrip1);
             Controls.Add(pnlStudents);
             Controls.Add(pnlDashboard);
@@ -341,12 +344,12 @@
             pnlDashboard.PerformLayout();
             pnlStudents.ResumeLayout(false);
             pnlStudents.PerformLayout();
-            pnlActivity.ResumeLayout(false);
-            pnlActivity.PerformLayout();
             pnlRooms.ResumeLayout(false);
             pnlRooms.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            pnlActivity.ResumeLayout(false);
+            pnlActivity.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -364,7 +367,6 @@
         private System.Windows.Forms.Panel pnlDashboard;
         private System.Windows.Forms.Label lblDashboard;
         private System.Windows.Forms.Panel pnlStudents;
-        private System.Windows.Forms.Panel pnlActivity;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.ListView listViewStudents;
         private System.Windows.Forms.Label label1;
@@ -376,19 +378,21 @@
         private System.Windows.Forms.Panel pnlRooms;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ListView listViewRooms;
-        private System.Windows.Forms.ListView listViewActivities;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
         private System.Windows.Forms.ColumnHeader columnHeader9;
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
         private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.Panel pnlActivity;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListView listViewActivity;
         private System.Windows.Forms.ColumnHeader columnHeader12;
-        private System.Windows.Forms.ColumnHeader columnHeader13;   
+        private System.Windows.Forms.ColumnHeader columnHeader13;
         private System.Windows.Forms.ColumnHeader columnHeader14;
         private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
 
     }
 }

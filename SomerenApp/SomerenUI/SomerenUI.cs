@@ -17,6 +17,7 @@ namespace SomerenUI
         private void ShowDashboardPanel()
         {
             // hide all other panels
+            pnlActivity.Hide();
             pnlStudents.Hide();
             pnlRooms.Hide();
 
@@ -27,6 +28,7 @@ namespace SomerenUI
         private void ShowStudentsPanel()
         {
             // hide all other panels
+            pnlActivity.Hide();
             pnlRooms.Hide();
 
             // show students
@@ -47,6 +49,7 @@ namespace SomerenUI
         private void ShowRoomsPanel()
         {
 
+            pnlActivity.Hide();
             pnlStudents.Show();
             pnlRooms.Show();
 
@@ -64,13 +67,16 @@ namespace SomerenUI
 
         private void showActivityPanel()
         {
+            pnlRooms.Hide();
+            pnlStudents.Hide();
+
             pnlActivity.Show();
             try
             {
-               
+
                 List<Activity> activities = GetActivities();
 
-             
+
                 DisplayActivities(activities);
             }
             catch (Exception e)
@@ -78,7 +84,7 @@ namespace SomerenUI
                 MessageBox.Show("Something went wrong while loading the activities: " + e.Message);
             }
 
-        }   
+        }
 
         private List<Activity> GetActivities()
         {
@@ -145,8 +151,9 @@ namespace SomerenUI
 
         private void DisplayActivities(List<Activity> activities)
         {
+          
             // clear the listview before filling it
-            listViewActivities.Items.Clear();
+            listViewActivity.Items.Clear();
 
             foreach (Activity activity in activities)
             {
@@ -154,11 +161,11 @@ namespace SomerenUI
                 li.SubItems.Add(activity.name);
                 li.SubItems.Add(activity.startTime.ToString());
                 li.SubItems.Add(activity.endTime.ToString());
-            
+
                 li.Tag = activity;   // link student object to listview item
-                listViewActivities.Items.Add(li);
+                listViewActivity.Items.Add(li);
             }
-        }   
+        }
 
         private void dashboardToolStripMenuItem1_Click(object sender, System.EventArgs e)
         {
