@@ -161,7 +161,7 @@ namespace SomerenUI
                 li.SubItems.Add(activity.name);
                 li.SubItems.Add(activity.startTime.ToString());
                 li.SubItems.Add(activity.endTime.ToString());
-
+                li.SubItems.Add(activity.day.ToString());
                 li.Tag = activity;   // link student object to listview item
                 listViewActivity.Items.Add(li);
             }
