@@ -62,6 +62,29 @@ namespace SomerenUI
             }
         }
 
+        private void showActivityPanel()
+        {
+            pnlActivity.Show();
+            try
+            {
+               
+                List<Activity> activities = GetActivities();
+                DisplayActivities(activities);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Something went wrong while loading the activities: " + e.Message);
+            }
+
+        }   
+
+        private List<Activity> GetActivities()
+        {
+            ActivityService activityService = new ActivityService();
+            List<Activity> activities = activityService.GetActivities();
+            return activities;
+        }
+
         private List<Student> GetStudents()
         {
             StudentService studentService = new StudentService();
@@ -118,6 +141,23 @@ namespace SomerenUI
             }
         }
 
+        private void DisplayActivities(List<Activity> activities)
+        {
+            // clear the listview before filling it
+            listViewActivities.Items.Clear();
+
+            foreach (Activity activity in activities)
+            {
+                ListViewItem li = new ListViewItem(activity.id.ToString());
+                li.SubItems.Add(activity.Description);
+                li.SubItems.Add(activity.StartTime.ToString());
+                li.SubItems.Add(activity.EndTime.ToString());
+            
+                li.Tag = activity;   // link student object to listview item
+                listViewActivities.Items.Add(li);
+            }
+        }   
+
         private void dashboardToolStripMenuItem1_Click(object sender, System.EventArgs e)
         {
             ShowDashboardPanel();
@@ -136,6 +176,11 @@ namespace SomerenUI
         private void roomsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowRoomsPanel();
+        }
+
+        private void activitiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showActivityPanel();
         }
     }
 }

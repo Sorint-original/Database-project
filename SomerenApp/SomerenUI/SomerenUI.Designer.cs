@@ -322,6 +322,7 @@
         private System.Windows.Forms.Panel pnlRooms;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.ListView listViewRooms;
+        private System.Windows.Forms.ListView listViewActivities;
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.ColumnHeader columnHeader7;
         private System.Windows.Forms.ColumnHeader columnHeader8;
