@@ -20,6 +20,7 @@ namespace SomerenUI
             pnlActivity.Hide();
             pnlStudents.Hide();
             pnlRooms.Hide();
+            pnlLecturers.Hide();
 
             // show dashboard
             pnlDashboard.Show();
@@ -30,6 +31,8 @@ namespace SomerenUI
             // hide all other panels
             pnlActivity.Hide();
             pnlRooms.Hide();
+            pnlLecturers.Hide();
+            pnlDashboard.Hide();
 
             // show students
             pnlStudents.Show();
@@ -50,6 +53,7 @@ namespace SomerenUI
         {
 
             pnlActivity.Hide();
+            pnlLecturers.Hide();
             pnlStudents.Show();
             pnlRooms.Show();
 
@@ -69,10 +73,13 @@ namespace SomerenUI
         {
             // hide all other panels
             pnlDashboard.Hide();
+            pnlActivity.Hide();
+            pnlRooms.Hide();
+            pnlStudents.Hide();
 
             // show lecturers 
-            pnlStudents.Show();
-            pnlRooms.Show();
+
+
             pnlLecturers.Show();
 
             try
@@ -90,9 +97,11 @@ namespace SomerenUI
 
         private void ShowActivityPanel()
         {
+            pnlDashboard.Hide();
+            pnlLecturers.Hide();
             pnlRooms.Hide();
-            pnlStudents.Hide();
 
+            pnlStudents.Hide();
             pnlActivity.Show();
             try
             {
