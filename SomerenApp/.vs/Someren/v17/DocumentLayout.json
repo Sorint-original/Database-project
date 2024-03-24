@@ -3,24 +3,40 @@
   "WorkspaceRootPath": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{01370907-9CCE-4AB8-BDEC-B86CBDF74774}|SomerenUI\\SomerenUI.csproj|C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\somerenui\\somerenui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{01370907-9CCE-4AB8-BDEC-B86CBDF74774}|SomerenUI\\SomerenUI.csproj|c:\\users\\pssor\\onedrive\\desktop\\work\\github\\database-project\\somerenapp\\somerenui\\somerenui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{01370907-9CCE-4AB8-BDEC-B86CBDF74774}|SomerenUI\\SomerenUI.csproj|solutionrelative:somerenui\\somerenui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{01370907-9CCE-4AB8-BDEC-B86CBDF74774}|SomerenUI\\SomerenUI.csproj|C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\somerenui\\somerenui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{01370907-9CCE-4AB8-BDEC-B86CBDF74774}|SomerenUI\\SomerenUI.csproj|c:\\users\\pssor\\onedrive\\desktop\\work\\github\\database-project\\somerenapp\\somerenui\\somerenui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{01370907-9CCE-4AB8-BDEC-B86CBDF74774}|SomerenUI\\SomerenUI.csproj|solutionrelative:somerenui\\somerenui.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1ACD0E00-C9A6-4C4F-AB3F-15F90A1F88BD}|SomerenDAL\\SomerenDAL.csproj|c:\\users\\pssor\\onedrive\\desktop\\work\\github\\database-project\\somerenapp\\somerendal\\lecturerdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1ACD0E00-C9A6-4C4F-AB3F-15F90A1F88BD}|SomerenDAL\\SomerenDAL.csproj|solutionrelative:somerendal\\lecturerdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CAD2ABE3-1FE0-4012-B6FC-E0679E41260C}|SomerenService\\SomerenService.csproj|c:\\users\\pssor\\onedrive\\desktop\\work\\github\\database-project\\somerenapp\\somerenservice\\drinkservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAD2ABE3-1FE0-4012-B6FC-E0679E41260C}|SomerenService\\SomerenService.csproj|solutionrelative:somerenservice\\drinkservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1ACD0E00-C9A6-4C4F-AB3F-15F90A1F88BD}|SomerenDAL\\SomerenDAL.csproj|C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\somerendal\\studentdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{1ACD0E00-C9A6-4C4F-AB3F-15F90A1F88BD}|SomerenDAL\\SomerenDAL.csproj|solutionrelative:somerendal\\studentdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{CAD2ABE3-1FE0-4012-B6FC-E0679E41260C}|SomerenService\\SomerenService.csproj|C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\somerenservice\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAD2ABE3-1FE0-4012-B6FC-E0679E41260C}|SomerenService\\SomerenService.csproj|solutionrelative:somerenservice\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{1ACD0E00-C9A6-4C4F-AB3F-15F90A1F88BD}|SomerenDAL\\SomerenDAL.csproj|C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\somerendal\\roomdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{CAD2ABE3-1FE0-4012-B6FC-E0679E41260C}|SomerenService\\SomerenService.csproj|C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\somerenservice\\lecturerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{CAD2ABE3-1FE0-4012-B6FC-E0679E41260C}|SomerenService\\SomerenService.csproj|solutionrelative:somerenservice\\lecturerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACD0E00-C9A6-4C4F-AB3F-15F90A1F88BD}|SomerenDAL\\SomerenDAL.csproj|c:\\users\\pssor\\onedrive\\desktop\\work\\github\\database-project\\somerenapp\\somerendal\\drinkdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACD0E00-C9A6-4C4F-AB3F-15F90A1F88BD}|SomerenDAL\\SomerenDAL.csproj|solutionrelative:somerendal\\drinkdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACD0E00-C9A6-4C4F-AB3F-15F90A1F88BD}|SomerenDAL\\SomerenDAL.csproj|c:\\users\\pssor\\onedrive\\desktop\\work\\github\\database-project\\somerenapp\\somerendal\\roomdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{1ACD0E00-C9A6-4C4F-AB3F-15F90A1F88BD}|SomerenDAL\\SomerenDAL.csproj|solutionrelative:somerendal\\roomdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{8E9F2A97-3E00-4524-A821-F207C970A69A}|SomerenModel\\SomerenModel.csproj|c:\\users\\pssor\\onedrive\\desktop\\work\\github\\database-project\\somerenapp\\somerenmodel\\drink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{8E9F2A97-3E00-4524-A821-F207C970A69A}|SomerenModel\\SomerenModel.csproj|solutionrelative:somerenmodel\\drink.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{1ACD0E00-C9A6-4C4F-AB3F-15F90A1F88BD}|SomerenDAL\\SomerenDAL.csproj|C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\somerendal\\lecturerdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{1ACD0E00-C9A6-4C4F-AB3F-15F90A1F88BD}|SomerenDAL\\SomerenDAL.csproj|solutionrelative:somerendal\\lecturerdao.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{8E9F2A97-3E00-4524-A821-F207C970A69A}|SomerenModel\\SomerenModel.csproj|C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\somerenmodel\\student.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -35,20 +51,8 @@
       "RelativeMoniker": "D:0:0:{8E9F2A97-3E00-4524-A821-F207C970A69A}|SomerenModel\\SomerenModel.csproj|solutionrelative:somerenmodel\\lecturer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{CAD2ABE3-1FE0-4012-B6FC-E0679E41260C}|SomerenService\\SomerenService.csproj|C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\somerenservice\\lecturerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAD2ABE3-1FE0-4012-B6FC-E0679E41260C}|SomerenService\\SomerenService.csproj|solutionrelative:somerenservice\\lecturerservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{CAD2ABE3-1FE0-4012-B6FC-E0679E41260C}|SomerenService\\SomerenService.csproj|C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\somerenservice\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{CAD2ABE3-1FE0-4012-B6FC-E0679E41260C}|SomerenService\\SomerenService.csproj|solutionrelative:somerenservice\\roomservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{CAD2ABE3-1FE0-4012-B6FC-E0679E41260C}|SomerenService\\SomerenService.csproj|C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\somerenservice\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{CAD2ABE3-1FE0-4012-B6FC-E0679E41260C}|SomerenService\\SomerenService.csproj|solutionrelative:somerenservice\\studentservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{01370907-9CCE-4AB8-BDEC-B86CBDF74774}|SomerenUI\\SomerenUI.csproj|C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\somerenui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{01370907-9CCE-4AB8-BDEC-B86CBDF74774}|SomerenUI\\SomerenUI.csproj|solutionrelative:somerenui\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -58,7 +62,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 10,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Bookmark",
@@ -66,7 +70,84 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "SomerenUI.cs",
+              "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenUI\\SomerenUI.cs",
+              "RelativeDocumentMoniker": "SomerenUI\\SomerenUI.cs",
+              "ToolTip": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenUI\\SomerenUI.cs",
+              "RelativeToolTip": "SomerenUI\\SomerenUI.cs",
+              "ViewState": "AQIAADkBAAAAAAAAAAApwE8BAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T15:38:28.297Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "SomerenUI.cs [Design]",
+              "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenUI\\SomerenUI.cs",
+              "RelativeDocumentMoniker": "SomerenUI\\SomerenUI.cs",
+              "ToolTip": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenUI\\SomerenUI.cs [Design]",
+              "RelativeToolTip": "SomerenUI\\SomerenUI.cs [Design]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T15:38:25.529Z",
+              "EditorCaption": " [Design]"
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 2,
+              "Title": "DrinkService.cs",
+              "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenService\\DrinkService.cs",
+              "RelativeDocumentMoniker": "SomerenService\\DrinkService.cs",
+              "ToolTip": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenService\\DrinkService.cs",
+              "RelativeToolTip": "SomerenService\\DrinkService.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABMAAAAmAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T15:33:48.3Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "RoomDao.cs",
+              "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenDAL\\RoomDao.cs",
+              "RelativeDocumentMoniker": "SomerenDAL\\RoomDao.cs",
+              "ToolTip": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenDAL\\RoomDao.cs",
+              "RelativeToolTip": "SomerenDAL\\RoomDao.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T15:33:33.621Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "DrinkDao.cs",
+              "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenDAL\\DrinkDao.cs",
+              "RelativeDocumentMoniker": "SomerenDAL\\DrinkDao.cs",
+              "ToolTip": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenDAL\\DrinkDao.cs",
+              "RelativeToolTip": "SomerenDAL\\DrinkDao.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAcAAAAcAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T15:25:05.201Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Drink.cs",
+              "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenModel\\Drink.cs",
+              "RelativeDocumentMoniker": "SomerenModel\\Drink.cs",
+              "ToolTip": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenModel\\Drink.cs",
+              "RelativeToolTip": "SomerenModel\\Drink.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAbAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-03-24T15:19:04.476Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "LecturerDao.cs",
               "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenDAL\\LecturerDao.cs",
               "RelativeDocumentMoniker": "SomerenDAL\\LecturerDao.cs",
@@ -79,7 +160,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 9,
               "Title": "Student.cs",
               "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenModel\\Student.cs",
               "RelativeDocumentMoniker": "SomerenModel\\Student.cs",
@@ -91,7 +172,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 11,
               "Title": "Lecturer.cs",
               "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenModel\\Lecturer.cs",
               "RelativeDocumentMoniker": "SomerenModel\\Lecturer.cs",
@@ -103,7 +184,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 4,
               "Title": "LecturerService.cs",
               "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenService\\LecturerService.cs",
               "RelativeDocumentMoniker": "SomerenService\\LecturerService.cs",
@@ -111,11 +192,12 @@
               "RelativeToolTip": "SomerenService\\LecturerService.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAABQAAAAyAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-20T16:36:08.837Z"
+              "WhenOpened": "2024-03-20T16:36:08.837Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 12,
               "Title": "StudentService.cs",
               "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenService\\StudentService.cs",
               "RelativeDocumentMoniker": "SomerenService\\StudentService.cs",
@@ -127,7 +209,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 10,
               "Title": "Room.cs",
               "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenModel\\Room.cs",
               "RelativeDocumentMoniker": "SomerenModel\\Room.cs",
@@ -139,76 +221,16 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 3,
               "Title": "RoomService.cs",
               "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenService\\RoomService.cs",
               "RelativeDocumentMoniker": "SomerenService\\RoomService.cs",
               "ToolTip": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenService\\RoomService.cs",
               "RelativeToolTip": "SomerenService\\RoomService.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABUAAAAmAAAA",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAAwAAAAIAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T20:15:48.915Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "RoomDao.cs",
-              "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenDAL\\RoomDao.cs",
-              "RelativeDocumentMoniker": "SomerenDAL\\RoomDao.cs",
-              "ToolTip": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenDAL\\RoomDao.cs",
-              "RelativeToolTip": "SomerenDAL\\RoomDao.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAABcAAAAwAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T18:57:54.857Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "StudentDao.cs",
-              "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenDAL\\StudentDao.cs",
-              "RelativeDocumentMoniker": "SomerenDAL\\StudentDao.cs",
-              "ToolTip": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenDAL\\StudentDao.cs",
-              "RelativeToolTip": "SomerenDAL\\StudentDao.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACIAAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-14T20:38:16.275Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "SomerenUI.cs",
-              "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenUI\\SomerenUI.cs",
-              "RelativeDocumentMoniker": "SomerenUI\\SomerenUI.cs",
-              "ToolTip": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenUI\\SomerenUI.cs",
-              "RelativeToolTip": "SomerenUI\\SomerenUI.cs",
-              "ViewState": "AQIAADMAAAAAAAAAAAAEwE0AAAAfAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T11:47:00.153Z",
+              "WhenOpened": "2024-03-14T20:15:48.915Z",
               "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "SomerenUI.cs [Design]",
-              "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenUI\\SomerenUI.cs",
-              "RelativeDocumentMoniker": "SomerenUI\\SomerenUI.cs",
-              "ToolTip": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenUI\\SomerenUI.cs [Design]",
-              "RelativeToolTip": "SomerenUI\\SomerenUI.cs [Design]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T09:19:20.348Z",
-              "EditorCaption": " [Design]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 11,
-              "Title": "Program.cs",
-              "DocumentMoniker": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenUI\\Program.cs",
-              "RelativeDocumentMoniker": "SomerenUI\\Program.cs",
-              "ToolTip": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenUI\\Program.cs",
-              "RelativeToolTip": "SomerenUI\\Program.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA8AAAAJAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-03-13T09:18:37.245Z"
             }
           ]
         }

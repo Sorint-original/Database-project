@@ -21,7 +21,7 @@ namespace SomerenUI
             pnlStudents.Hide();
             pnlRooms.Hide();
             pnlLecturers.Hide();
-
+            pnlDrinks.Hide();
             // show dashboard
             pnlDashboard.Show();
         }
@@ -33,6 +33,7 @@ namespace SomerenUI
             pnlRooms.Hide();
             pnlLecturers.Hide();
             pnlDashboard.Hide();
+            pnlDrinks.Hide();
 
             // show students
             pnlStudents.Show();
@@ -54,8 +55,12 @@ namespace SomerenUI
 
             pnlActivity.Hide();
             pnlLecturers.Hide();
+            pnlDrinks.Hide();
+
+
             pnlStudents.Show();
             pnlRooms.Show();
+
 
             try
             {
@@ -76,10 +81,9 @@ namespace SomerenUI
             pnlActivity.Hide();
             pnlRooms.Hide();
             pnlStudents.Hide();
+            pnlDrinks.Hide();
 
             // show lecturers 
-
-
             pnlLecturers.Show();
 
             try
@@ -100,8 +104,9 @@ namespace SomerenUI
             pnlDashboard.Hide();
             pnlLecturers.Hide();
             pnlRooms.Hide();
-
+            pnlDrinks.Hide();
             pnlStudents.Hide();
+
             pnlActivity.Show();
             try
             {
@@ -114,6 +119,32 @@ namespace SomerenUI
             catch (Exception e)
             {
                 MessageBox.Show("Something went wrong while loading the activities: " + e.Message);
+            }
+
+        }
+
+        private void ShowDrinksPanel()
+        {
+            pnlDashboard.Hide();
+            pnlLecturers.Hide();
+            pnlRooms.Hide();
+            pnlStudents.Hide();
+            pnlActivity.Hide();
+
+            pnlDrinks.Show();
+
+
+            try
+            {
+
+                List<Drink> drinks = GetDrinks();
+
+
+                DisplayDrinks(drinks);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Something went wrong while loading the drinks: " + e.Message);
             }
 
         }
@@ -144,6 +175,13 @@ namespace SomerenUI
             LecturerService lecturerService = new LecturerService();
             List<Lecturer> lecturers = lecturerService.GetLecturers();
             return lecturers;
+        }
+
+        private List<Drink> GetDrinks()
+        {
+            DrinkService drinkService = new DrinkService();
+            List<Drink> drinks = drinkService.GetDrinks();
+            return drinks;
         }
 
         private void DisplayLecturers(List<Lecturer> lecturers)
@@ -227,6 +265,42 @@ namespace SomerenUI
             }
         }
 
+        private void DisplayDrinks(List<Drink> drinks)
+        {
+
+            // clear the listview before filling it
+            listViewDrinks.Items.Clear();
+
+            foreach (Drink drink in drinks)
+            {
+                ListViewItem li = new ListViewItem(drink.Id.ToString());
+                li.SubItems.Add(drink.Name);
+                li.SubItems.Add(drink.Price.ToString());
+                if (drink.Alcohol)
+                {
+                    li.SubItems.Add("Alcoholic");
+                }
+                else
+                {
+                    li.SubItems.Add("Non Alcoholic");
+                }
+                if (drink.StockAmount == 0)
+                {
+                    li.SubItems.Add("stock empty");
+                }
+                else if (drink.StockAmount < 10)
+                {
+                    li.SubItems.Add("stock nearly depleted");
+                }
+                else
+                {
+                    li.SubItems.Add("stock sufficient");
+                }
+                li.Tag = drink;   // link student object to listview item
+                listViewDrinks.Items.Add(li);
+            }
+        }
+
         private void dashboardToolStripMenuItem1_Click(object sender, System.EventArgs e)
         {
             ShowDashboardPanel();
@@ -255,6 +329,11 @@ namespace SomerenUI
         private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowLecturersPanel();
+        }
+
+        private void drinksToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowDrinksPanel();
         }
     }
 }
