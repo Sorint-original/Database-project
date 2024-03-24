@@ -65,7 +65,30 @@ namespace SomerenUI
             }
         }
 
-        private void showActivityPanel()
+        private void ShowLecturersPanel()
+        {
+            // hide all other panels
+            pnlDashboard.Hide();
+
+            // show lecturers 
+            pnlStudents.Show();
+            pnlRooms.Show();
+            pnlLecturers.Show();
+
+            try
+            {
+                // get and display all lecturers 
+                List<Lecturer> lecturer = GetLecturers();
+                DisplayLecturers(lecturer);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Something went wrong while loading the students: " + e.Message);
+
+            }
+        }
+
+        private void ShowActivityPanel()
         {
             pnlRooms.Hide();
             pnlStudents.Hide();
@@ -105,6 +128,34 @@ namespace SomerenUI
             RoomService roomService = new RoomService();
             List<Room> rooms = roomService.GetRooms();
             return rooms;
+        }
+
+        private List<Lecturer> GetLecturers()
+        {
+            LecturerService lecturerService = new LecturerService();
+            List<Lecturer> lecturers = lecturerService.GetLecturers();
+            return lecturers;
+        }
+
+        private void DisplayLecturers(List<Lecturer> lecturers)
+        {
+            // clear the listview before filling it
+            listViewLecturers.Items.Clear();
+
+            foreach (Lecturer lecturer in lecturers)
+            {
+                ListViewItem li = new ListViewItem(lecturer.LecturerId.ToString());
+                li.SubItems.Add(lecturer.FirstName);
+                li.SubItems.Add(lecturer.LastName);
+                li.SubItems.Add(lecturer.PhoneNumber);
+                li.SubItems.Add(lecturer.Age.ToString());
+                li.SubItems.Add(lecturer.RoomCode.ToString());
+
+
+                li.Tag = lecturer;   // link lecturer object to listview item
+                listViewLecturers.Items.Add(li);
+
+            }
         }
 
         private void DisplayStudents(List<Student> students)
@@ -151,7 +202,7 @@ namespace SomerenUI
 
         private void DisplayActivities(List<Activity> activities)
         {
-          
+
             // clear the listview before filling it
             listViewActivity.Items.Clear();
 
@@ -189,7 +240,12 @@ namespace SomerenUI
 
         private void activitiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            showActivityPanel();
+            ShowActivityPanel();
+        }
+
+        private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowLecturersPanel();
         }
     }
 }
