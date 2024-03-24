@@ -17,41 +17,19 @@ namespace SomerenUI
         private void ShowDashboardPanel()
         {
             // hide all other panels
+            pnlActivity.Hide();
             pnlStudents.Hide();
             pnlRooms.Hide();
-            pnlLecturers.Hide();
 
             // show dashboard
             pnlDashboard.Show();
         }
-        private void ShowLecturersPanel()
-        {
-            // hide all other panels
-            pnlDashboard.Hide();
 
-            // show lecturers 
-            pnlStudents.Show();
-            pnlRooms.Show();
-            pnlLecturers.Show();
-
-            try
-            {
-                // get and display all lecturers 
-                List<Lecturer> lecturer = GetLecturers();
-                DisplayLecturers(lecturer);
-            }
-            catch (Exception e)
-            {
-                MessageBox.Show("Something went wrong while loading the students: " + e.Message);
-
-            }
-        }
         private void ShowStudentsPanel()
         {
             // hide all other panels
-            pnlDashboard.Hide();
+            pnlActivity.Hide();
             pnlRooms.Hide();
-            pnlLecturers.Hide();
 
             // show students
             pnlStudents.Show();
@@ -71,10 +49,8 @@ namespace SomerenUI
         private void ShowRoomsPanel()
         {
 
-            pnlLecturers.Hide();
-            pnlDashboard.Hide();
-
-            // show students
+            pnlActivity.Hide();
+            pnlStudents.Show();
             pnlRooms.Show();
 
             try
@@ -89,11 +65,32 @@ namespace SomerenUI
             }
         }
 
-        private List<Lecturer> GetLecturers()
+        private void showActivityPanel()
         {
-            LecturerService lecturerService = new LecturerService();
-            List<Lecturer> lecturer = lecturerService.GetLecturers();
-            return lecturer;
+            pnlRooms.Hide();
+            pnlStudents.Hide();
+
+            pnlActivity.Show();
+            try
+            {
+
+                List<Activity> activities = GetActivities();
+
+
+                DisplayActivities(activities);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Something went wrong while loading the activities: " + e.Message);
+            }
+
+        }
+
+        private List<Activity> GetActivities()
+        {
+            ActivityService activityService = new ActivityService();
+            List<Activity> activities = activityService.GetActivities();
+            return activities;
         }
 
         private List<Student> GetStudents()
@@ -103,34 +100,13 @@ namespace SomerenUI
             return students;
         }
 
-
-
         private List<Room> GetRooms()
         {
             RoomService roomService = new RoomService();
             List<Room> rooms = roomService.GetRooms();
             return rooms;
         }
-        private void DisplayLecturers(List<Lecturer> lecturers)
-        {
-            // clear the listview before filling it
-            listViewLecturers.Items.Clear();
 
-            foreach (Lecturer lecturer in lecturers)
-            {
-                ListViewItem li = new ListViewItem(lecturer.LecturerId.ToString());
-                li.SubItems.Add(lecturer.FirstName);
-                li.SubItems.Add(lecturer.LastName);
-                li.SubItems.Add(lecturer.PhoneNumber);
-                li.SubItems.Add(lecturer.Age.ToString());
-                li.SubItems.Add(lecturer.RoomCode.ToString());
-
-
-                li.Tag = lecturer;   // link lecturer object to listview item
-                listViewLecturers.Items.Add(li);
-
-            }
-        }
         private void DisplayStudents(List<Student> students)
         {
             // clear the listview before filling it
@@ -173,6 +149,24 @@ namespace SomerenUI
             }
         }
 
+        private void DisplayActivities(List<Activity> activities)
+        {
+          
+            // clear the listview before filling it
+            listViewActivity.Items.Clear();
+
+            foreach (Activity activity in activities)
+            {
+                ListViewItem li = new ListViewItem(activity.id.ToString());
+                li.SubItems.Add(activity.name);
+                li.SubItems.Add(activity.startTime.ToString());
+                li.SubItems.Add(activity.endTime.ToString());
+                li.SubItems.Add(activity.day.ToString());
+                li.Tag = activity;   // link student object to listview item
+                listViewActivity.Items.Add(li);
+            }
+        }
+
         private void dashboardToolStripMenuItem1_Click(object sender, System.EventArgs e)
         {
             ShowDashboardPanel();
@@ -193,9 +187,9 @@ namespace SomerenUI
             ShowRoomsPanel();
         }
 
-        private void lecturersToolStripMenuItem_Click(object sender, EventArgs e)
+        private void activitiesToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            ShowLecturersPanel();
+            showActivityPanel();
         }
     }
 }
