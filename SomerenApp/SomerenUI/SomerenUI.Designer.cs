@@ -513,8 +513,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader20;
         private System.Windows.Forms.ColumnHeader columnHeader21;
         private System.Windows.Forms.ColumnHeader columnHeader22;
-
-        private SystemWindows.Forms.Label label4;
+        private System.Windows.Forms.Label label4;
 
 
     }
