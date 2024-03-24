@@ -1,23 +1,23 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\aronlakatos\\Desktop\\project database\\SomerenApp\\SomerenModel\\SomerenModel.csproj": {}
+    "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj": {}
   },
   "projects": {
-    "C:\\Users\\aronlakatos\\Desktop\\project database\\SomerenApp\\SomerenModel\\SomerenModel.csproj": {
+    "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\aronlakatos\\Desktop\\project database\\SomerenApp\\SomerenModel\\SomerenModel.csproj",
+        "projectUniqueName": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj",
         "projectName": "SomerenModel",
-        "projectPath": "C:\\Users\\aronlakatos\\Desktop\\project database\\SomerenApp\\SomerenModel\\SomerenModel.csproj",
-        "packagesPath": "C:\\Users\\aronlakatos\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\aronlakatos\\Desktop\\project database\\SomerenApp\\SomerenModel\\obj\\",
+        "projectPath": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj",
+        "packagesPath": "C:\\Users\\pssor\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenModel\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
         ],
         "configFilePaths": [
-          "C:\\Users\\aronlakatos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\pssor\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
@@ -39,16 +39,17 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
         "net6.0": {
           "targetAlias": "net6.0",
           "dependencies": {
-            "Azure.Core": {
-              "target": "Package",
-              "version": "[1.38.0, )"
-            },
             "Microsoft.Data.SqlClient": {
               "target": "Package",
               "version": "[5.2.0, )"
@@ -78,7 +79,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.403\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
         }
       }
     }
