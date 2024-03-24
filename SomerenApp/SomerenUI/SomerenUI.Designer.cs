@@ -80,6 +80,7 @@
             columnHeader17 = new System.Windows.Forms.ColumnHeader();
             label3 = new System.Windows.Forms.Label();
             pnlDrinks = new System.Windows.Forms.Panel();
+            DrinkAddButton = new System.Windows.Forms.Button();
             pictureBox6 = new System.Windows.Forms.PictureBox();
             pictureBox7 = new System.Windows.Forms.PictureBox();
             listViewDrinks = new System.Windows.Forms.ListView();
@@ -88,8 +89,8 @@
             columnHeader25 = new System.Windows.Forms.ColumnHeader();
             columnHeader26 = new System.Windows.Forms.ColumnHeader();
             columnHeader27 = new System.Windows.Forms.ColumnHeader();
-            label5 = new System.Windows.Forms.Label();
             columnHeader28 = new System.Windows.Forms.ColumnHeader();
+            label5 = new System.Windows.Forms.Label();
             menuStrip1.SuspendLayout();
             pnlDashboard.SuspendLayout();
             pnlStudents.SuspendLayout();
@@ -169,8 +170,8 @@
             // drinksToolStripMenuItem
             // 
             drinksToolStripMenuItem.Name = "drinksToolStripMenuItem";
-            drinksToolStripMenuItem.Size = new System.Drawing.Size(52, 19);
-            drinksToolStripMenuItem.Text = "Drinks";
+            drinksToolStripMenuItem.Size = new System.Drawing.Size(99, 19);
+            drinksToolStripMenuItem.Text = "Drinks Supplies";
             drinksToolStripMenuItem.Click += drinksToolStripMenuItem_Click;
             // 
             // pnlDashboard
@@ -476,6 +477,7 @@
             // 
             // pnlDrinks
             // 
+            pnlDrinks.Controls.Add(DrinkAddButton);
             pnlDrinks.Controls.Add(pictureBox6);
             pnlDrinks.Controls.Add(pictureBox7);
             pnlDrinks.Controls.Add(listViewDrinks);
@@ -485,6 +487,16 @@
             pnlDrinks.Name = "pnlDrinks";
             pnlDrinks.Size = new System.Drawing.Size(938, 466);
             pnlDrinks.TabIndex = 5;
+            // 
+            // DrinkAddButton
+            // 
+            DrinkAddButton.Location = new System.Drawing.Point(39, 395);
+            DrinkAddButton.Name = "DrinkAddButton";
+            DrinkAddButton.Size = new System.Drawing.Size(101, 33);
+            DrinkAddButton.TabIndex = 5;
+            DrinkAddButton.Text = "Add Drink";
+            DrinkAddButton.UseVisualStyleBackColor = true;
+            DrinkAddButton.Click += DrinkAddButton_Click;
             // 
             // pictureBox6
             // 
@@ -540,6 +552,11 @@
             columnHeader27.Text = "Stock status";
             columnHeader27.Width = 100;
             // 
+            // columnHeader28
+            // 
+            columnHeader28.Text = "Amount sold";
+            columnHeader28.Width = 100;
+            // 
             // label5
             // 
             label5.AutoSize = true;
@@ -551,16 +568,11 @@
             label5.TabIndex = 0;
             label5.Text = "Drinks";
             // 
-            // columnHeader28
-            // 
-            columnHeader28.Text = "Amount sold";
-            columnHeader28.Width = 100;
-            // 
             // SomerenUI
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(962, 505);
+            ClientSize = new System.Drawing.Size(962, 555);
             Controls.Add(pnlDrinks);
             Controls.Add(menuStrip1);
             Controls.Add(pnlLecturers);
@@ -659,5 +671,6 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripMenuItem drinksToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader columnHeader28;
+        private System.Windows.Forms.Button DrinkAddButton;
     }
 }

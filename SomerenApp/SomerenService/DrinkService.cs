@@ -22,5 +22,24 @@ namespace SomerenService
             List<Drink> drinks = drinkDao.GetAllDrinks();
             return drinks;
         }
+
+        public void AddEmptyDrink()
+        {
+            int id = GetAvalibleID();
+            drinkDao.CreateEmptyDrink(id);
+        }
+
+        private int GetAvalibleID()
+        {
+            List<int> ids = drinkDao.GetAllID();
+            for(int i = 1; i <= ids.Count(); i++)
+            {
+                if (i != ids[i-1])
+                {
+                    return i;
+                }
+            }
+            return ids.Count()+1;
+        }
     }
 }

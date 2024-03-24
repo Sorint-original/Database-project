@@ -38,5 +38,30 @@ namespace SomerenDAL
             }
             return drinks;
         }
+
+        public List<int> GetAllID()
+        {
+            List<int> ids = new List<int>();
+            string query = "SELECT DrinkID FROM Drink;";
+            SqlParameter[] sqlParameters = new SqlParameter[0];
+            DataTable dataTable = ExecuteSelectQuery(query, sqlParameters);
+            foreach (DataRow dr in dataTable.Rows)
+            {
+                ids.Add((int)dr["DrinkID"]);
+            }
+            return ids;
+        }
+
+        public void CreateEmptyDrink(int ID)
+        {
+            string command = "INSERT INTO Drink VALUES (@Id,NULL,NULL,NULL,NULL,NULL)";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@Id", ID);
+
+            ExecuteEditQuery(command, sqlParameters);
+        }
+
+
     }
+
 }
