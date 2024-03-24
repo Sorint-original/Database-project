@@ -51,7 +51,7 @@
             columnHeader14 = new System.Windows.Forms.ColumnHeader();
             columnHeader15 = new System.Windows.Forms.ColumnHeader();
             columnHeader16 = new System.Windows.Forms.ColumnHeader();
-               columnHeader17 = new System.Windows.Forms.ColumnHeader();
+            columnHeader17 = new System.Windows.Forms.ColumnHeader();
             columnHeader18 = new System.Windows.Forms.ColumnHeader();
             columnHeader19 = new System.Windows.Forms.ColumnHeader();
             columnHeader20 = new System.Windows.Forms.ColumnHeader();
@@ -496,7 +496,7 @@
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader columnHeader11;
         private System.Windows.Forms.Panel pnlActivity;
-        private System.Windows.Forms.Label label3;
+      
         private System.Windows.Forms.ListView listViewActivity;
         private System.Windows.Forms.ColumnHeader columnHeader12;
         private System.Windows.Forms.ColumnHeader columnHeader13;
