@@ -238,7 +238,7 @@
             // 
             // listViewActivity
             // 
-            listViewActivity.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader12, columnHeader13, columnHeader14, columnHeader15, columnHeader16 });
+            listViewActivity.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader18, columnHeader19, columnHeader20, columnHeader21, columnHeader22 });
             listViewActivity.Location = new System.Drawing.Point(16, 42);
             listViewActivity.Name = "listViewActivity";
             listViewActivity.Size = new System.Drawing.Size(766, 307);
