@@ -66,7 +66,9 @@
             columnHeader9 = new System.Windows.Forms.ColumnHeader();
             columnHeader10 = new System.Windows.Forms.ColumnHeader();
             columnHeader11 = new System.Windows.Forms.ColumnHeader();
+
             label2 = new System.Windows.Forms.Label();
+            label4 = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             listViewStudents = new System.Windows.Forms.ListView();
             columnHeader1 = new System.Windows.Forms.ColumnHeader();
@@ -195,7 +197,7 @@
             // pnlActivity
             // 
             pnlActivity.Controls.Add(listViewActivity);
-            pnlActivity.Controls.Add(label3);
+            pnlActivity.Controls.Add(label4);
             pnlActivity.Location = new System.Drawing.Point(0, 0);
             pnlActivity.Name = "pnlActivity";
             pnlActivity.Size = new System.Drawing.Size(938, 466);
@@ -511,6 +513,8 @@
         private System.Windows.Forms.ColumnHeader columnHeader20;
         private System.Windows.Forms.ColumnHeader columnHeader21;
         private System.Windows.Forms.ColumnHeader columnHeader22;
+
+        private SystemWindows.Forms.Label label4;
 
 
     }
