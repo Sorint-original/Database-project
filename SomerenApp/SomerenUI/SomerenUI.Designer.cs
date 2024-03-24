@@ -80,6 +80,8 @@
             columnHeader17 = new System.Windows.Forms.ColumnHeader();
             label3 = new System.Windows.Forms.Label();
             pnlDrinks = new System.Windows.Forms.Panel();
+            DeleteButton = new System.Windows.Forms.Button();
+            UpdateButton = new System.Windows.Forms.Button();
             DrinkAddButton = new System.Windows.Forms.Button();
             pictureBox6 = new System.Windows.Forms.PictureBox();
             pictureBox7 = new System.Windows.Forms.PictureBox();
@@ -477,6 +479,8 @@
             // 
             // pnlDrinks
             // 
+            pnlDrinks.Controls.Add(DeleteButton);
+            pnlDrinks.Controls.Add(UpdateButton);
             pnlDrinks.Controls.Add(DrinkAddButton);
             pnlDrinks.Controls.Add(pictureBox6);
             pnlDrinks.Controls.Add(pictureBox7);
@@ -487,6 +491,24 @@
             pnlDrinks.Name = "pnlDrinks";
             pnlDrinks.Size = new System.Drawing.Size(938, 466);
             pnlDrinks.TabIndex = 5;
+            // 
+            // DeleteButton
+            // 
+            DeleteButton.Location = new System.Drawing.Point(227, 400);
+            DeleteButton.Name = "DeleteButton";
+            DeleteButton.Size = new System.Drawing.Size(75, 23);
+            DeleteButton.TabIndex = 8;
+            DeleteButton.Text = "Delete";
+            DeleteButton.UseVisualStyleBackColor = true;
+            // 
+            // UpdateButton
+            // 
+            UpdateButton.Location = new System.Drawing.Point(146, 400);
+            UpdateButton.Name = "UpdateButton";
+            UpdateButton.Size = new System.Drawing.Size(75, 23);
+            UpdateButton.TabIndex = 7;
+            UpdateButton.Text = "Update";
+            UpdateButton.UseVisualStyleBackColor = true;
             // 
             // DrinkAddButton
             // 
@@ -672,5 +694,7 @@
         private System.Windows.Forms.ToolStripMenuItem drinksToolStripMenuItem;
         private System.Windows.Forms.ColumnHeader columnHeader28;
         private System.Windows.Forms.Button DrinkAddButton;
+        private System.Windows.Forms.Button DeleteButton;
+        private System.Windows.Forms.Button UpdateButton;
     }
 }
