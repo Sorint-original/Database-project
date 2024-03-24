@@ -33,3 +33,20 @@ C:\Users\pssor\OneDrive\Desktop\work\github\Database-project\SomerenApp\SomerenS
 C:\Users\pssor\OneDrive\Desktop\work\github\Database-project\SomerenApp\SomerenService\obj\Debug\net6.0\refint\SomerenService.dll
 C:\Users\pssor\OneDrive\Desktop\work\github\Database-project\SomerenApp\SomerenService\obj\Debug\net6.0\SomerenService.pdb
 C:\Users\pssor\OneDrive\Desktop\work\github\Database-project\SomerenApp\SomerenService\obj\Debug\net6.0\ref\SomerenService.dll
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\obj\Debug\net6.0\SomerenService.csproj.AssemblyReference.cache
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\obj\Debug\net6.0\SomerenService.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\obj\Debug\net6.0\SomerenService.AssemblyInfoInputs.cache
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\obj\Debug\net6.0\SomerenService.AssemblyInfo.cs
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\obj\Debug\net6.0\SomerenService.csproj.CoreCompileInputs.cache
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\bin\Debug\net6.0\SomerenService.deps.json
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\bin\Debug\net6.0\SomerenService.dll
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\bin\Debug\net6.0\SomerenService.pdb
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\bin\Debug\net6.0\SomerenDAL.dll
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\bin\Debug\net6.0\SomerenModel.dll
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\bin\Debug\net6.0\SomerenDAL.pdb
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\bin\Debug\net6.0\SomerenModel.pdb
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\obj\Debug\net6.0\SomerenService.csproj.CopyComplete
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\obj\Debug\net6.0\SomerenService.dll
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\obj\Debug\net6.0\refint\SomerenService.dll
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\obj\Debug\net6.0\SomerenService.pdb
+C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenService\obj\Debug\net6.0\ref\SomerenService.dll

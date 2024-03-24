@@ -49,6 +49,11 @@
             columnHeader9 = new System.Windows.Forms.ColumnHeader();
             columnHeader10 = new System.Windows.Forms.ColumnHeader();
             columnHeader11 = new System.Windows.Forms.ColumnHeader();
+            columnHeader12 = new System.Windows.Forms.ColumnHeader();
+            columnHeader13 = new System.Windows.Forms.ColumnHeader();
+            columnHeader14 = new System.Windows.Forms.ColumnHeader();
+            columnHeader15 = new System.Windows.Forms.ColumnHeader();
+            columnHeader16 = new System.Windows.Forms.ColumnHeader();
             label2 = new System.Windows.Forms.Label();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             listViewStudents = new System.Windows.Forms.ListView();
@@ -58,12 +63,16 @@
             columnHeader4 = new System.Windows.Forms.ColumnHeader();
             columnHeader5 = new System.Windows.Forms.ColumnHeader();
             label1 = new System.Windows.Forms.Label();
+            pnlActivity = new System.Windows.Forms.Panel();
+            label3 = new System.Windows.Forms.Label();
+            listViewActivity = new System.Windows.Forms.ListView();
             menuStrip1.SuspendLayout();
             pnlDashboard.SuspendLayout();
             pnlStudents.SuspendLayout();
             pnlRooms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            pnlActivity.SuspendLayout();
             SuspendLayout();
             // 
             // menuStrip1
@@ -114,6 +123,7 @@
             activitiesToolStripMenuItem.Name = "activitiesToolStripMenuItem";
             activitiesToolStripMenuItem.Size = new System.Drawing.Size(67, 20);
             activitiesToolStripMenuItem.Text = "Activities";
+            activitiesToolStripMenuItem.Click += activitiesToolStripMenuItem_Click;
             // 
             // roomsToolStripMenuItem
             // 
@@ -208,6 +218,8 @@
             // 
             columnHeader11.Text = "Room Type";
             columnHeader11.Width = 100;
+
+            
             // 
             // label2
             // 
@@ -273,11 +285,53 @@
             label1.TabIndex = 0;
             label1.Text = "Students";
             // 
+            // pnlActivity
+            // 
+            pnlActivity.Controls.Add(listViewActivity);
+            pnlActivity.Controls.Add(label3);
+            pnlActivity.Location = new System.Drawing.Point(12, 19);
+            pnlActivity.Name = "pnlActivity";
+            pnlActivity.Size = new System.Drawing.Size(938, 466);
+            pnlActivity.TabIndex = 3;
+            
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.Location = new System.Drawing.Point(13, 13);
+            label3.Name = "label3";
+            label3.Size = new System.Drawing.Size(208, 15);
+            label3.TabIndex = 0;
+            label3.Text = "Acctivity";
+            // 
+            // listViewActivity
+            // 
+            listViewActivity.Location = new System.Drawing.Point(16, 42);
+            listViewActivity.Name = "listViewActivity";
+            listViewActivity.Size = new System.Drawing.Size(766, 307);
+            listViewActivity.TabIndex = 1;
+            listViewActivity.UseCompatibleStateImageBehavior = false;
+           listViewActivity.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader12, columnHeader13, columnHeader14, columnHeader15, columnHeader16 });
+            listViewActivity.View = System.Windows.Forms.View.Details;
+
+
+            columnHeader12.Text = "Activity ID";
+            columnHeader12.Width = 100;
+            columnHeader13.Text = "Activity Name";
+            columnHeader13.Width = 100;
+            columnHeader14.Text = "Start Time";
+            columnHeader14.Width = 100;
+            columnHeader15.Text = "End Time";
+            columnHeader15.Width = 100;
+            columnHeader16.Text = "Day";
+            columnHeader16.Width = 100;
+            // 
             // SomerenUI
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(962, 505);
+            Controls.Add(pnlActivity);
             Controls.Add(menuStrip1);
             Controls.Add(pnlStudents);
             Controls.Add(pnlDashboard);
@@ -294,6 +348,8 @@
             pnlRooms.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            pnlActivity.ResumeLayout(false);
+            pnlActivity.PerformLayout();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -329,5 +385,14 @@
         private System.Windows.Forms.ColumnHeader columnHeader10;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ColumnHeader columnHeader11;
+        private System.Windows.Forms.Panel pnlActivity;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.ListView listViewActivity;
+        private System.Windows.Forms.ColumnHeader columnHeader12;
+        private System.Windows.Forms.ColumnHeader columnHeader13;
+        private System.Windows.Forms.ColumnHeader columnHeader14;
+        private System.Windows.Forms.ColumnHeader columnHeader15;
+        private System.Windows.Forms.ColumnHeader columnHeader16;
+
     }
 }

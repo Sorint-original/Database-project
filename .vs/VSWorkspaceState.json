@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\SomerenApp",
+    "\\SomerenApp\\SomerenDAL",
+    "\\SomerenApp\\SomerenModel",
+    "\\SomerenApp\\SomerenService",
+    "\\SomerenApp\\SomerenUI"
+  ],
+  "SelectedNode": "\\SomerenApp\\SomerenModel\\Teacher.cs",
+  "PreviewInSolutionExplorer": false
+}

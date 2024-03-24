@@ -17,6 +17,7 @@ namespace SomerenUI
         private void ShowDashboardPanel()
         {
             // hide all other panels
+            pnlActivity.Hide();
             pnlStudents.Hide();
             pnlRooms.Hide();
 
@@ -27,6 +28,7 @@ namespace SomerenUI
         private void ShowStudentsPanel()
         {
             // hide all other panels
+            pnlActivity.Hide();
             pnlRooms.Hide();
 
             // show students
@@ -47,6 +49,7 @@ namespace SomerenUI
         private void ShowRoomsPanel()
         {
 
+            pnlActivity.Hide();
             pnlStudents.Show();
             pnlRooms.Show();
 
@@ -60,6 +63,34 @@ namespace SomerenUI
             {
                 MessageBox.Show("Something went wrong while loading the rooms: " + e.Message);
             }
+        }
+
+        private void showActivityPanel()
+        {
+            pnlRooms.Hide();
+            pnlStudents.Hide();
+
+            pnlActivity.Show();
+            try
+            {
+
+                List<Activity> activities = GetActivities();
+
+
+                DisplayActivities(activities);
+            }
+            catch (Exception e)
+            {
+                MessageBox.Show("Something went wrong while loading the activities: " + e.Message);
+            }
+
+        }
+
+        private List<Activity> GetActivities()
+        {
+            ActivityService activityService = new ActivityService();
+            List<Activity> activities = activityService.GetActivities();
+            return activities;
         }
 
         private List<Student> GetStudents()
@@ -118,6 +149,24 @@ namespace SomerenUI
             }
         }
 
+        private void DisplayActivities(List<Activity> activities)
+        {
+          
+            // clear the listview before filling it
+            listViewActivity.Items.Clear();
+
+            foreach (Activity activity in activities)
+            {
+                ListViewItem li = new ListViewItem(activity.id.ToString());
+                li.SubItems.Add(activity.name);
+                li.SubItems.Add(activity.startTime.ToString());
+                li.SubItems.Add(activity.endTime.ToString());
+                li.SubItems.Add(activity.day.ToString());
+                li.Tag = activity;   // link student object to listview item
+                listViewActivity.Items.Add(li);
+            }
+        }
+
         private void dashboardToolStripMenuItem1_Click(object sender, System.EventArgs e)
         {
             ShowDashboardPanel();
@@ -136,6 +185,11 @@ namespace SomerenUI
         private void roomsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowRoomsPanel();
+        }
+
+        private void activitiesToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            showActivityPanel();
         }
     }
 }
