@@ -89,6 +89,7 @@
             columnHeader26 = new System.Windows.Forms.ColumnHeader();
             columnHeader27 = new System.Windows.Forms.ColumnHeader();
             label5 = new System.Windows.Forms.Label();
+            columnHeader28 = new System.Windows.Forms.ColumnHeader();
             menuStrip1.SuspendLayout();
             pnlDashboard.SuspendLayout();
             pnlStudents.SuspendLayout();
@@ -505,7 +506,7 @@
             // 
             // listViewDrinks
             // 
-            listViewDrinks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader23, columnHeader24, columnHeader25, columnHeader26, columnHeader27 });
+            listViewDrinks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader23, columnHeader24, columnHeader25, columnHeader26, columnHeader27, columnHeader28 });
             listViewDrinks.Location = new System.Drawing.Point(30, 42);
             listViewDrinks.Margin = new System.Windows.Forms.Padding(6);
             listViewDrinks.Name = "listViewDrinks";
@@ -549,6 +550,11 @@
             label5.Size = new System.Drawing.Size(81, 32);
             label5.TabIndex = 0;
             label5.Text = "Drinks";
+            // 
+            // columnHeader28
+            // 
+            columnHeader28.Text = "Amount sold";
+            columnHeader28.Width = 100;
             // 
             // SomerenUI
             // 
@@ -652,5 +658,6 @@
         private System.Windows.Forms.ColumnHeader columnHeader27;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.ToolStripMenuItem drinksToolStripMenuItem;
+        private System.Windows.Forms.ColumnHeader columnHeader28;
     }
 }

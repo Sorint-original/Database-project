@@ -14,7 +14,7 @@ namespace SomerenDAL
     {
         public List<Drink> GetAllDrinks()
         {
-            string query = "SELECT DrinkID, Name, Price, IfAlcoholic, StockAmount FROM Drink ORDER BY Name;";
+            string query = "SELECT DrinkID, Name, Price, IfAlcoholic, StockAmount, AmountSold FROM Drink ORDER BY Name;";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -31,7 +31,8 @@ namespace SomerenDAL
                     Name = (string)dr["Name"],
                     Price = (decimal)dr["Price"],
                     Alcohol = (bool)dr["IfAlcoholic"],
-                    StockAmount = (int)dr["StockAmount"]
+                    StockAmount = (int)dr["StockAmount"],
+                    AmountSold = (int)dr["AmountSold"]
                 };
                 drinks.Add(drink);
             }

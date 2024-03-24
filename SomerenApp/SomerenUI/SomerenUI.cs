@@ -296,6 +296,7 @@ namespace SomerenUI
                 {
                     li.SubItems.Add("stock sufficient");
                 }
+                li.SubItems.Add(drink.AmountSold.ToString());   
                 li.Tag = drink;   // link student object to listview item
                 listViewDrinks.Items.Add(li);
             }
