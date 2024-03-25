@@ -17,11 +17,11 @@ namespace SomerenDAL
             string query;
             if (OrderByName)
             {
-                query = "SELECT DrinkID, Name, Price, IfAlcoholic, StockAmount, AmountSold FROM Drink ORDER BY Name;";
+                query = "SELECT DrinkID, Name, Price, IfAlcoholic, StockAmount, (SELECT SUM(B.Amount) FROM buys AS B WHERE B.DrinkID = D.DrinkID ) AS AmountSold FROM Drink AS D ORDER BY Name;";
             }
             else
             {
-                query = "SELECT DrinkID, Name, Price, IfAlcoholic, StockAmount, AmountSold FROM Drink ;";
+                query = "SELECT DrinkID, Name, Price, IfAlcoholic, StockAmount, (SELECT SUM(B.Amount) FROM buys AS B WHERE B.DrinkID = D.DrinkID ) AS AmountSold FROM Drink AS D FROM Drink ;";
             }
             
             SqlParameter[] sqlParameters = new SqlParameter[0];
@@ -41,8 +41,17 @@ namespace SomerenDAL
                     Price = (decimal)dr["Price"],
                     Alcohol = (bool)dr["IfAlcoholic"],
                     StockAmount = (int)dr["StockAmount"],
-                    AmountSold = (int)dr["AmountSold"]
+                   
                 };
+                try
+                {
+                    drink.AmountSold = (int)dr["AmountSold"];
+                }
+                catch
+                {
+                    drink.AmountSold = 0;
+                }
+                
                 drinks.Add(drink);
             }
             return drinks;
@@ -63,28 +72,26 @@ namespace SomerenDAL
 
         public void AddDrink(Drink drink)
         {
-            string command = "INSERT INTO Drink VALUES (@Id, @Name, @Price, @Alcohol, @StockAmount, @AmountSold)";
+            string command = "INSERT INTO Drink VALUES (@Id, @Name, @Price, @Alcohol, @StockAmount)";
             SqlParameter[] sqlParameters = new SqlParameter[6];
             sqlParameters[0] = new SqlParameter("@Id", drink.Id);
             sqlParameters[1] = new SqlParameter("@Name",drink.Name);
             sqlParameters[2] = new SqlParameter("@Price", drink.Price);
             sqlParameters[3] = new SqlParameter("@Alcohol", drink.Alcohol);
             sqlParameters[4] = new SqlParameter("@StockAmount", drink.StockAmount);
-            sqlParameters[5] = new SqlParameter("@AmountSold", drink.AmountSold);
 
             ExecuteEditQuery(command, sqlParameters);
         }
 
         public void UpdateDrink(Drink drink)
         {
-            string command = "UPDATE Drink SET Name =  @Name, Price = @Price, IfAlcoholic =  @Alcohol, StockAmount =  @StockAmount, AmountSold = @AmountSold WHERE DrinkId = @Id;";
+            string command = "UPDATE Drink SET Name =  @Name, Price = @Price, IfAlcoholic =  @Alcohol, StockAmount =  @StockAmount WHERE DrinkId = @Id;";
             SqlParameter[] sqlParameters = new SqlParameter[6];
             sqlParameters[0] = new SqlParameter("@Id", drink.Id);
             sqlParameters[1] = new SqlParameter("@Name", drink.Name);
             sqlParameters[2] = new SqlParameter("@Price", drink.Price);
             sqlParameters[3] = new SqlParameter("@Alcohol", drink.Alcohol);
             sqlParameters[4] = new SqlParameter("@StockAmount", drink.StockAmount);
-            sqlParameters[5] = new SqlParameter("@AmountSold", drink.AmountSold);
 
             ExecuteEditQuery(command, sqlParameters);
         }
