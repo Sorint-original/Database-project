@@ -494,7 +494,7 @@
             // 
             // DeleteButton
             // 
-            DeleteButton.Location = new System.Drawing.Point(229, 395);
+            DeleteButton.Location = new System.Drawing.Point(696, 395);
             DeleteButton.Name = "DeleteButton";
             DeleteButton.Size = new System.Drawing.Size(86, 33);
             DeleteButton.TabIndex = 8;
@@ -543,6 +543,7 @@
             // listViewDrinks
             // 
             listViewDrinks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader23, columnHeader24, columnHeader25, columnHeader26, columnHeader27, columnHeader28 });
+            listViewDrinks.FullRowSelect = true;
             listViewDrinks.Location = new System.Drawing.Point(30, 42);
             listViewDrinks.Margin = new System.Windows.Forms.Padding(6);
             listViewDrinks.Name = "listViewDrinks";

@@ -350,8 +350,13 @@ namespace SomerenUI
 
         private void DeleteButton_Click(object sender, EventArgs e)
         {
-            DeleteForm deleteForm = new DeleteForm(GetDrinks());
-            deleteForm.ShowDialog();
+            DrinkService drinkService = new DrinkService();
+            while (listViewDrinks.SelectedItems.Count > 0)
+            {
+                drinkService.DeleteByID(int.Parse(listViewDrinks.SelectedItems[0].Text));
+                listViewDrinks.Items.Remove(listViewDrinks.SelectedItems[0]);
+            }
+
             ShowDrinksPanel();
         }
 

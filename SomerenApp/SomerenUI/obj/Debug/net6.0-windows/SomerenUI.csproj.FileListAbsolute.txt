@@ -187,5 +187,4 @@ C:\Users\adria\OneDrive\Documents\GitHub\Database-project\SomerenApp\SomerenUI\o
 C:\Users\adria\OneDrive\Documents\GitHub\Database-project\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\SomerenUI.pdb
 C:\Users\adria\OneDrive\Documents\GitHub\Database-project\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\SomerenUI.genruntimeconfig.cache
 C:\Users\adria\OneDrive\Documents\GitHub\Database-project\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\ref\SomerenUI.dll
-C:\Users\pssor\OneDrive\Desktop\work\github\Database-project\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\SomerenUI.DeleteForm.resources
 C:\Users\pssor\OneDrive\Desktop\work\github\Database-project\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\SomerenUI.AddDrinkForm.resources

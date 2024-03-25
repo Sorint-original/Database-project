@@ -73,7 +73,7 @@ namespace SomerenDAL
         public void AddDrink(Drink drink)
         {
             string command = "INSERT INTO Drink VALUES (@Id, @Name, @Price, @Alcohol, @StockAmount)";
-            SqlParameter[] sqlParameters = new SqlParameter[6];
+            SqlParameter[] sqlParameters = new SqlParameter[5];
             sqlParameters[0] = new SqlParameter("@Id", drink.Id);
             sqlParameters[1] = new SqlParameter("@Name",drink.Name);
             sqlParameters[2] = new SqlParameter("@Price", drink.Price);
@@ -86,7 +86,7 @@ namespace SomerenDAL
         public void UpdateDrink(Drink drink)
         {
             string command = "UPDATE Drink SET Name =  @Name, Price = @Price, IfAlcoholic =  @Alcohol, StockAmount =  @StockAmount WHERE DrinkId = @Id;";
-            SqlParameter[] sqlParameters = new SqlParameter[6];
+            SqlParameter[] sqlParameters = new SqlParameter[5];
             sqlParameters[0] = new SqlParameter("@Id", drink.Id);
             sqlParameters[1] = new SqlParameter("@Name", drink.Name);
             sqlParameters[2] = new SqlParameter("@Price", drink.Price);
