@@ -52,11 +52,16 @@ namespace SomerenDAL
             return ids;
         }
 
-        public void CreateEmptyDrink(int ID)
+        public void AddDrink(Drink drink)
         {
-            string command = "INSERT INTO Drink VALUES (@Id,NULL,NULL,NULL,NULL,NULL)";
-            SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@Id", ID);
+            string command = "INSERT INTO Drink VALUES (@Id, @Name, @Price, @Alcohol, @StockAmount, @AmountSold)";
+            SqlParameter[] sqlParameters = new SqlParameter[6];
+            sqlParameters[0] = new SqlParameter("@Id", drink.Id);
+            sqlParameters[1] = new SqlParameter("@Name",drink.Name);
+            sqlParameters[2] = new SqlParameter("@Price", drink.Price);
+            sqlParameters[3] = new SqlParameter("@Alcohol", drink.Alcohol);
+            sqlParameters[4] = new SqlParameter("@StockAmount", drink.StockAmount);
+            sqlParameters[5] = new SqlParameter("@AmountSold", drink.AmountSold);
 
             ExecuteEditQuery(command, sqlParameters);
         }

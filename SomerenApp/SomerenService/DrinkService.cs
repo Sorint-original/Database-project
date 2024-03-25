@@ -23,13 +23,8 @@ namespace SomerenService
             return drinks;
         }
 
-        public void AddEmptyDrink()
-        {
-            int id = GetAvalibleID();
-            drinkDao.CreateEmptyDrink(id);
-        }
 
-        private int GetAvalibleID()
+        public int GetAvalibleID()
         {
             List<int> ids = drinkDao.GetAllID();
             for(int i = 1; i <= ids.Count(); i++)
@@ -45,6 +40,11 @@ namespace SomerenService
         public void DeleteByID(int id)
         {
             drinkDao.DeleteById(id);
+        }
+
+        public void AddDrink(Drink drink)
+        {
+            drinkDao.AddDrink(drink);
         }
     }
 }

@@ -341,8 +341,10 @@ namespace SomerenUI
 
         private void DrinkAddButton_Click(object sender, EventArgs e)
         {
+            
             DrinkService drinkService = new DrinkService();
-            drinkService.AddEmptyDrink();
+            AddDrinkForm addDrinkForm = new AddDrinkForm(true,drinkService.GetAvalibleID());
+            addDrinkForm.ShowDialog();
             ShowDrinksPanel();
         }
 
