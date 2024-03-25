@@ -16,5 +16,11 @@ namespace SomerenModel
         public int StockAmount { get; set; }
         public int AmountSold { get; set; }
 
+
+        public override string ToString()
+        {
+            return $"id: {Id} Name: {Name}";
+        }
+
     }
 }

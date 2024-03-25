@@ -270,12 +270,12 @@ namespace SomerenUI
 
             // clear the listview before filling it
             listViewDrinks.Items.Clear();
-            idlist.Items.Clear();
+       
 
             foreach (Drink drink in drinks)
             {
                 ListViewItem li = new ListViewItem(drink.Id.ToString());
-                idlist.Items.Add(drink.Id.ToString());
+
                 li.SubItems.Add(drink.Name);
                 li.SubItems.Add(drink.Price.ToString());
                 if (drink.Alcohol)
@@ -343,6 +343,13 @@ namespace SomerenUI
         {
             DrinkService drinkService = new DrinkService();
             drinkService.AddEmptyDrink();
+            ShowDrinksPanel();
+        }
+
+        private void DeleteButton_Click(object sender, EventArgs e)
+        {
+            DeleteForm deleteForm = new DeleteForm(GetDrinks());
+            deleteForm.ShowDialog();
             ShowDrinksPanel();
         }
     }

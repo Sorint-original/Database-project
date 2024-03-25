@@ -494,25 +494,26 @@
             // 
             // DeleteButton
             // 
-            DeleteButton.Location = new System.Drawing.Point(227, 400);
+            DeleteButton.Location = new System.Drawing.Point(229, 395);
             DeleteButton.Name = "DeleteButton";
-            DeleteButton.Size = new System.Drawing.Size(75, 23);
+            DeleteButton.Size = new System.Drawing.Size(86, 33);
             DeleteButton.TabIndex = 8;
             DeleteButton.Text = "Delete";
             DeleteButton.UseVisualStyleBackColor = true;
+            DeleteButton.Click += DeleteButton_Click;
             // 
             // UpdateButton
             // 
-            UpdateButton.Location = new System.Drawing.Point(146, 400);
+            UpdateButton.Location = new System.Drawing.Point(137, 395);
             UpdateButton.Name = "UpdateButton";
-            UpdateButton.Size = new System.Drawing.Size(75, 23);
+            UpdateButton.Size = new System.Drawing.Size(86, 33);
             UpdateButton.TabIndex = 7;
             UpdateButton.Text = "Update";
             UpdateButton.UseVisualStyleBackColor = true;
             // 
             // DrinkAddButton
             // 
-            DrinkAddButton.Location = new System.Drawing.Point(39, 395);
+            DrinkAddButton.Location = new System.Drawing.Point(30, 395);
             DrinkAddButton.Name = "DrinkAddButton";
             DrinkAddButton.Size = new System.Drawing.Size(101, 33);
             DrinkAddButton.TabIndex = 5;

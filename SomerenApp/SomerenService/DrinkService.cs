@@ -41,5 +41,10 @@ namespace SomerenService
             }
             return ids.Count()+1;
         }
+
+        public void DeleteByID(int id)
+        {
+            drinkDao.DeleteById(id);
+        }
     }
 }

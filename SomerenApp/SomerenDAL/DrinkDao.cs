@@ -62,6 +62,15 @@ namespace SomerenDAL
         }
 
 
+        public void DeleteById(int ID)
+        {
+            string command = "DELETE FROM Drink WHERE DrinkId = @Id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@Id", ID);
+
+            ExecuteEditQuery(command, sqlParameters);
+        }
+
     }
 
 }
