@@ -99,7 +99,7 @@ namespace SomerenDAL
 
         public void DeleteById(int ID)
         {
-            string command = "DELETE FROM Drink WHERE DrinkId = @Id";
+            string command = "DELETE FROM buys WHERE DrinkId = @Id ; DELETE FROM Drink WHERE DrinkId = @Id;";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@Id", ID);
 
