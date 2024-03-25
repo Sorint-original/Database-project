@@ -180,7 +180,7 @@ namespace SomerenUI
         private List<Drink> GetDrinks()
         {
             DrinkService drinkService = new DrinkService();
-            List<Drink> drinks = drinkService.GetDrinks();
+            List<Drink> drinks = drinkService.GetDrinks(true);
             return drinks;
         }
 
@@ -270,7 +270,7 @@ namespace SomerenUI
 
             // clear the listview before filling it
             listViewDrinks.Items.Clear();
-       
+
 
             foreach (Drink drink in drinks)
             {
@@ -341,9 +341,9 @@ namespace SomerenUI
 
         private void DrinkAddButton_Click(object sender, EventArgs e)
         {
-            
+
             DrinkService drinkService = new DrinkService();
-            AddDrinkForm addDrinkForm = new AddDrinkForm(true,drinkService.GetAvalibleID());
+            AddDrinkForm addDrinkForm = new AddDrinkForm(true, drinkService.GetAvalibleID());
             addDrinkForm.ShowDialog();
             ShowDrinksPanel();
         }
@@ -352,6 +352,13 @@ namespace SomerenUI
         {
             DeleteForm deleteForm = new DeleteForm(GetDrinks());
             deleteForm.ShowDialog();
+            ShowDrinksPanel();
+        }
+
+        private void UpdateButton_Click(object sender, EventArgs e)
+        {
+            AddDrinkForm addDrinkForm = new AddDrinkForm(false);
+            addDrinkForm.ShowDialog();
             ShowDrinksPanel();
         }
     }

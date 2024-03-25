@@ -39,6 +39,10 @@
             AddButton = new System.Windows.Forms.Button();
             AlcoholCB = new System.Windows.Forms.ComboBox();
             IdLabel = new System.Windows.Forms.Label();
+            UpdateB = new System.Windows.Forms.Button();
+            pnlIdselect = new System.Windows.Forms.Panel();
+            IdCB = new System.Windows.Forms.ComboBox();
+            pnlIdselect.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -134,11 +138,40 @@
             IdLabel.Size = new System.Drawing.Size(0, 15);
             IdLabel.TabIndex = 11;
             // 
+            // UpdateB
+            // 
+            UpdateB.Location = new System.Drawing.Point(151, 313);
+            UpdateB.Name = "UpdateB";
+            UpdateB.Size = new System.Drawing.Size(75, 23);
+            UpdateB.TabIndex = 12;
+            UpdateB.Text = "Update";
+            UpdateB.UseVisualStyleBackColor = true;
+            UpdateB.Click += UpdateB_Click;
+            // 
+            // pnlIdselect
+            // 
+            pnlIdselect.Controls.Add(IdCB);
+            pnlIdselect.Location = new System.Drawing.Point(95, 31);
+            pnlIdselect.Name = "pnlIdselect";
+            pnlIdselect.Size = new System.Drawing.Size(156, 46);
+            pnlIdselect.TabIndex = 13;
+            // 
+            // IdCB
+            // 
+            IdCB.FormattingEnabled = true;
+            IdCB.Location = new System.Drawing.Point(3, 12);
+            IdCB.Name = "IdCB";
+            IdCB.Size = new System.Drawing.Size(150, 23);
+            IdCB.TabIndex = 0;
+            IdCB.SelectedIndexChanged += IdCB_SelectedIndexChanged;
+            // 
             // AddDrinkForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(273, 368);
+            Controls.Add(pnlIdselect);
+            Controls.Add(UpdateB);
             Controls.Add(IdLabel);
             Controls.Add(AlcoholCB);
             Controls.Add(AddButton);
@@ -152,6 +185,7 @@
             Controls.Add(label1);
             Name = "AddDrinkForm";
             Text = "Add Drink";
+            pnlIdselect.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -169,5 +203,8 @@
         private System.Windows.Forms.Button AddButton;
         private System.Windows.Forms.ComboBox AlcoholCB;
         private System.Windows.Forms.Label IdLabel;
+        private System.Windows.Forms.Button UpdateB;
+        private System.Windows.Forms.Panel pnlIdselect;
+        private System.Windows.Forms.ComboBox IdCB;
     }
 }

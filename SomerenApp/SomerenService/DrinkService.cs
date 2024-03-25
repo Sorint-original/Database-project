@@ -17,9 +17,9 @@ namespace SomerenService
             drinkDao = new DrinkDao();
         }
 
-        public List<Drink> GetDrinks()
+        public List<Drink> GetDrinks(bool OrderByName)
         {
-            List<Drink> drinks = drinkDao.GetAllDrinks();
+            List<Drink> drinks = drinkDao.GetAllDrinks( OrderByName);
             return drinks;
         }
 
@@ -45,6 +45,11 @@ namespace SomerenService
         public void AddDrink(Drink drink)
         {
             drinkDao.AddDrink(drink);
+        }
+
+        public void UpdateDrink(Drink drink)
+        {
+            drinkDao.UpdateDrink(drink);
         }
     }
 }

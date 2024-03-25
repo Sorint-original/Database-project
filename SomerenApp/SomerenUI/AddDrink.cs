@@ -14,16 +14,52 @@ namespace SomerenUI
 {
     public partial class AddDrinkForm : Form
     {
-        public AddDrinkForm(bool Add,  int id = 0)
+        public AddDrinkForm(bool Add, int id = 0)
         {
             InitializeComponent();
-            IdLabel.Text = id.ToString();
+            if (Add)
+            {
+                SetupAdd(id);
+            }
+            else
+            {
+                SetupUpdate();
+            }
         }
+
+        public void SetupAdd(int id)
+        {
+            IdLabel.Text = id.ToString();
+            UpdateB.Hide();
+            pnlIdselect.Hide();
+        }
+
+        public void SetupUpdate()
+        {
+            AddButton.Hide();
+            //Add drinks
+            RefreshIdCB();
+            IdCB.SelectedIndex = 0;
+
+        }
+
+        public void RefreshIdCB()
+        {
+            IdCB.Items.Clear();
+            DrinkService drinkService = new DrinkService();
+            List<Drink> drinks = drinkService.GetDrinks(false);
+
+            foreach (Drink drink in drinks)
+            {
+                IdCB.Items.Add(drink);
+            }
+        }
+
 
         private void AddButton_Click(object sender, EventArgs e)
         {
-            Drink drink = GetDrink();
-            if(drink != null)
+            Drink drink = GetDrink(true);
+            if (drink != null)
             {
                 DrinkService drinkService = new DrinkService();
                 drinkService.AddDrink(drink);
@@ -33,11 +69,19 @@ namespace SomerenUI
 
         }
 
-        private Drink GetDrink()
+        private Drink GetDrink(bool Add)
         {
             Drink drink = new Drink();
-            drink.Id = int.Parse(IdLabel.Text);
-            if(NameTB.Text!= "" )
+            if(Add)
+            {
+                drink.Id = int.Parse(IdLabel.Text);
+            }
+            else
+            {
+                Drink originalDrink = IdCB.SelectedItem as Drink;
+                drink.Id = originalDrink.Id;
+            }
+            if (NameTB.Text != "")
             {
                 drink.Name = NameTB.Text;
             }
@@ -47,7 +91,8 @@ namespace SomerenUI
                 return null;
             }
 
-            if (PriceTB.Text != "") {
+            if (PriceTB.Text != "")
+            {
                 try
                 {
                     drink.Price = decimal.Parse(PriceTB.Text);
@@ -64,7 +109,7 @@ namespace SomerenUI
                 return null;
             }
 
-            if(AlcoholCB.SelectedIndex == 0)
+            if (AlcoholCB.SelectedIndex == 0)
             {
                 drink.Alcohol = true;
             }
@@ -97,6 +142,38 @@ namespace SomerenUI
             }
             drink.AmountSold = 0;
             return drink;
+        }
+
+        private void IdCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Drink drink = IdCB.SelectedItem as Drink;
+            NameTB.Text = drink.Name;
+            PriceTB.Text = drink.Price.ToString();
+            if (drink.Alcohol)
+            {
+                AlcoholCB.SelectedIndex = 0;
+            }
+            else
+            {
+                AlcoholCB.SelectedIndex = 1;
+            }
+            StockTB.Text = drink.StockAmount.ToString();
+        }
+
+        private void UpdateB_Click(object sender, EventArgs e)
+        {
+            Drink drink = GetDrink(false);
+            if (drink != null)
+            {
+                DrinkService drinkService = new DrinkService();
+                drinkService.UpdateDrink(drink);
+          
+                int auxiliary = IdCB.SelectedIndex;
+                IdCB.Text = "";
+                RefreshIdCB();
+                IdCB.SelectedIndex = auxiliary;
+
+            }
         }
     }
 }

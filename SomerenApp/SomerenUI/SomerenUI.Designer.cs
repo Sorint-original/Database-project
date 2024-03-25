@@ -510,6 +510,7 @@
             UpdateButton.TabIndex = 7;
             UpdateButton.Text = "Update";
             UpdateButton.UseVisualStyleBackColor = true;
+            UpdateButton.Click += UpdateButton_Click;
             // 
             // DrinkAddButton
             // 

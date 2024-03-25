@@ -12,9 +12,18 @@ namespace SomerenDAL
 {
     public class DrinkDao : BaseDao
     {
-        public List<Drink> GetAllDrinks()
+        public List<Drink> GetAllDrinks( bool OrderByName)
         {
-            string query = "SELECT DrinkID, Name, Price, IfAlcoholic, StockAmount, AmountSold FROM Drink ORDER BY Name;";
+            string query;
+            if (OrderByName)
+            {
+                query = "SELECT DrinkID, Name, Price, IfAlcoholic, StockAmount, AmountSold FROM Drink ORDER BY Name;";
+            }
+            else
+            {
+                query = "SELECT DrinkID, Name, Price, IfAlcoholic, StockAmount, AmountSold FROM Drink ;";
+            }
+            
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -58,6 +67,20 @@ namespace SomerenDAL
             SqlParameter[] sqlParameters = new SqlParameter[6];
             sqlParameters[0] = new SqlParameter("@Id", drink.Id);
             sqlParameters[1] = new SqlParameter("@Name",drink.Name);
+            sqlParameters[2] = new SqlParameter("@Price", drink.Price);
+            sqlParameters[3] = new SqlParameter("@Alcohol", drink.Alcohol);
+            sqlParameters[4] = new SqlParameter("@StockAmount", drink.StockAmount);
+            sqlParameters[5] = new SqlParameter("@AmountSold", drink.AmountSold);
+
+            ExecuteEditQuery(command, sqlParameters);
+        }
+
+        public void UpdateDrink(Drink drink)
+        {
+            string command = "UPDATE Drink SET Name =  @Name, Price = @Price, IfAlcoholic =  @Alcohol, StockAmount =  @StockAmount, AmountSold = @AmountSold WHERE DrinkId = @Id;";
+            SqlParameter[] sqlParameters = new SqlParameter[6];
+            sqlParameters[0] = new SqlParameter("@Id", drink.Id);
+            sqlParameters[1] = new SqlParameter("@Name", drink.Name);
             sqlParameters[2] = new SqlParameter("@Price", drink.Price);
             sqlParameters[3] = new SqlParameter("@Alcohol", drink.Alcohol);
             sqlParameters[4] = new SqlParameter("@StockAmount", drink.StockAmount);
