@@ -22,6 +22,7 @@ namespace SomerenUI
             pnlRooms.Hide();
             pnlLecturers.Hide();
             pnlDrinks.Hide();
+            pnlVAT.Hide();
             // show dashboard
             pnlDashboard.Show();
         }
@@ -34,7 +35,7 @@ namespace SomerenUI
             pnlLecturers.Hide();
             pnlDashboard.Hide();
             pnlDrinks.Hide();
-
+            pnlVAT.Hide();
             // show students
             pnlStudents.Show();
 
@@ -56,7 +57,7 @@ namespace SomerenUI
             pnlActivity.Hide();
             pnlLecturers.Hide();
             pnlDrinks.Hide();
-
+            pnlVAT.Hide();
 
             pnlStudents.Show();
             pnlRooms.Show();
@@ -82,7 +83,7 @@ namespace SomerenUI
             pnlRooms.Hide();
             pnlStudents.Hide();
             pnlDrinks.Hide();
-
+            pnlVAT.Hide();
             // show lecturers 
             pnlLecturers.Show();
 
@@ -106,7 +107,7 @@ namespace SomerenUI
             pnlRooms.Hide();
             pnlDrinks.Hide();
             pnlStudents.Hide();
-
+            pnlVAT.Hide();
             pnlActivity.Show();
             try
             {
@@ -130,7 +131,7 @@ namespace SomerenUI
             pnlRooms.Hide();
             pnlStudents.Hide();
             pnlActivity.Hide();
-
+            pnlVAT.Hide();
             pnlDrinks.Show();
 
 
@@ -145,6 +146,32 @@ namespace SomerenUI
             catch (Exception e)
             {
                 MessageBox.Show("Something went wrong while loading the drinks: " + e.Message);
+            }
+
+        }
+
+
+        private void ShowVATPanel()
+        {
+            pnlDashboard.Hide();
+            pnlLecturers.Hide();
+            pnlRooms.Hide();
+            pnlStudents.Hide();
+            pnlActivity.Hide();
+            pnlDrinks.Hide();
+
+            pnlVAT.Show();
+            DisplayOrderYears();
+        }
+
+        private void DisplayOrderYears()
+        {
+            yearSelectorBox.Items.Clear();
+            OrderService orderService = new OrderService();
+            HashSet<int> years = orderService.GetYearOfOrders();
+            foreach (int year in years)
+            {
+                yearSelectorBox.Items.Add(year);
             }
 
         }
@@ -304,6 +331,41 @@ namespace SomerenUI
             }
         }
 
+        private void CalculateVAT()
+        {
+            Quarter quarter = GetSelectedYearAndQuarter();
+            if (quarter == null)
+            {
+                return;
+            }
+
+            OrderService orderService = new OrderService();
+            var result = orderService.CalculateVAT(quarter);
+            vatLow.Text = $"${result.Item1:0.00}";
+            vatHigh.Text = $"${result.Item2:0.00}";
+            vatTotal.Text = $"${result.Item3:0.00}";
+
+
+        }
+
+        private Quarter? GetSelectedYearAndQuarter()
+        {
+            if (yearSelectorBox.SelectedItem == null || qSelectorBox.SelectedItem == null)
+            {
+                return null;
+            }
+
+            String selectedYear = yearSelectorBox.SelectedItem.ToString();
+            String selectedQuarter = qSelectorBox.SelectedItem.ToString();
+
+            Quarter quarter = Quarter.GetQuarter(selectedQuarter, selectedYear);
+
+            return quarter;
+        }
+
+
+
+
         private void dashboardToolStripMenuItem1_Click(object sender, System.EventArgs e)
         {
             ShowDashboardPanel();
@@ -372,6 +434,36 @@ namespace SomerenUI
             OrderForm orderForm = new OrderForm();
             orderForm.ShowDialog();
             ShowDrinksPanel();
+        }
+
+        private void vATToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowVATPanel();
+        }
+
+        private void calcVatButton_Click(object sender, EventArgs e)
+        {
+            CalculateVAT();
+        }
+
+        private void qSelectorBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            vatHigh.Text = "";
+            vatLow.Text = "";
+            vatTotal.Text = "";
+            Quarter quarter = GetSelectedYearAndQuarter();
+            quarterStart.Text = quarter.StartDate;
+            quarterEnd.Text = quarter.EndDate;
+        }
+
+        private void yearSelectorBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            vatHigh.Text = "";
+            vatLow.Text = "";
+            vatTotal.Text = "";
+            quarterStart.Text = "";
+            quarterEnd.Text = "";
+
         }
     }
 }
