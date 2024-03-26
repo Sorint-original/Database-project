@@ -19,6 +19,7 @@ namespace SomerenDAL
             sqlParameters[0] = new SqlParameter("@Id", order.DrinkId);
             sqlParameters[1] = new SqlParameter("@StudentNumber", order.StudentNumber);
             sqlParameters[2] = new SqlParameter("@Amount", order.Amount);
+            sqlParameters[3] = new SqlParameter("@Date", order.Date);
 
             ExecuteEditQuery(command, sqlParameters);
         }
