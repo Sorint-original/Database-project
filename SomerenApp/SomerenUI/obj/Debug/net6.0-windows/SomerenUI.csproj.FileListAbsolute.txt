@@ -270,3 +270,4 @@ C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenUI\obj\Debug\net
 C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\SomerenUI.pdb
 C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\SomerenUI.genruntimeconfig.cache
 C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\ref\SomerenUI.dll
+C:\Users\pssor\OneDrive\Desktop\work\github\Database-project\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\SomerenUI.RevenueReport.resources

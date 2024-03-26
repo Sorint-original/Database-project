@@ -97,7 +97,8 @@ namespace SomerenUI
                     {
                         DrinkId = int.Parse(listViewDrinks.SelectedItems[0].Text),
                         StudentNumber = int.Parse(listViewStudents.SelectedItems[0].Text),
-                        Amount = int.Parse(OrderAmountTB.Text)
+                        Amount = int.Parse(OrderAmountTB.Text),
+                        Date = DateTime.Now
                     };
 
                     OrderService orderService = new OrderService();

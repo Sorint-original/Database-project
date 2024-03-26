@@ -658,7 +658,7 @@
             pnlVAT.Location = new System.Drawing.Point(12, 44);
             pnlVAT.Margin = new System.Windows.Forms.Padding(6);
             pnlVAT.Name = "pnlVAT";
-            pnlVAT.Size = new System.Drawing.Size(938, 466);
+            pnlVAT.Size = new System.Drawing.Size(950, 480);
             pnlVAT.TabIndex = 6;
             // 
             // vatTotal
@@ -798,7 +798,7 @@
             // pictureBox8
             // 
             pictureBox8.Image = (System.Drawing.Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new System.Drawing.Point(805, 3);
+            pictureBox8.Location = new System.Drawing.Point(820, 0);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new System.Drawing.Size(130, 123);
             pictureBox8.TabIndex = 4;
