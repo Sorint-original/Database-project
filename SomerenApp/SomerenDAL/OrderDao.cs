@@ -14,7 +14,7 @@ namespace SomerenDAL
 
         public void CreateOrder(Order order)
         {
-            string command = "INSERT INTO buys VALUES (@Id, @StudentNumber, @Amount)";
+            string command = "INSERT INTO buys VALUES ( @StudentNumber, @Id, @Amount)";
             SqlParameter[] sqlParameters = new SqlParameter[3];
             sqlParameters[0] = new SqlParameter("@Id", order.DrinkId);
             sqlParameters[1] = new SqlParameter("@StudentNumber", order.StudentNumber);

@@ -93,6 +93,7 @@
             columnHeader27 = new System.Windows.Forms.ColumnHeader();
             columnHeader28 = new System.Windows.Forms.ColumnHeader();
             label5 = new System.Windows.Forms.Label();
+            MakeOrderB = new System.Windows.Forms.Button();
             menuStrip1.SuspendLayout();
             pnlDashboard.SuspendLayout();
             pnlStudents.SuspendLayout();
@@ -479,6 +480,7 @@
             // 
             // pnlDrinks
             // 
+            pnlDrinks.Controls.Add(MakeOrderB);
             pnlDrinks.Controls.Add(DeleteButton);
             pnlDrinks.Controls.Add(UpdateButton);
             pnlDrinks.Controls.Add(DrinkAddButton);
@@ -508,7 +510,7 @@
             UpdateButton.Name = "UpdateButton";
             UpdateButton.Size = new System.Drawing.Size(86, 33);
             UpdateButton.TabIndex = 7;
-            UpdateButton.Text = "Update";
+            UpdateButton.Text = "Update Drink";
             UpdateButton.UseVisualStyleBackColor = true;
             UpdateButton.Click += UpdateButton_Click;
             // 
@@ -592,6 +594,16 @@
             label5.Size = new System.Drawing.Size(81, 32);
             label5.TabIndex = 0;
             label5.Text = "Drinks";
+            // 
+            // MakeOrderB
+            // 
+            MakeOrderB.Location = new System.Drawing.Point(229, 395);
+            MakeOrderB.Name = "MakeOrderB";
+            MakeOrderB.Size = new System.Drawing.Size(93, 33);
+            MakeOrderB.TabIndex = 9;
+            MakeOrderB.Text = "Make Order";
+            MakeOrderB.UseVisualStyleBackColor = true;
+            MakeOrderB.Click += MakeOrderB_Click;
             // 
             // SomerenUI
             // 
@@ -699,5 +711,6 @@
         private System.Windows.Forms.Button DrinkAddButton;
         private System.Windows.Forms.Button DeleteButton;
         private System.Windows.Forms.Button UpdateButton;
+        private System.Windows.Forms.Button MakeOrderB;
     }
 }

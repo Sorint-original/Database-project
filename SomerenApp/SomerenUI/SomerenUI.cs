@@ -366,5 +366,12 @@ namespace SomerenUI
             addDrinkForm.ShowDialog();
             ShowDrinksPanel();
         }
+
+        private void MakeOrderB_Click(object sender, EventArgs e)
+        {
+            OrderForm orderForm = new OrderForm();
+            orderForm.ShowDialog();
+            ShowDrinksPanel();
+        }
     }
 }
