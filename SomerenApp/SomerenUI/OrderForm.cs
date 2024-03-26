@@ -86,28 +86,38 @@ namespace SomerenUI
         {
             if(PriceL.Text != "")
             {
-                //Create Order
-                Order order = new Order()
-                {
-                    DrinkId = int.Parse(listViewDrinks.SelectedItems[0].Text),
-                    StudentNumber = int.Parse(listViewStudents.SelectedItems[0].Text),
-                    Amount = int.Parse(OrderAmountTB.Text)
-                };
 
-                OrderService orderService = new OrderService();
-                orderService.CreateOrder(order);
-
-                //Modify Stock Ammount
                 DrinkService drinkService = new DrinkService();
                 Drink drink = drinkService.GetDrinkById(int.Parse(listViewDrinks.SelectedItems[0].Text));
-                drink.StockAmount -= int.Parse(OrderAmountTB.Text);
-                drinkService.UpdateDrink(drink);
 
-                //Reset Everything
-                PriceL.Text = "";
-                OrderAmountTB.Text = "";
-                listViewDrinks.SelectedItems.Clear();
-                listViewStudents.SelectedItems.Clear();
+                if(drink.StockAmount > int.Parse(OrderAmountTB.Text))
+                {
+                    //Create Order
+                    Order order = new Order()
+                    {
+                        DrinkId = int.Parse(listViewDrinks.SelectedItems[0].Text),
+                        StudentNumber = int.Parse(listViewStudents.SelectedItems[0].Text),
+                        Amount = int.Parse(OrderAmountTB.Text)
+                    };
+
+                    OrderService orderService = new OrderService();
+                    orderService.CreateOrder(order);
+
+                    //Modify Stock Ammount
+                    drink.StockAmount -= int.Parse(OrderAmountTB.Text);
+                    drinkService.UpdateDrink(drink);
+
+                    //Reset Everything
+                    PriceL.Text = "";
+                    OrderAmountTB.Text = "";
+                    listViewDrinks.SelectedItems.Clear();
+                    listViewStudents.SelectedItems.Clear();
+                }
+                else
+                {
+                    MessageBox.Show("The oder amount can't be over the stock amount of the drink");
+                }
+                
             }
             else
             {
