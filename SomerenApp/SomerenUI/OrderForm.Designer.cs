@@ -87,7 +87,7 @@
             // 
             // columnHeader27
             // 
-            columnHeader27.Text = "Stock status";
+            columnHeader27.Text = "Stock Amount";
             columnHeader27.Width = 100;
             // 
             // columnHeader28
@@ -106,7 +106,7 @@
             listViewStudents.TabIndex = 3;
             listViewStudents.UseCompatibleStateImageBehavior = false;
             listViewStudents.View = System.Windows.Forms.View.Details;
-            listViewStudents.SelectedIndexChanged += this.listViewStudents_SelectedIndexChanged;
+            listViewStudents.SelectedIndexChanged += listViewStudents_SelectedIndexChanged;
             // 
             // columnHeader1
             // 

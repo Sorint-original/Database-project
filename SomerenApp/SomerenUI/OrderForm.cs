@@ -58,14 +58,7 @@ namespace SomerenUI
                 {
                     li.SubItems.Add("stock empty");
                 }
-                else if (drink.StockAmount < 10)
-                {
-                    li.SubItems.Add("stock nearly depleted");
-                }
-                else
-                {
-                    li.SubItems.Add("stock sufficient");
-                }
+                li.SubItems.Add(drink.StockAmount.ToString());
                 li.SubItems.Add(drink.AmountSold.ToString());
                 li.Tag = drink;   // link student object to listview item
                 listViewDrinks.Items.Add(li);
@@ -124,13 +117,17 @@ namespace SomerenUI
 
         private void OrderAmountTB_TextChanged(object sender, EventArgs e)
         {
-            try
+            if(OrderAmountTB.Text != "")
             {
-                int aux = int.Parse(OrderAmountTB.Text);
-            }
-            catch {
-                MessageBox.Show("the amount needs to be an integer");
-                OrderAmountTB.Text = "";
+                try
+                {
+                    int aux = int.Parse(OrderAmountTB.Text);
+                }
+                catch
+                {
+                    MessageBox.Show("the amount needs to be an integer");
+                    OrderAmountTB.Text = "";
+                }
             }
             UpdatePrice();
         }
