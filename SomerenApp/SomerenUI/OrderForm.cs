@@ -113,6 +113,8 @@ namespace SomerenUI
                     OrderAmountTB.Text = "";
                     listViewDrinks.SelectedItems.Clear();
                     listViewStudents.SelectedItems.Clear();
+                    //update list views
+                    RefreshDrinks(GetDrinks());
                 }
                 else
                 {
