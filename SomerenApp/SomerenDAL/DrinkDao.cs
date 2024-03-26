@@ -6,6 +6,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using System.Collections;
 
 
 namespace SomerenDAL
@@ -26,6 +27,33 @@ namespace SomerenDAL
             
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+        public Drink GetDrinkById(int id)
+        {
+            string query = "SELECT DrinkID, Name, Price, IfAlcoholic, StockAmount, (SELECT SUM(B.Amount) FROM buys AS B WHERE B.DrinkID = D.DrinkID ) AS AmountSold FROM Drink AS D WHERE D.DrinkID = @Id ;";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0]=new SqlParameter("@Id", id);
+            DataTable dataTable = ExecuteSelectQuery(query, sqlParameters);
+            DataRow dr = dataTable.Rows[0];
+            Drink drink = new Drink()
+            {
+                Id = (int)dr["DrinkID"],
+                Name = (string)dr["Name"],
+                Price = (decimal)dr["Price"],
+                Alcohol = (bool)dr["IfAlcoholic"],
+                StockAmount = (int)dr["StockAmount"],
+
+            };
+            try
+            {
+                drink.AmountSold = (int)dr["AmountSold"];
+            }
+            catch
+            {
+                drink.AmountSold = 0;
+            }
+            return drink;
         }
 
         private List<Drink> ReadTables(DataTable dataTable)

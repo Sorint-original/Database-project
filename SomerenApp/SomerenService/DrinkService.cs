@@ -23,6 +23,12 @@ namespace SomerenService
             return drinks;
         }
 
+        public Drink GetDrinkById(int id)
+        {
+            Drink drink = drinkDao.GetDrinkById(id);
+            return drink;
+        }
+
 
         public int GetAvalibleID()
         {

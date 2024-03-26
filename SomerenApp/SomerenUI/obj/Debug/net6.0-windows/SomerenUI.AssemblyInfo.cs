@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SomerenUI")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+d5b26cebdafe97f0d38563f21f652b794586b265")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+65de522631c61e2688e2f285caa6e6d3fb761611")]
 [assembly: System.Reflection.AssemblyProductAttribute("SomerenUI")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SomerenUI")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
