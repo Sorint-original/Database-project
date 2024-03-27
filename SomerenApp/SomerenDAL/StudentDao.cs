@@ -33,5 +33,13 @@ namespace SomerenDAL
             }
             return students;
         }
+
+        public Student GetStudentById(int studentNumber)
+        {
+            string query = "SELECT StudentNumber, FirstName, LastName, TelephoneNumber, Class, RoomCode FROM Student WHERE StudentNumber = @studentNumber";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@studentNumber", studentNumber);
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters))[0];
+        }
     }
 }

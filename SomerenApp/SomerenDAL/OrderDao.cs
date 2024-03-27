@@ -67,7 +67,7 @@ namespace SomerenDAL
             return orders;
         }
 
-        public List<Order> GetOrdersForQuarter(DateTime startDate, DateTime endDate)
+        public List<Order> GetOrdersForTimePeriod(DateTime startDate, DateTime endDate)
         {
             string query = "SELECT * FROM buys WHERE Date BETWEEN @StartDate AND @EndDate";
             SqlParameter[] sqlParameters = new SqlParameter[2];
