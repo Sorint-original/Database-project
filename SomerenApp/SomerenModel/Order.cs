@@ -13,6 +13,6 @@ namespace SomerenModel
         public int StudentNumber { get; set; }
         public int Amount { get; set; }
 
-        public DateTime Date { get; set; } 
+        public DateTime Date { get; set; }
     }
 }
