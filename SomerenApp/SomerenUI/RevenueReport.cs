@@ -19,16 +19,27 @@ namespace SomerenUI
             InitializeComponent();
         }
 
+
+
         private void Revenue()
         {
-            if (dateTimePicker1 == null || dateTimePicker2 == null)
+
+            if (dateTimePicker1.Value == null || dateTimePicker2.Value == null)
             {
                 return;
             }
+
+
+            if (dateTimePicker1.Value.Date>= dateTimePicker2.Value.Date  || dateTimePicker2.Value.Date > DateTime.Now)
+            {
+                return;
+            }
+
+
             DateTime startDate = dateTimePicker1.Value;
             DateTime endDate = dateTimePicker2.Value;
 
-            OrderService orderService = new OrderService(); 
+            OrderService orderService = new OrderService();
 
             int salesAmount = orderService.GetDrinksOrdered(startDate, endDate);
             label3.Text = salesAmount.ToString();
@@ -36,19 +47,24 @@ namespace SomerenUI
             decimal turnover = orderService.CalculateRevenue(startDate, endDate);
             label4.Text = $"${turnover:0.00}";
 
-            HashSet<Student> students = orderService.GetStudentsWhoOrdered(startDate, endDate);    
+            HashSet<Student> students = orderService.GetStudentsWhoOrdered(startDate, endDate);
             foreach (Student student in students)
             {
-                textBox1.Text += student.ToString();
+                textBox1.Text += student.ToString() + "/n";
             }
         }
 
         private void dateTimePicker2_ValueChanged(object sender, EventArgs e)
         {
-            Revenue();
+           
         }
 
         private void dateTimePicker1_ValueChanged(object sender, EventArgs e)
+        {
+           
+        }
+
+        private void calculateB_Click(object sender, EventArgs e)
         {
             Revenue();
         }

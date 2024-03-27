@@ -36,6 +36,7 @@
             dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             dateTimePicker2 = new System.Windows.Forms.DateTimePicker();
             textBox1 = new System.Windows.Forms.TextBox();
+            calculateB = new System.Windows.Forms.Button();
             SuspendLayout();
             // 
             // label1
@@ -107,11 +108,22 @@
             textBox1.Size = new System.Drawing.Size(648, 323);
             textBox1.TabIndex = 7;
             // 
+            // calculateB
+            // 
+            calculateB.Location = new System.Drawing.Point(552, 823);
+            calculateB.Name = "calculateB";
+            calculateB.Size = new System.Drawing.Size(150, 52);
+            calculateB.TabIndex = 8;
+            calculateB.Text = "Calculate";
+            calculateB.UseVisualStyleBackColor = true;
+            calculateB.Click += calculateB_Click;
+            // 
             // RevenueReport
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(882, 805);
+            ClientSize = new System.Drawing.Size(856, 912);
+            Controls.Add(calculateB);
             Controls.Add(textBox1);
             Controls.Add(dateTimePicker2);
             Controls.Add(dateTimePicker1);
@@ -136,5 +148,6 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.DateTimePicker dateTimePicker2;
         private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Button calculateB;
     }
 }
