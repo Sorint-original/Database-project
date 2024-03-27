@@ -45,7 +45,7 @@ namespace SomerenUI
                 ListViewItem li = new ListViewItem(drink.Id.ToString());
 
                 li.SubItems.Add(drink.Name);
-                li.SubItems.Add(drink.Price.ToString());
+                li.SubItems.Add($"${drink.Price:0.00}");
                 if (drink.Alcohol)
                 {
                     li.SubItems.Add("Alcoholic");

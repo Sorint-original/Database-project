@@ -22,7 +22,7 @@ namespace SomerenDAL
             }
             else
             {
-                query = "SELECT DrinkID, Name, Price, IfAlcoholic, StockAmount, (SELECT SUM(B.Amount) FROM buys AS B WHERE B.DrinkID = D.DrinkID ) AS AmountSold FROM Drink AS D FROM Drink ;";
+                query = "SELECT DrinkID, Name, Price, IfAlcoholic, StockAmount, (SELECT SUM(B.Amount) FROM buys AS B WHERE B.DrinkID = D.DrinkID ) AS AmountSold FROM Drink AS D  ;";
             }
             
             SqlParameter[] sqlParameters = new SqlParameter[0];
