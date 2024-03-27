@@ -10,5 +10,10 @@ namespace SomerenModel
         public string PhoneNumber { get; set; } // Thelephone number
         public string Class {  get; set; }
         public int RoomCode {  get; set; }
+
+        public override string ToString()
+        {
+            return $"{FirstName} {LastName} ({Class})";
+        }
     }
 }
