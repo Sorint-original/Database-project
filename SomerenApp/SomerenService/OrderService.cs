@@ -76,7 +76,7 @@ namespace SomerenService
 
         public (decimal lowVAT, decimal highVAT, decimal totalVAT) CalculateVAT(Quarter quarter)
         {
-            List<Order> orders = GetOrderForTimePeriod(quarter);
+            List<Order> orders = orderDao.GetOrdersForTimePeriod(quarter);
             decimal lowVAT = 0;
             decimal highVAT = 0;
             decimal totalVAT = 0;
@@ -102,7 +102,7 @@ namespace SomerenService
         public decimal CalculateRevenue(DateTime startTime, DateTime endTime)
         {
             decimal revenue = 0m;
-            List<Order> orders = OrderDao.GetOrdersForTimePeriod(startTime, endTime);
+            List<Order> orders = orderDao.GetOrdersForTimePeriod(startTime, endTime);
             foreach (Order order in orders)
             {
                 Drink drink = drinkDao.GetDrinkById(order.DrinkId);
@@ -115,7 +115,7 @@ namespace SomerenService
 
         public int GetStudentsWhoOrdered(DateTime startTime, DateTime endTime)
         {
-            List<Order> orders = OrderDao.GetOrdersForTimePeriod(startTime, endTime);
+            List<Order> orders = orderDao.GetOrdersForTimePeriod(startTime, endTime);
             HashSet<Student> students = new HashSet<Student>();
             foreach (Order order in orders)
             {
@@ -127,7 +127,7 @@ namespace SomerenService
 
         public int GetDrinksOrdered(DateTime startTime, DateTime endTime)
         {
-            List<Order> orders = OrderDao.GetOrdersForTimePeriod(startTime, endTime);
+            List<Order> orders = orderDao.GetOrdersForTimePeriod(startTime, endTime);
             HashSet<Drink> drinks = new HashSet<Drink>();
             foreach (Order order in orders)
             {
