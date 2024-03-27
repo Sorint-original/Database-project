@@ -76,7 +76,7 @@ namespace SomerenService
 
         public (decimal lowVAT, decimal highVAT, decimal totalVAT) CalculateVAT(Quarter quarter)
         {
-            List<Order> orders = orderDao.GetOrdersForTimePeriod(quarter);
+            List<Order> orders = GetOrdersForQuarter(quarter);
             decimal lowVAT = 0;
             decimal highVAT = 0;
             decimal totalVAT = 0;
@@ -113,7 +113,7 @@ namespace SomerenService
             return revenue;
         }
 
-        public int GetStudentsWhoOrdered(DateTime startTime, DateTime endTime)
+        public HashSet<Student> GetStudentsWhoOrdered(DateTime startTime, DateTime endTime)
         {
             List<Order> orders = orderDao.GetOrdersForTimePeriod(startTime, endTime);
             HashSet<Student> students = new HashSet<Student>();
@@ -121,7 +121,7 @@ namespace SomerenService
             {
                 students.Add(studentDao.GetStudentById(order.StudentNumber));
             }
-            return students.Count;
+            return students;
 
         }
 

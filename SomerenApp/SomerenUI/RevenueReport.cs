@@ -36,10 +36,10 @@ namespace SomerenUI
             decimal turnover = orderService.CalculateRevenue(startDate, endDate);
             label4.Text = $"${turnover:0.00}";
 
-            List<Student> students = orderService.GetStudentsWhoOrdered(startDate, endDate);    
+            HashSet<Student> students = orderService.GetStudentsWhoOrdered(startDate, endDate);    
             foreach (Student student in students)
             {
-                textBox1.Text += student.FirstName + " " + student.LastName + Environment.NewLine;
+                textBox1.Text += student.ToString();
             }
         }
 
