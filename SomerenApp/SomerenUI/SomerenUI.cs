@@ -424,7 +424,15 @@ namespace SomerenUI
 
         private void UpdateButton_Click(object sender, EventArgs e)
         {
-            AddDrinkForm addDrinkForm = new AddDrinkForm(false);
+            AddDrinkForm addDrinkForm;
+            if (listViewDrinks.SelectedItems.Count > 0)
+            {
+                addDrinkForm = new AddDrinkForm(false, int.Parse(listViewDrinks.SelectedItems[0].Text));
+            }
+            else
+            {
+                addDrinkForm = new AddDrinkForm(false);
+            }
             addDrinkForm.ShowDialog();
             ShowDrinksPanel();
         }

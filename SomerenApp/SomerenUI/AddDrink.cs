@@ -23,7 +23,7 @@ namespace SomerenUI
             }
             else
             {
-                SetupUpdate();
+                SetupUpdate(id);
             }
         }
 
@@ -34,12 +34,29 @@ namespace SomerenUI
             pnlIdselect.Hide();
         }
 
-        public void SetupUpdate()
+        public void SetupUpdate(int id)
         {
             AddButton.Hide();
-            //Add drinks
             RefreshIdCB();
-            IdCB.SelectedIndex = 0;
+            if(id == 0)
+            {
+                //when it enters update without any drink selected
+                IdCB.SelectedIndex = 0;
+            }
+            else
+            {
+                //when it eneters update with a drink selected
+                DrinkService drinkService = new DrinkService();
+                List<Drink> drinks = drinkService.GetDrinks(false);
+                for (int i = 0; i < drinks.Count; i++)
+                {
+                    if(id == drinks[i].Id)
+                    {
+                        IdCB.SelectedIndex = i;
+                        break;
+                    }
+                }
+            }
 
         }
 
