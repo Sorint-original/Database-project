@@ -24,20 +24,17 @@ namespace SomerenUI
         private void Revenue()
         {
 
-            if (dateTimePicker1.Value == null || dateTimePicker2.Value == null)
+         
+        DateTime startDate = dateTimePicker2.Value;
+            DateTime endDate = dateTimePicker1.Value;
+
+            if (startDate >= endDate  || endDate > DateTime.Now)
             {
                 return;
             }
 
 
-            if (dateTimePicker1.Value.Date>= dateTimePicker2.Value.Date  || dateTimePicker2.Value.Date > DateTime.Now)
-            {
-                return;
-            }
-
-
-            DateTime startDate = dateTimePicker1.Value;
-            DateTime endDate = dateTimePicker2.Value;
+           
 
             OrderService orderService = new OrderService();
 
