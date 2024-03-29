@@ -274,4 +274,3 @@ C:\Users\pssor\OneDrive\Desktop\work\github\Database-project\SomerenApp\SomerenU
 C:\Users\adria\OneDrive\Documents\GitHub\Database-project\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\SomerenUI.AddDrinkForm.resources
 C:\Users\adria\OneDrive\Documents\GitHub\Database-project\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\SomerenUI.OrderForm.resources
 C:\Users\adria\OneDrive\Documents\GitHub\Database-project\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\SomerenUI.RevenueReport.resources
-C:\Users\pssor\OneDrive\Desktop\work\github\Database-project\SomerenApp\SomerenUI\obj\Debug\net6.0-windows\SomerenUI.RevenueReport.resources

@@ -47,7 +47,7 @@ namespace SomerenUI
             HashSet<Student> students = orderService.GetStudentsWhoOrdered(startDate, endDate);
             foreach (Student student in students)
             {
-                textBox1.Text += student.ToString() + "/n";
+                textBox1.Text += student.ToString() + "\r\n";
             }
         }
 

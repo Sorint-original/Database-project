@@ -81,6 +81,7 @@
             columnHeader17 = new System.Windows.Forms.ColumnHeader();
             label3 = new System.Windows.Forms.Label();
             pnlDrinks = new System.Windows.Forms.Panel();
+            RevenueB = new System.Windows.Forms.Button();
             MakeOrderB = new System.Windows.Forms.Button();
             DeleteButton = new System.Windows.Forms.Button();
             UpdateButton = new System.Windows.Forms.Button();
@@ -114,7 +115,6 @@
             pictureBox8 = new System.Windows.Forms.PictureBox();
             pictureBox9 = new System.Windows.Forms.PictureBox();
             label6 = new System.Windows.Forms.Label();
-            RevenueB = new System.Windows.Forms.Button();
             menuStrip1.SuspendLayout();
             pnlDashboard.SuspendLayout();
             pnlStudents.SuspendLayout();
@@ -204,7 +204,7 @@
             // vATToolStripMenuItem
             // 
             vATToolStripMenuItem.Name = "vATToolStripMenuItem";
-            vATToolStripMenuItem.Size = new System.Drawing.Size(38, 19);
+            vATToolStripMenuItem.Size = new System.Drawing.Size(74, 36);
             vATToolStripMenuItem.Text = "VAT";
             vATToolStripMenuItem.Click += vATToolStripMenuItem_Click;
             // 
@@ -254,7 +254,7 @@
             // 
             pictureBox2.Image = (System.Drawing.Image)resources.GetObject("pictureBox2.Image");
             pictureBox2.Location = new System.Drawing.Point(1495, 0);
-            pictureBox2.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            pictureBox2.Margin = new System.Windows.Forms.Padding(6);
             pictureBox2.Name = "pictureBox2";
             pictureBox2.Size = new System.Drawing.Size(241, 262);
             pictureBox2.TabIndex = 2;
@@ -264,7 +264,7 @@
             // 
             listViewRooms.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader6, columnHeader7, columnHeader8, columnHeader9, columnHeader10, columnHeader11 });
             listViewRooms.Location = new System.Drawing.Point(30, 90);
-            listViewRooms.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            listViewRooms.Margin = new System.Windows.Forms.Padding(6);
             listViewRooms.Name = "listViewRooms";
             listViewRooms.Size = new System.Drawing.Size(1419, 650);
             listViewRooms.TabIndex = 1;
@@ -316,7 +316,7 @@
             // 
             pictureBox1.Image = (System.Drawing.Image)resources.GetObject("pictureBox1.Image");
             pictureBox1.Location = new System.Drawing.Point(1495, 0);
-            pictureBox1.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            pictureBox1.Margin = new System.Windows.Forms.Padding(6);
             pictureBox1.Name = "pictureBox1";
             pictureBox1.Size = new System.Drawing.Size(241, 262);
             pictureBox1.TabIndex = 2;
@@ -326,7 +326,7 @@
             // 
             listViewStudents.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5 });
             listViewStudents.Location = new System.Drawing.Point(30, 90);
-            listViewStudents.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            listViewStudents.Margin = new System.Windows.Forms.Padding(6);
             listViewStudents.Name = "listViewStudents";
             listViewStudents.Size = new System.Drawing.Size(1419, 650);
             listViewStudents.TabIndex = 1;
@@ -375,7 +375,7 @@
             pnlActivity.Controls.Add(listViewActivity);
             pnlActivity.Controls.Add(label4);
             pnlActivity.Location = new System.Drawing.Point(41, 124);
-            pnlActivity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            pnlActivity.Margin = new System.Windows.Forms.Padding(6);
             pnlActivity.Name = "pnlActivity";
             pnlActivity.Size = new System.Drawing.Size(1742, 994);
             pnlActivity.TabIndex = 3;
@@ -384,7 +384,7 @@
             // 
             pictureBox5.Image = (System.Drawing.Image)resources.GetObject("pictureBox5.Image");
             pictureBox5.Location = new System.Drawing.Point(1504, 0);
-            pictureBox5.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            pictureBox5.Margin = new System.Windows.Forms.Padding(6);
             pictureBox5.Name = "pictureBox5";
             pictureBox5.Size = new System.Drawing.Size(241, 262);
             pictureBox5.TabIndex = 5;
@@ -394,7 +394,7 @@
             // 
             listViewActivity.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader18, columnHeader19, columnHeader20, columnHeader21, columnHeader22 });
             listViewActivity.Location = new System.Drawing.Point(45, 90);
-            listViewActivity.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            listViewActivity.Margin = new System.Windows.Forms.Padding(6);
             listViewActivity.Name = "listViewActivity";
             listViewActivity.Size = new System.Drawing.Size(1419, 650);
             listViewActivity.TabIndex = 1;
@@ -452,7 +452,7 @@
             // 
             pictureBox4.Image = (System.Drawing.Image)resources.GetObject("pictureBox4.Image");
             pictureBox4.Location = new System.Drawing.Point(1495, 6);
-            pictureBox4.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            pictureBox4.Margin = new System.Windows.Forms.Padding(6);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new System.Drawing.Size(241, 262);
             pictureBox4.TabIndex = 4;
@@ -536,10 +536,20 @@
             pnlDrinks.Size = new System.Drawing.Size(1742, 994);
             pnlDrinks.TabIndex = 5;
             // 
+            // RevenueB
+            // 
+            RevenueB.Location = new System.Drawing.Point(607, 843);
+            RevenueB.Name = "RevenueB";
+            RevenueB.Size = new System.Drawing.Size(166, 78);
+            RevenueB.TabIndex = 6;
+            RevenueB.Text = "Revenue Report";
+            RevenueB.UseVisualStyleBackColor = true;
+            RevenueB.Click += RevenueB_Click;
+            // 
             // MakeOrderB
             // 
             MakeOrderB.Location = new System.Drawing.Point(425, 843);
-            MakeOrderB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            MakeOrderB.Margin = new System.Windows.Forms.Padding(6);
             MakeOrderB.Name = "MakeOrderB";
             MakeOrderB.Size = new System.Drawing.Size(173, 70);
             MakeOrderB.TabIndex = 9;
@@ -550,7 +560,7 @@
             // DeleteButton
             // 
             DeleteButton.Location = new System.Drawing.Point(1293, 843);
-            DeleteButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            DeleteButton.Margin = new System.Windows.Forms.Padding(6);
             DeleteButton.Name = "DeleteButton";
             DeleteButton.Size = new System.Drawing.Size(160, 70);
             DeleteButton.TabIndex = 8;
@@ -561,7 +571,7 @@
             // UpdateButton
             // 
             UpdateButton.Location = new System.Drawing.Point(254, 843);
-            UpdateButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            UpdateButton.Margin = new System.Windows.Forms.Padding(6);
             UpdateButton.Name = "UpdateButton";
             UpdateButton.Size = new System.Drawing.Size(160, 70);
             UpdateButton.TabIndex = 7;
@@ -572,7 +582,7 @@
             // DrinkAddButton
             // 
             DrinkAddButton.Location = new System.Drawing.Point(56, 843);
-            DrinkAddButton.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            DrinkAddButton.Margin = new System.Windows.Forms.Padding(6);
             DrinkAddButton.Name = "DrinkAddButton";
             DrinkAddButton.Size = new System.Drawing.Size(188, 70);
             DrinkAddButton.TabIndex = 5;
@@ -584,7 +594,7 @@
             // 
             pictureBox6.Image = (System.Drawing.Image)resources.GetObject("pictureBox6.Image");
             pictureBox6.Location = new System.Drawing.Point(1495, 6);
-            pictureBox6.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            pictureBox6.Margin = new System.Windows.Forms.Padding(6);
             pictureBox6.Name = "pictureBox6";
             pictureBox6.Size = new System.Drawing.Size(241, 262);
             pictureBox6.TabIndex = 4;
@@ -675,7 +685,7 @@
             pnlVAT.Location = new System.Drawing.Point(12, 44);
             pnlVAT.Margin = new System.Windows.Forms.Padding(6);
             pnlVAT.Name = "pnlVAT";
-            pnlVAT.Size = new System.Drawing.Size(950, 480);
+            pnlVAT.Size = new System.Drawing.Size(917, 480);
             pnlVAT.TabIndex = 6;
             // 
             // vatTotal
@@ -683,15 +693,15 @@
             vatTotal.AutoSize = true;
             vatTotal.Location = new System.Drawing.Point(585, 174);
             vatTotal.Name = "vatTotal";
-            vatTotal.Size = new System.Drawing.Size(0, 15);
+            vatTotal.Size = new System.Drawing.Size(0, 32);
             vatTotal.TabIndex = 25;
             // 
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new System.Drawing.Point(374, 174);
+            label13.Location = new System.Drawing.Point(210, 170);
             label13.Name = "label13";
-            label13.Size = new System.Drawing.Size(146, 15);
+            label13.Size = new System.Drawing.Size(297, 32);
             label13.TabIndex = 24;
             label13.Text = "Total VAT amount payable:";
             // 
@@ -700,15 +710,15 @@
             vatHigh.AutoSize = true;
             vatHigh.Location = new System.Drawing.Point(585, 125);
             vatHigh.Name = "vatHigh";
-            vatHigh.Size = new System.Drawing.Size(0, 15);
+            vatHigh.Size = new System.Drawing.Size(0, 32);
             vatHigh.TabIndex = 23;
             // 
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new System.Drawing.Point(374, 125);
+            label12.Location = new System.Drawing.Point(210, 128);
             label12.Name = "label12";
-            label12.Size = new System.Drawing.Size(178, 15);
+            label12.Size = new System.Drawing.Size(361, 32);
             label12.TabIndex = 22;
             label12.Text = "VAT high (21%) amount payable:";
             // 
@@ -717,15 +727,15 @@
             vatLow.AutoSize = true;
             vatLow.Location = new System.Drawing.Point(585, 95);
             vatLow.Name = "vatLow";
-            vatLow.Size = new System.Drawing.Size(0, 15);
+            vatLow.Size = new System.Drawing.Size(0, 32);
             vatLow.TabIndex = 21;
             // 
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new System.Drawing.Point(374, 95);
+            label11.Location = new System.Drawing.Point(210, 91);
             label11.Name = "label11";
-            label11.Size = new System.Drawing.Size(167, 15);
+            label11.Size = new System.Drawing.Size(337, 32);
             label11.TabIndex = 20;
             label11.Text = "VAT low (6%) amount payable:";
             // 
@@ -734,7 +744,7 @@
             quarterEnd.AutoSize = true;
             quarterEnd.Location = new System.Drawing.Point(585, 59);
             quarterEnd.Name = "quarterEnd";
-            quarterEnd.Size = new System.Drawing.Size(67, 15);
+            quarterEnd.Size = new System.Drawing.Size(134, 32);
             quarterEnd.TabIndex = 19;
             quarterEnd.Text = "____________";
             // 
@@ -743,25 +753,25 @@
             label10.AutoSize = true;
             label10.Location = new System.Drawing.Point(558, 59);
             label10.Name = "label10";
-            label10.Size = new System.Drawing.Size(21, 15);
+            label10.Size = new System.Drawing.Size(41, 32);
             label10.TabIndex = 18;
             label10.Text = "to:";
             // 
             // quarterStart
             // 
             quarterStart.AutoSize = true;
-            quarterStart.Location = new System.Drawing.Point(485, 59);
+            quarterStart.Location = new System.Drawing.Point(427, 59);
             quarterStart.Name = "quarterStart";
-            quarterStart.Size = new System.Drawing.Size(67, 15);
+            quarterStart.Size = new System.Drawing.Size(134, 32);
             quarterStart.TabIndex = 17;
             quarterStart.Text = "____________";
             // 
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new System.Drawing.Point(374, 59);
+            label9.Location = new System.Drawing.Point(210, 59);
             label9.Name = "label9";
-            label9.Size = new System.Drawing.Size(105, 15);
+            label9.Size = new System.Drawing.Size(211, 32);
             label9.TabIndex = 16;
             label9.Text = "Quarter runs from:";
             // 
@@ -769,7 +779,7 @@
             // 
             calcVatButton.Location = new System.Drawing.Point(26, 419);
             calcVatButton.Name = "calcVatButton";
-            calcVatButton.Size = new System.Drawing.Size(203, 23);
+            calcVatButton.Size = new System.Drawing.Size(203, 41);
             calcVatButton.TabIndex = 15;
             calcVatButton.Text = "Calculate VAT for selected period";
             calcVatButton.UseVisualStyleBackColor = true;
@@ -780,7 +790,7 @@
             label8.AutoSize = true;
             label8.Location = new System.Drawing.Point(30, 122);
             label8.Name = "label8";
-            label8.Size = new System.Drawing.Size(81, 15);
+            label8.Size = new System.Drawing.Size(166, 32);
             label8.TabIndex = 14;
             label8.Text = "Select Quarter";
             // 
@@ -789,7 +799,7 @@
             label7.AutoSize = true;
             label7.Location = new System.Drawing.Point(29, 59);
             label7.Name = "label7";
-            label7.Size = new System.Drawing.Size(63, 15);
+            label7.Size = new System.Drawing.Size(130, 32);
             label7.TabIndex = 13;
             label7.Text = "Select year";
             // 
@@ -799,7 +809,7 @@
             qSelectorBox.Items.AddRange(new object[] { "Q1", "Q2", "Q3", "Q4" });
             qSelectorBox.Location = new System.Drawing.Point(29, 145);
             qSelectorBox.Name = "qSelectorBox";
-            qSelectorBox.Size = new System.Drawing.Size(121, 23);
+            qSelectorBox.Size = new System.Drawing.Size(121, 40);
             qSelectorBox.TabIndex = 12;
             qSelectorBox.SelectedIndexChanged += qSelectorBox_SelectedIndexChanged;
             // 
@@ -808,14 +818,14 @@
             yearSelectorBox.FormattingEnabled = true;
             yearSelectorBox.Location = new System.Drawing.Point(29, 87);
             yearSelectorBox.Name = "yearSelectorBox";
-            yearSelectorBox.Size = new System.Drawing.Size(121, 23);
+            yearSelectorBox.Size = new System.Drawing.Size(121, 40);
             yearSelectorBox.TabIndex = 11;
             yearSelectorBox.SelectedIndexChanged += yearSelectorBox_SelectedIndexChanged;
             // 
             // pictureBox8
             // 
             pictureBox8.Image = (System.Drawing.Image)resources.GetObject("pictureBox8.Image");
-            pictureBox8.Location = new System.Drawing.Point(820, 0);
+            pictureBox8.Location = new System.Drawing.Point(784, 0);
             pictureBox8.Name = "pictureBox8";
             pictureBox8.Size = new System.Drawing.Size(130, 123);
             pictureBox8.TabIndex = 4;
@@ -837,32 +847,10 @@
             label6.Location = new System.Drawing.Point(30, 7);
             label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(54, 32);
+            label6.Size = new System.Drawing.Size(108, 65);
             label6.TabIndex = 0;
             label6.Text = "VAT";
             // 
-            // label6
-            // 
-            label6.AutoSize = true;
-            label6.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
-            label6.Location = new System.Drawing.Point(30, 7);
-            label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
-            label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(54, 32);
-            label6.TabIndex = 0;
-            label6.Text = "VAT";
-
-
-            RevenueB.Location = new System.Drawing.Point(607, 843);
-            RevenueB.Name = "RevenueB";
-            RevenueB.Size = new System.Drawing.Size(166, 78);
-            RevenueB.TabIndex = 6;
-            RevenueB.Text = "Revenue Report";
-            RevenueB.UseVisualStyleBackColor = true;
-            RevenueB.Click += RevenueB_Click;
-      
-            // 
-            
             // SomerenUI
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
@@ -876,7 +864,7 @@
             Controls.Add(pnlStudents);
             Controls.Add(pnlDashboard);
             MainMenuStrip = menuStrip1;
-            Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            Margin = new System.Windows.Forms.Padding(6);
             Name = "SomerenUI";
             Text = "SomerenApp";
             menuStrip1.ResumeLayout(false);
