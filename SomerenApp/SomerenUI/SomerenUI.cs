@@ -473,5 +473,12 @@ namespace SomerenUI
             quarterEnd.Text = "";
 
         }
+
+        private void RevenueB_Click(object sender, EventArgs e)
+        {
+            RevenueReport revenueReport = new RevenueReport();
+            revenueReport.ShowDialog();
+
+        }
     }
 }
