@@ -59,7 +59,7 @@ namespace SomerenUI
             pnlDrinks.Hide();
             pnlVAT.Hide();
 
-            pnlStudents.Show();
+            pnlStudents.Hide();
             pnlRooms.Show();
 
 
