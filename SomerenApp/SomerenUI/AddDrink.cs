@@ -36,6 +36,7 @@ namespace SomerenUI
 
         public void SetupUpdate(int id)
         {
+            this.Text = "Update Drink";
             AddButton.Hide();
             RefreshIdCB();
             if(id == 0)
@@ -126,11 +127,11 @@ namespace SomerenUI
                 return null;
             }
 
-            if (AlcoholCB.SelectedIndex == 0)
+            if (RBTrue.Checked)
             {
                 drink.Alcohol = true;
             }
-            else if (AlcoholCB.SelectedIndex == 1)
+            else if (RBFalse.Checked)
             {
                 drink.Alcohol = false;
             }
@@ -168,11 +169,13 @@ namespace SomerenUI
             PriceTB.Text = drink.Price.ToString();
             if (drink.Alcohol)
             {
-                AlcoholCB.SelectedIndex = 0;
+                RBTrue.Checked = true;
+                RBFalse.Checked = false;
             }
             else
             {
-                AlcoholCB.SelectedIndex = 1;
+                RBTrue.Checked = false;
+                RBFalse.Checked = true;
             }
             StockTB.Text = drink.StockAmount.ToString();
         }

@@ -13,7 +13,7 @@ namespace SomerenModel
 
         public override string ToString()
         {
-            return $"{FirstName} {LastName} ({Class})";
+            return $"{StudentNumber} {FirstName} {LastName} ({Class})";
         }
     }
 }

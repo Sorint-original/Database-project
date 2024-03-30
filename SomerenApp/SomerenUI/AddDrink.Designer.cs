@@ -37,11 +37,12 @@
             label5 = new System.Windows.Forms.Label();
             StockTB = new System.Windows.Forms.TextBox();
             AddButton = new System.Windows.Forms.Button();
-            AlcoholCB = new System.Windows.Forms.ComboBox();
             IdLabel = new System.Windows.Forms.Label();
             UpdateB = new System.Windows.Forms.Button();
             pnlIdselect = new System.Windows.Forms.Panel();
             IdCB = new System.Windows.Forms.ComboBox();
+            RBTrue = new System.Windows.Forms.RadioButton();
+            RBFalse = new System.Windows.Forms.RadioButton();
             pnlIdselect.SuspendLayout();
             SuspendLayout();
             // 
@@ -121,15 +122,6 @@
             AddButton.UseVisualStyleBackColor = true;
             AddButton.Click += AddButton_Click;
             // 
-            // AlcoholCB
-            // 
-            AlcoholCB.FormattingEnabled = true;
-            AlcoholCB.Items.AddRange(new object[] { "True", "False" });
-            AlcoholCB.Location = new System.Drawing.Point(126, 203);
-            AlcoholCB.Name = "AlcoholCB";
-            AlcoholCB.Size = new System.Drawing.Size(100, 23);
-            AlcoholCB.TabIndex = 10;
-            // 
             // IdLabel
             // 
             IdLabel.AutoSize = true;
@@ -165,15 +157,38 @@
             IdCB.TabIndex = 0;
             IdCB.SelectedIndexChanged += IdCB_SelectedIndexChanged;
             // 
+            // RBTrue
+            // 
+            RBTrue.AutoSize = true;
+            RBTrue.Location = new System.Drawing.Point(111, 206);
+            RBTrue.Name = "RBTrue";
+            RBTrue.Size = new System.Drawing.Size(47, 19);
+            RBTrue.TabIndex = 14;
+            RBTrue.TabStop = true;
+            RBTrue.Text = "True";
+            RBTrue.UseVisualStyleBackColor = true;
+            // 
+            // RBFalse
+            // 
+            RBFalse.AutoSize = true;
+            RBFalse.Location = new System.Drawing.Point(167, 206);
+            RBFalse.Name = "RBFalse";
+            RBFalse.Size = new System.Drawing.Size(51, 19);
+            RBFalse.TabIndex = 15;
+            RBFalse.TabStop = true;
+            RBFalse.Text = "False";
+            RBFalse.UseVisualStyleBackColor = true;
+            // 
             // AddDrinkForm
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(273, 368);
+            Controls.Add(RBFalse);
+            Controls.Add(RBTrue);
             Controls.Add(pnlIdselect);
             Controls.Add(UpdateB);
             Controls.Add(IdLabel);
-            Controls.Add(AlcoholCB);
             Controls.Add(AddButton);
             Controls.Add(label5);
             Controls.Add(StockTB);
@@ -201,10 +216,11 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.TextBox StockTB;
         private System.Windows.Forms.Button AddButton;
-        private System.Windows.Forms.ComboBox AlcoholCB;
         private System.Windows.Forms.Label IdLabel;
         private System.Windows.Forms.Button UpdateB;
         private System.Windows.Forms.Panel pnlIdselect;
         private System.Windows.Forms.ComboBox IdCB;
+        private System.Windows.Forms.RadioButton RBTrue;
+        private System.Windows.Forms.RadioButton RBFalse;
     }
 }

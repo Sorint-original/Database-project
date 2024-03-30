@@ -59,7 +59,7 @@ namespace SomerenUI
             pnlDrinks.Hide();
             pnlVAT.Hide();
 
-            pnlStudents.Show();
+            pnlStudents.Hide();
             pnlRooms.Show();
 
 
@@ -479,6 +479,40 @@ namespace SomerenUI
             RevenueReport revenueReport = new RevenueReport();
             revenueReport.ShowDialog();
 
+        }
+
+        private void DeleteStudentB_Click(object sender, EventArgs e)
+        {
+            StudentService studentService = new StudentService();
+            while (listViewStudents.SelectedItems.Count > 0)
+            {
+                studentService.DeleteByID(int.Parse(listViewStudents.SelectedItems[0].Text));
+                listViewStudents.Items.Remove(listViewStudents.SelectedItems[0]);
+            }
+
+            ShowStudentsPanel();
+        }
+
+        private void AddStudentB_Click(object sender, EventArgs e)
+        {
+            AddStudent addStudentForm = new AddStudent(true);
+            addStudentForm.ShowDialog();
+            ShowStudentsPanel();
+        }
+
+        private void UpdateStudentB_Click(object sender, EventArgs e)
+        {
+            AddStudent addStudentForm ;
+            if (listViewStudents.SelectedItems.Count > 0)
+            {
+                addStudentForm = new AddStudent(false, int.Parse(listViewStudents.SelectedItems[0].Text)) ;
+            }
+            else
+            {
+                addStudentForm = new AddStudent(false);
+            }
+            addStudentForm.ShowDialog();
+            ShowStudentsPanel();
         }
     }
 }

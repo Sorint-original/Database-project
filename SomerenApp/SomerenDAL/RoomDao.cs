@@ -38,5 +38,20 @@ namespace SomerenDAL
             }
             return rooms;
         }
+
+       public Room GetRoomById (int id)
+        {
+            string query = "SELECT RoomCode, RoomNumber, Floor, Building, NumberBeds, RoomType FROM Room WHERE RoomCode = @RoomCode";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@RoomCode", id);
+            try
+            {
+                return ReadTables(ExecuteSelectQuery(query, sqlParameters))[0];
+            }
+            catch
+            {
+                return null;
+            }
+        }
     }
 }
