@@ -22,5 +22,10 @@ namespace SomerenService
             List<Room> rooms = roomDao.GetAllRooms();
             return rooms;
         }
+
+        public Room GetRoomById(int id)
+        {
+            return roomDao.GetRoomById(id);
+        }
     }
 }

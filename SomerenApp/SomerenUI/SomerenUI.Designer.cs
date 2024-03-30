@@ -271,6 +271,7 @@
             AddStudentB.TabIndex = 4;
             AddStudentB.Text = "Add Student";
             AddStudentB.UseVisualStyleBackColor = true;
+            AddStudentB.Click += AddStudentB_Click;
             // 
             // pictureBox1
             // 

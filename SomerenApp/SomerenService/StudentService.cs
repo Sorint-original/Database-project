@@ -23,5 +23,9 @@ namespace SomerenService
         {
             studentDao.DeleteById(id);
         }
+
+        public Student GetStudentById(int id) {
+            return studentDao.GetStudentById(id);
+        }
     }
 }

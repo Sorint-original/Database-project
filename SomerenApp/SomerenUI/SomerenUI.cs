@@ -492,5 +492,12 @@ namespace SomerenUI
 
             ShowStudentsPanel();
         }
+
+        private void AddStudentB_Click(object sender, EventArgs e)
+        {
+            AddStudent addStudentForm = new AddStudent();
+            addStudentForm.ShowDialog();
+            ShowStudentsPanel();
+        }
     }
 }

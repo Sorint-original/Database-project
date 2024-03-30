@@ -36,6 +36,7 @@ namespace SomerenUI
 
         public void SetupUpdate(int id)
         {
+            this.Text = "Update Drink";
             AddButton.Hide();
             RefreshIdCB();
             if(id == 0)
