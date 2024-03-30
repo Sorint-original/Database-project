@@ -262,6 +262,7 @@
             UpdateStudentB.TabIndex = 5;
             UpdateStudentB.Text = "Update Student";
             UpdateStudentB.UseVisualStyleBackColor = true;
+            UpdateStudentB.Click += UpdateStudentB_Click;
             // 
             // AddStudentB
             // 

@@ -10,44 +10,96 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.LinkLabel;
 
 namespace SomerenUI
 {
     public partial class AddStudent : Form
     {
-        public AddStudent()
+        public AddStudent(bool Add, int id = 0)
         {
             InitializeComponent();
+            if (Add)
+            {
+                SetupAdd();
+            }
+            else
+            {
+                SetupUpdate(id);
+            }
+        }
+
+        public void SetupAdd()
+        {
+            Updatepnl.Hide();
+            UpdateB.Hide();
+        }
+
+        public void SetupUpdate(int id)
+        {
+            AddStudentB.Hide();
+            RefreshStudentBox();
+            if (id == 0)
+            {
+                StudentCB.SelectedIndex = 0;
+            }
+            else
+            {
+                //when it eneters update with a STUDENT selected
+                StudentService studentService = new StudentService();
+                List<Student> students = studentService.GetStudents();
+                for (int i = 0; i < students.Count; i++)
+                {
+                    if (id == students[i].StudentNumber)
+                    {
+                        StudentCB.SelectedIndex = i;
+                        break;
+                    }
+                }
+            }
         }
 
         private void AddStudentB_Click(object sender, EventArgs e)
         {
-            Student student = GetStudent();
+            Student student = GetStudent(true);
+            if (student != null)
+            {
+                StudentService studentService = new StudentService();
+                studentService.AddStudent(student);
+                this.Close();
+            }
         }
 
-        private Student GetStudent()
+        private Student GetStudent(bool add)
         {
             Student student = new Student();
-
-            if (SNumberTB.Text.Length == 6)
+            if (add == false)
             {
-                try
+                student = StudentCB.SelectedItem as Student;
+            }
+            
+            if(add == true)
+            {
+                if (SNumberTB.Text.Length == 6)
                 {
-                    student.StudentNumber = int.Parse(SNumberTB.Text);
+                    try
+                    {
+                        student.StudentNumber = int.Parse(SNumberTB.Text);
+                    }
+                    catch
+                    {
+                        MessageBox.Show("The student Number needs to be a integer");
+                        return null;
+                    }
                 }
-                catch
+                else
                 {
-                    MessageBox.Show("The student Number needs to be a integer");
+                    MessageBox.Show("The student needs a student number of 6 digits");
                     return null;
                 }
             }
-            else
-            {
-                MessageBox.Show("The student needs a student number of 6 digits");
-                return null;
-            }
 
-            if(FirstNameTB.Text != "")
+            if (FirstNameTB.Text != "")
             {
                 student.FirstName = FirstNameTB.Text;
             }
@@ -107,20 +159,23 @@ namespace SomerenUI
                 return null;
             }
 
-           //Test if the student number is unique
-           StudentService studentService = new StudentService();
-           Student test = studentService.GetStudentById(student.StudentNumber);
-            if (test != null)
+            if (add)
             {
-                MessageBox.Show("There is already a student with thisstudent number");
-                return null;
+                //Test if the student number is unique
+                StudentService studentService = new StudentService();
+                Student test = studentService.GetStudentById(student.StudentNumber);
+                if (test != null)
+                {
+                    MessageBox.Show("There is already a student with this student number");
+                    return null;
+                }
             }
 
-           //Test if Room exists
+            //Test if Room exists
 
             RoomService roomService = new RoomService();
             Room room = roomService.GetRoomById(student.RoomCode);
-            if(room == null)
+            if (room == null)
             {
                 MessageBox.Show("The student needs a valid room");
                 return null;
@@ -129,6 +184,47 @@ namespace SomerenUI
             return student;
         }
 
+        public void RefreshStudentBox()
+        {
+            StudentCB.Items.Clear();
+            StudentService studentService = new StudentService();
+            List<Student> students = studentService.GetStudents();
 
+            foreach (Student student in students)
+            {
+                StudentCB.Items.Add(student);
+            }
+        }
+
+        private void StudentCB_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            Student student = StudentCB.SelectedItem as Student;
+            if (student != null)
+            {
+                FirstNameTB.Text = student.FirstName;
+                LastNameTB.Text = student.LastName;
+                PhoneNumberTB.Text = student.PhoneNumber;
+                ClassTB.Text = student.Class;
+                RoomCodeTB.Text = student.RoomCode.ToString();
+            }
+        }
+
+        private void UpdateB_Click(object sender, EventArgs e)
+        {
+
+            Student student = GetStudent(false);
+            if (student != null)
+            {
+                StudentService studentService = new StudentService();
+
+                studentService.UpdateStudent(student);
+
+                int auxiliary = StudentCB.SelectedIndex;
+                StudentCB.Text = "";
+                RefreshStudentBox();
+                StudentCB.SelectedIndex = auxiliary;
+
+            }
+        }
     }
 }

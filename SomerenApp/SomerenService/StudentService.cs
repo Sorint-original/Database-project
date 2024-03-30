@@ -27,5 +27,15 @@ namespace SomerenService
         public Student GetStudentById(int id) {
             return studentDao.GetStudentById(id);
         }
+
+        public void AddStudent(Student student)
+        {
+            studentDao.AddStudent(student);
+        }
+
+        public void UpdateStudent(Student student)
+        {
+            studentDao.UpdateStudent(student);
+        }
     }
 }

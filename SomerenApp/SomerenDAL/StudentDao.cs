@@ -57,5 +57,33 @@ namespace SomerenDAL
 
             ExecuteEditQuery(command, sqlParameters);
         }
+
+        public void AddStudent(Student student)
+        {
+            string command = "INSERT INTO Student VALUES (@StudentNumber, @FirstName, @SecondName, @Phone, @Class, @RoomCode)";
+            SqlParameter[] sqlParameters = new SqlParameter[6];
+            sqlParameters[0] = new SqlParameter("@StudentNumber", student.StudentNumber);
+            sqlParameters[1] = new SqlParameter("@FirstName", student.FirstName);
+            sqlParameters[2] = new SqlParameter("@SecondName", student.LastName);
+            sqlParameters[3] = new SqlParameter("@Phone", student.PhoneNumber);
+            sqlParameters[4] = new SqlParameter("@Class", student.Class);
+            sqlParameters[5] = new SqlParameter("@RoomCode", student.RoomCode);
+
+            ExecuteEditQuery(command, sqlParameters);
+        }
+
+        public void UpdateStudent(Student student)
+        {
+            string command = "UPDATE  Student SET FirstName = @FirstName, LastName =  @SecondName, TelephoneNumber = @Phone, Class = @Class, RoomCode = @RoomCode WHERE StudentNumber = @StudentNumber";
+            SqlParameter[] sqlParameters = new SqlParameter[6];
+            sqlParameters[0] = new SqlParameter("@StudentNumber", student.StudentNumber);
+            sqlParameters[1] = new SqlParameter("@FirstName", student.FirstName);
+            sqlParameters[2] = new SqlParameter("@SecondName", student.LastName);
+            sqlParameters[3] = new SqlParameter("@Phone", student.PhoneNumber);
+            sqlParameters[4] = new SqlParameter("@Class", student.Class);
+            sqlParameters[5] = new SqlParameter("@RoomCode", student.RoomCode);
+
+            ExecuteEditQuery(command, sqlParameters);
+        }
     }
 }

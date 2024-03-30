@@ -41,6 +41,10 @@
             PhoneNumberTB = new System.Windows.Forms.TextBox();
             ClassTB = new System.Windows.Forms.TextBox();
             RoomCodeTB = new System.Windows.Forms.TextBox();
+            UpdateB = new System.Windows.Forms.Button();
+            Updatepnl = new System.Windows.Forms.Panel();
+            StudentCB = new System.Windows.Forms.ComboBox();
+            Updatepnl.SuspendLayout();
             SuspendLayout();
             // 
             // label1
@@ -118,42 +122,71 @@
             // 
             FirstNameTB.Location = new System.Drawing.Point(151, 90);
             FirstNameTB.Name = "FirstNameTB";
-            FirstNameTB.Size = new System.Drawing.Size(128, 23);
+            FirstNameTB.Size = new System.Drawing.Size(175, 23);
             FirstNameTB.TabIndex = 8;
             // 
             // LastNameTB
             // 
             LastNameTB.Location = new System.Drawing.Point(151, 129);
             LastNameTB.Name = "LastNameTB";
-            LastNameTB.Size = new System.Drawing.Size(128, 23);
+            LastNameTB.Size = new System.Drawing.Size(175, 23);
             LastNameTB.TabIndex = 9;
             // 
             // PhoneNumberTB
             // 
             PhoneNumberTB.Location = new System.Drawing.Point(151, 170);
             PhoneNumberTB.Name = "PhoneNumberTB";
-            PhoneNumberTB.Size = new System.Drawing.Size(128, 23);
+            PhoneNumberTB.Size = new System.Drawing.Size(175, 23);
             PhoneNumberTB.TabIndex = 10;
             // 
             // ClassTB
             // 
             ClassTB.Location = new System.Drawing.Point(151, 211);
             ClassTB.Name = "ClassTB";
-            ClassTB.Size = new System.Drawing.Size(128, 23);
+            ClassTB.Size = new System.Drawing.Size(175, 23);
             ClassTB.TabIndex = 11;
             // 
             // RoomCodeTB
             // 
             RoomCodeTB.Location = new System.Drawing.Point(151, 244);
             RoomCodeTB.Name = "RoomCodeTB";
-            RoomCodeTB.Size = new System.Drawing.Size(128, 23);
+            RoomCodeTB.Size = new System.Drawing.Size(175, 23);
             RoomCodeTB.TabIndex = 12;
+            // 
+            // UpdateB
+            // 
+            UpdateB.Location = new System.Drawing.Point(226, 300);
+            UpdateB.Name = "UpdateB";
+            UpdateB.Size = new System.Drawing.Size(100, 33);
+            UpdateB.TabIndex = 13;
+            UpdateB.Text = "Update Student";
+            UpdateB.UseVisualStyleBackColor = true;
+            UpdateB.Click += UpdateB_Click;
+            // 
+            // Updatepnl
+            // 
+            Updatepnl.Controls.Add(StudentCB);
+            Updatepnl.Location = new System.Drawing.Point(144, 21);
+            Updatepnl.Name = "Updatepnl";
+            Updatepnl.Size = new System.Drawing.Size(185, 63);
+            Updatepnl.TabIndex = 14;
+            // 
+            // StudentCB
+            // 
+            StudentCB.FormattingEnabled = true;
+            StudentCB.Location = new System.Drawing.Point(7, 10);
+            StudentCB.Name = "StudentCB";
+            StudentCB.Size = new System.Drawing.Size(175, 23);
+            StudentCB.TabIndex = 0;
+            StudentCB.SelectedIndexChanged += StudentCB_SelectedIndexChanged;
             // 
             // AddStudent
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(310, 365);
+            ClientSize = new System.Drawing.Size(341, 365);
+            Controls.Add(Updatepnl);
+            Controls.Add(UpdateB);
             Controls.Add(RoomCodeTB);
             Controls.Add(ClassTB);
             Controls.Add(PhoneNumberTB);
@@ -169,6 +202,7 @@
             Controls.Add(label1);
             Name = "AddStudent";
             Text = "Add Student";
+            Updatepnl.ResumeLayout(false);
             ResumeLayout(false);
             PerformLayout();
         }
@@ -188,5 +222,8 @@
         private System.Windows.Forms.TextBox PhoneNumberTB;
         private System.Windows.Forms.TextBox ClassTB;
         private System.Windows.Forms.TextBox RoomCodeTB;
+        private System.Windows.Forms.Button UpdateB;
+        private System.Windows.Forms.Panel Updatepnl;
+        private System.Windows.Forms.ComboBox StudentCB;
     }
 }
