@@ -55,11 +55,12 @@ namespace SomerenUI
         {
 
             pnlActivity.Hide();
+            pnlStudents.Hide();
+            pnlDashboard.Hide();
             pnlLecturers.Hide();
             pnlDrinks.Hide();
             pnlVAT.Hide();
 
-            pnlStudents.Show();
             pnlRooms.Show();
 
 
