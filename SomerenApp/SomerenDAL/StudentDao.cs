@@ -41,5 +41,14 @@ namespace SomerenDAL
             sqlParameters[0] = new SqlParameter("@studentNumber", studentNumber);
             return ReadTables(ExecuteSelectQuery(query, sqlParameters))[0];
         }
+
+        public void DeleteById(int ID)
+        {
+            string command = "DELETE FROM Student WHERE StudentNumber = @Id ;" ;
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@Id", ID);
+
+            ExecuteEditQuery(command, sqlParameters);
+        }
     }
 }

@@ -42,6 +42,8 @@
             pnlDashboard = new System.Windows.Forms.Panel();
             lblDashboard = new System.Windows.Forms.Label();
             pnlStudents = new System.Windows.Forms.Panel();
+            DeleteStudentB = new System.Windows.Forms.Button();
+            UpdateStudentB = new System.Windows.Forms.Button();
             AddStudentB = new System.Windows.Forms.Button();
             pictureBox1 = new System.Windows.Forms.PictureBox();
             listViewStudents = new System.Windows.Forms.ListView();
@@ -116,8 +118,6 @@
             pictureBox8 = new System.Windows.Forms.PictureBox();
             pictureBox9 = new System.Windows.Forms.PictureBox();
             label6 = new System.Windows.Forms.Label();
-            UpdateStudentB = new System.Windows.Forms.Button();
-            DeleteStudentB = new System.Windows.Forms.Button();
             menuStrip1.SuspendLayout();
             pnlDashboard.SuspendLayout();
             pnlStudents.SuspendLayout();
@@ -243,6 +243,25 @@
             pnlStudents.Name = "pnlStudents";
             pnlStudents.Size = new System.Drawing.Size(938, 466);
             pnlStudents.TabIndex = 2;
+            // 
+            // DeleteStudentB
+            // 
+            DeleteStudentB.Location = new System.Drawing.Point(696, 371);
+            DeleteStudentB.Name = "DeleteStudentB";
+            DeleteStudentB.Size = new System.Drawing.Size(86, 31);
+            DeleteStudentB.TabIndex = 6;
+            DeleteStudentB.Text = "Delete";
+            DeleteStudentB.UseVisualStyleBackColor = true;
+            DeleteStudentB.Click += DeleteStudentB_Click;
+            // 
+            // UpdateStudentB
+            // 
+            UpdateStudentB.Location = new System.Drawing.Point(157, 371);
+            UpdateStudentB.Name = "UpdateStudentB";
+            UpdateStudentB.Size = new System.Drawing.Size(102, 31);
+            UpdateStudentB.TabIndex = 5;
+            UpdateStudentB.Text = "Update Student";
+            UpdateStudentB.UseVisualStyleBackColor = true;
             // 
             // AddStudentB
             // 
@@ -864,24 +883,6 @@
             label6.Size = new System.Drawing.Size(54, 32);
             label6.TabIndex = 0;
             label6.Text = "VAT";
-            // 
-            // UpdateStudentB
-            // 
-            UpdateStudentB.Location = new System.Drawing.Point(157, 371);
-            UpdateStudentB.Name = "UpdateStudentB";
-            UpdateStudentB.Size = new System.Drawing.Size(102, 31);
-            UpdateStudentB.TabIndex = 5;
-            UpdateStudentB.Text = "Update Student";
-            UpdateStudentB.UseVisualStyleBackColor = true;
-            // 
-            // DeleteStudentB
-            // 
-            DeleteStudentB.Location = new System.Drawing.Point(696, 371);
-            DeleteStudentB.Name = "DeleteStudentB";
-            DeleteStudentB.Size = new System.Drawing.Size(86, 31);
-            DeleteStudentB.TabIndex = 6;
-            DeleteStudentB.Text = "Delete";
-            DeleteStudentB.UseVisualStyleBackColor = true;
             // 
             // SomerenUI
             // 

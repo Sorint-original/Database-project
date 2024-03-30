@@ -18,5 +18,10 @@ namespace SomerenService
             List<Student> students = studentDao.GetAllStudents();
             return students;
         }
+
+        public void DeleteByID(int id)
+        {
+            studentDao.DeleteById(id);
+        }
     }
 }

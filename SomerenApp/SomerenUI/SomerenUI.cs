@@ -480,5 +480,17 @@ namespace SomerenUI
             revenueReport.ShowDialog();
 
         }
+
+        private void DeleteStudentB_Click(object sender, EventArgs e)
+        {
+            StudentService studentService = new StudentService();
+            while (listViewStudents.SelectedItems.Count > 0)
+            {
+                studentService.DeleteByID(int.Parse(listViewStudents.SelectedItems[0].Text));
+                listViewStudents.Items.Remove(listViewStudents.SelectedItems[0]);
+            }
+
+            ShowStudentsPanel();
+        }
     }
 }
