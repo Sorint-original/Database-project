@@ -44,5 +44,14 @@ namespace SomerenDAL
             sqlParameters[1] = new SqlParameter("@StudentNumber", student.StudentNumber);
             ExecuteEditQuery(query, sqlParameters);
         }
+
+        public void RemoveParticipant(Activity activity, Student student)
+        {
+            string query = "DELETE participates WHERE StudentNumber = @StudentNumber AND ActivityID = @ActivityId;";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@ActivityId", activity.id);
+            sqlParameters[1] = new SqlParameter("@StudentNumber", student.StudentNumber);
+            ExecuteEditQuery(query, sqlParameters);
+        }
     }   
 }

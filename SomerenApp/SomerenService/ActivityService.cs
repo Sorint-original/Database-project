@@ -28,5 +28,10 @@ namespace SomerenService
         {
             activityDao.AddParticipant(activity, student);
         }
+
+        public void RemoveParticipant(Activity activity,Student student)
+        {
+            activityDao.RemoveParticipant(activity,student);
+        }
     }
 }

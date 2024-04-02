@@ -109,7 +109,28 @@ namespace SomerenUI
 
         private void RemoveStudB_Click(object sender, EventArgs e)
         {
+            if (listViewPart.SelectedItems.Count > 0)
+            {
+                string message = "Do you want to Remove this participant?";
+                string title = "Remove participant";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    RemoveParticipant();
+                }
+            }
+        }
 
+        private void RemoveParticipant()
+        {
+
+            ActivityService activityService = new ActivityService();
+            SomerenModel.Activity activity = ActivityBox.SelectedItem as SomerenModel.Activity;
+            StudentService studentService = new StudentService();
+            Student student = studentService.GetStudentById(int.Parse(listViewPart.SelectedItems[0].Text));
+            activityService.RemoveParticipant(activity,student);
+            RefreshStudentLists();
         }
     }
 }
