@@ -288,6 +288,7 @@
             listViewStudents.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader1, columnHeader2, columnHeader3, columnHeader4, columnHeader5 });
             listViewStudents.FullRowSelect = true;
             listViewStudents.Location = new System.Drawing.Point(16, 42);
+            listViewStudents.MultiSelect = false;
             listViewStudents.Name = "listViewStudents";
             listViewStudents.Size = new System.Drawing.Size(766, 307);
             listViewStudents.TabIndex = 1;

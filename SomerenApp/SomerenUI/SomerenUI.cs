@@ -483,6 +483,22 @@ namespace SomerenUI
 
         private void DeleteStudentB_Click(object sender, EventArgs e)
         {
+            //Message box warning + validation
+            if (listViewStudents.SelectedItems.Count > 0)
+            {
+                string message = "Do you want to Delete this student?";
+                string title = "Delete student";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    DeleteStudents();
+                }
+            }
+        }
+
+        private void DeleteStudents()
+        {
             StudentService studentService = new StudentService();
             while (listViewStudents.SelectedItems.Count > 0)
             {
