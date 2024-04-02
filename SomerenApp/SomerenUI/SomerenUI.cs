@@ -483,6 +483,22 @@ namespace SomerenUI
 
         private void DeleteStudentB_Click(object sender, EventArgs e)
         {
+            //Message box warning + validation
+            if (listViewStudents.SelectedItems.Count > 0)
+            {
+                string message = "Do you want to Delete this student?";
+                string title = "Delete student";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    DeleteStudents();
+                }
+            }
+        }
+
+        private void DeleteStudents()
+        {
             StudentService studentService = new StudentService();
             while (listViewStudents.SelectedItems.Count > 0)
             {
@@ -502,10 +518,10 @@ namespace SomerenUI
 
         private void UpdateStudentB_Click(object sender, EventArgs e)
         {
-            AddStudent addStudentForm ;
+            AddStudent addStudentForm;
             if (listViewStudents.SelectedItems.Count > 0)
             {
-                addStudentForm = new AddStudent(false, int.Parse(listViewStudents.SelectedItems[0].Text)) ;
+                addStudentForm = new AddStudent(false, int.Parse(listViewStudents.SelectedItems[0].Text));
             }
             else
             {
@@ -513,6 +529,21 @@ namespace SomerenUI
             }
             addStudentForm.ShowDialog();
             ShowStudentsPanel();
+        }
+
+        private void ParticipantsB_Click(object sender, EventArgs e)
+        {
+            Participants ParticipantsForm ;
+            if (listViewActivity.SelectedItems.Count > 0)
+            {
+                ParticipantsForm = new Participants(int.Parse(listViewActivity.SelectedItems[0].Text));
+            }
+            else
+            {
+                ParticipantsForm = new Participants();
+            }
+
+            ParticipantsForm.ShowDialog();
         }
     }
 }

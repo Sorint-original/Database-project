@@ -64,6 +64,7 @@
             columnHeader11 = new System.Windows.Forms.ColumnHeader();
             label2 = new System.Windows.Forms.Label();
             pnlActivity = new System.Windows.Forms.Panel();
+            ParticipantsB = new System.Windows.Forms.Button();
             pictureBox5 = new System.Windows.Forms.PictureBox();
             listViewActivity = new System.Windows.Forms.ListView();
             columnHeader18 = new System.Windows.Forms.ColumnHeader();
@@ -238,7 +239,7 @@
             pnlStudents.Controls.Add(pictureBox1);
             pnlStudents.Controls.Add(listViewStudents);
             pnlStudents.Controls.Add(label1);
-            pnlStudents.Location = new System.Drawing.Point(22, 54);
+            pnlStudents.Location = new System.Drawing.Point(16, 42);
             pnlStudents.Margin = new System.Windows.Forms.Padding(6);
             pnlStudents.Name = "pnlStudents";
             pnlStudents.Size = new System.Drawing.Size(938, 466);
@@ -401,6 +402,7 @@
             // 
             // pnlActivity
             // 
+            pnlActivity.Controls.Add(ParticipantsB);
             pnlActivity.Controls.Add(pictureBox5);
             pnlActivity.Controls.Add(listViewActivity);
             pnlActivity.Controls.Add(label4);
@@ -408,6 +410,16 @@
             pnlActivity.Name = "pnlActivity";
             pnlActivity.Size = new System.Drawing.Size(938, 466);
             pnlActivity.TabIndex = 3;
+            // 
+            // ParticipantsB
+            // 
+            ParticipantsB.Location = new System.Drawing.Point(24, 372);
+            ParticipantsB.Name = "ParticipantsB";
+            ParticipantsB.Size = new System.Drawing.Size(136, 44);
+            ParticipantsB.TabIndex = 6;
+            ParticipantsB.Text = "Manage participants";
+            ParticipantsB.UseVisualStyleBackColor = true;
+            ParticipantsB.Click += ParticipantsB_Click;
             // 
             // pictureBox5
             // 
@@ -421,7 +433,9 @@
             // listViewActivity
             // 
             listViewActivity.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader18, columnHeader19, columnHeader20, columnHeader21, columnHeader22 });
+            listViewActivity.FullRowSelect = true;
             listViewActivity.Location = new System.Drawing.Point(24, 42);
+            listViewActivity.MultiSelect = false;
             listViewActivity.Name = "listViewActivity";
             listViewActivity.Size = new System.Drawing.Size(766, 307);
             listViewActivity.TabIndex = 1;
@@ -469,7 +483,7 @@
             pnlLecturers.Controls.Add(pictureBox3);
             pnlLecturers.Controls.Add(listViewLecturers);
             pnlLecturers.Controls.Add(label3);
-            pnlLecturers.Location = new System.Drawing.Point(22, 54);
+            pnlLecturers.Location = new System.Drawing.Point(19, 36);
             pnlLecturers.Margin = new System.Windows.Forms.Padding(6);
             pnlLecturers.Name = "pnlLecturers";
             pnlLecturers.Size = new System.Drawing.Size(938, 466);
@@ -556,7 +570,7 @@
             pnlDrinks.Controls.Add(pictureBox7);
             pnlDrinks.Controls.Add(listViewDrinks);
             pnlDrinks.Controls.Add(label5);
-            pnlDrinks.Location = new System.Drawing.Point(22, 54);
+            pnlDrinks.Location = new System.Drawing.Point(22, 42);
             pnlDrinks.Margin = new System.Windows.Forms.Padding(6);
             pnlDrinks.Name = "pnlDrinks";
             pnlDrinks.Size = new System.Drawing.Size(938, 466);
@@ -704,7 +718,7 @@
             pnlVAT.Controls.Add(pictureBox8);
             pnlVAT.Controls.Add(pictureBox9);
             pnlVAT.Controls.Add(label6);
-            pnlVAT.Location = new System.Drawing.Point(22, 54);
+            pnlVAT.Location = new System.Drawing.Point(19, 36);
             pnlVAT.Name = "pnlVAT";
             pnlVAT.Size = new System.Drawing.Size(494, 225);
             pnlVAT.TabIndex = 6;
@@ -891,12 +905,12 @@
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(962, 497);
-            Controls.Add(pnlStudents);
+            Controls.Add(pnlLecturers);
             Controls.Add(pnlVAT);
             Controls.Add(pnlDrinks);
-            Controls.Add(menuStrip1);
-            Controls.Add(pnlLecturers);
+            Controls.Add(pnlStudents);
             Controls.Add(pnlActivity);
+            Controls.Add(menuStrip1);
             Controls.Add(pnlRooms);
             Controls.Add(pnlDashboard);
             MainMenuStrip = menuStrip1;
@@ -1023,5 +1037,6 @@
         private System.Windows.Forms.Button AddStudentB;
         private System.Windows.Forms.Button DeleteStudentB;
         private System.Windows.Forms.Button UpdateStudentB;
+        private System.Windows.Forms.Button ParticipantsB;
     }
 }

@@ -9,5 +9,10 @@ namespace SomerenModel
         public string endTime { get; set; }
         public string name { get; set; }
         public string day { get; set; }
+
+        public  override string ToString()
+        {
+            return $"{id} {name} {day} {startTime}";
+        }
     }
 }

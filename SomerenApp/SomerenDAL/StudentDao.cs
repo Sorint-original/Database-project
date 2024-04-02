@@ -49,9 +49,18 @@ namespace SomerenDAL
             }
         }
 
+        public List<Student> ParticipantStudents(SomerenModel.Activity activity)
+        {
+            string query = "SELECT S.StudentNumber, FirstName, LastName, TelephoneNumber, Class, RoomCode  FROM participates AS P JOIN Student AS S ON P.StudentNumber = S.StudentNumber WHERE ActivityID = @ActivityId;";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@ActivityId", activity.id);
+            return ReadTables(ExecuteSelectQuery(query, sqlParameters));
+        }
+
+
         public void DeleteById(int ID)
         {
-            string command = "DELETE FROM Student WHERE StudentNumber = @Id ;" ;
+            string command = "DELETE FROM participates WHERE StudentNumber = @Id  ;DELETE FROM buys WHERE StudentNumber = @Id  ;DELETE FROM Student WHERE StudentNumber = @Id ;";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@Id", ID);
 
