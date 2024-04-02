@@ -518,10 +518,10 @@ namespace SomerenUI
 
         private void UpdateStudentB_Click(object sender, EventArgs e)
         {
-            AddStudent addStudentForm ;
+            AddStudent addStudentForm;
             if (listViewStudents.SelectedItems.Count > 0)
             {
-                addStudentForm = new AddStudent(false, int.Parse(listViewStudents.SelectedItems[0].Text)) ;
+                addStudentForm = new AddStudent(false, int.Parse(listViewStudents.SelectedItems[0].Text));
             }
             else
             {
@@ -529,6 +529,11 @@ namespace SomerenUI
             }
             addStudentForm.ShowDialog();
             ShowStudentsPanel();
+        }
+
+        private void ParticipantsB_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
