@@ -533,7 +533,17 @@ namespace SomerenUI
 
         private void ParticipantsB_Click(object sender, EventArgs e)
         {
+            Participants ParticipantsForm ;
+            if (listViewActivity.SelectedItems.Count > 0)
+            {
+                ParticipantsForm = new Participants(int.Parse(listViewActivity.SelectedItems[0].Text));
+            }
+            else
+            {
+                ParticipantsForm = new Participants();
+            }
 
+            ParticipantsForm.ShowDialog();
         }
     }
 }

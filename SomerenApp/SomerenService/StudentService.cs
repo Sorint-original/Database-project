@@ -37,5 +37,10 @@ namespace SomerenService
         {
             studentDao.UpdateStudent(student);
         }
+
+        public List<Student> ParticipantStudents(SomerenModel.Activity activity)
+        {
+            return studentDao.ParticipantStudents(activity);
+        }
     }
 }

@@ -23,5 +23,10 @@ namespace SomerenService
             List<Activity> activities = activityDao.GetAllActivities();
             return activities;
         }
+
+        public void AddParticipant(Activity activity,Student student)
+        {
+            activityDao.AddParticipant(activity, student);
+        }
     }
 }

@@ -35,5 +35,14 @@ namespace SomerenDAL
             }
             return activities;
         }
+
+        public void AddParticipant(Activity activity, Student student)
+        {
+            string query = "INSERT INTO participates VALUES (@StudentNumber,@ActivityId);";
+            SqlParameter[] sqlParameters = new SqlParameter[2];
+            sqlParameters[0] = new SqlParameter("@ActivityId", activity.id);
+            sqlParameters[1] = new SqlParameter("@StudentNumber", student.StudentNumber);
+            ExecuteEditQuery(query, sqlParameters);
+        }
     }   
 }
