@@ -1,0 +1,29 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "vslsRemoteLaunch",
+            "name": "SomerenDAL",
+            "request": "attach",
+            "projectID": "1acd0e00-c9a6-4c4f-ab3f-15f90a1f88bd"
+        },
+        {
+            "type": "vslsRemoteLaunch",
+            "name": "SomerenService",
+            "request": "attach",
+            "projectID": "cad2abe3-1fe0-4012-b6fc-e0679e41260c"
+        },
+        {
+            "type": "vslsRemoteLaunch",
+            "name": "SomerenModel",
+            "request": "attach",
+            "projectID": "8e9f2a97-3e00-4524-a821-f207c970a69a"
+        },
+        {
+            "type": "vslsRemoteLaunch",
+            "name": "SomerenUI",
+            "request": "attach",
+            "projectID": "01370907-9cce-4ab8-bdec-b86cbdf74774"
+        }
+    ]
+}
