@@ -42,7 +42,7 @@ namespace SomerenDAL
 
         public Lecturer GetLecturerById(int Id)
         {
-            string query = "SELECT LecturerId, FirstName, LastName, Age, TelephoneNumber, RoomCode FROM Lecturer WHERE LcturerId = @lecturerId";
+            string query = "SELECT LecturerId, FirstName, LastName, Age, TelephoneNumber, RoomCode FROM Lecturer WHERE LecturerId = @lecturerId";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@lecturerId", Id);
             try
