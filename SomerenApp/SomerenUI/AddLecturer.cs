@@ -93,7 +93,7 @@ namespace SomerenUI
 
             if (add == true)
             {
-                if (LecturerIdTB.Text.Length == 2)
+                if (LecturerIdTB.Text.Length > 0)
                 {
                     try
                     {
@@ -107,7 +107,7 @@ namespace SomerenUI
                 }
                 else
                 {
-                    MessageBox.Show("The lecturer needs a lecturer Id of 2 digits");
+                    MessageBox.Show("The lecturer needs a lecturer Id ");
                     return null;
                 }
             }
@@ -131,6 +131,7 @@ namespace SomerenUI
                 MessageBox.Show("The lecturer needs a last name");
                 return null;
             }
+
 
             Regex regex = new Regex(@"^(^[0][1-9]\d{8}$)+$");
             Match match = regex.Match(NumberT.Text);
