@@ -533,7 +533,7 @@ namespace SomerenUI
 
         private void ParticipantsB_Click(object sender, EventArgs e)
         {
-            Participants ParticipantsForm ;
+            Participants ParticipantsForm;
             if (listViewActivity.SelectedItems.Count > 0)
             {
                 ParticipantsForm = new Participants(int.Parse(listViewActivity.SelectedItems[0].Text));
@@ -544,6 +544,55 @@ namespace SomerenUI
             }
 
             ParticipantsForm.ShowDialog();
+        }
+
+        private void addLectureB_Click(object sender, EventArgs e)
+        {
+            AddLecturer addLecturerForm = new AddLecturer(true);
+            addLecturerForm.ShowDialog();
+            ShowLecturersPanel();
+        }
+
+        private void updateLecturerB_Click(object sender, EventArgs e)
+        {
+            AddLecturer addLecturerForm;
+            if (listViewLecturers.SelectedItems.Count > 0)
+            {
+                addLecturerForm = new AddLecturer(false, int.Parse(listViewLecturers.SelectedItems[0].Text));
+            }
+            else
+            {
+                addLecturerForm = new AddLecturer(false);
+            }
+            addLecturerForm.ShowDialog();
+            ShowLecturersPanel();
+        }
+
+        private void deleteLectureB_Click(object sender, EventArgs e)
+        {
+            //Message box warning + validation
+            if (listViewLecturers.SelectedItems.Count > 0)
+            {
+                string message = "Do you want to Delete this lecturer?";
+                string title = "Delete lecturer";
+                MessageBoxButtons buttons = MessageBoxButtons.YesNo;
+                DialogResult result = MessageBox.Show(message, title, buttons);
+                if (result == DialogResult.Yes)
+                {
+                    DeleteLecturers();
+                }
+            }
+        }
+        private void DeleteLecturers()
+        {
+            LecturerService lecturerService = new LecturerService();
+            while (listViewLecturers.SelectedItems.Count > 0)
+            {
+                lecturerService.DeleteByID(int.Parse(listViewLecturers.SelectedItems[0].Text));
+                listViewLecturers.Items.Remove(listViewLecturers.SelectedItems[0]);
+            }
+
+            ShowLecturersPanel();
         }
     }
 }

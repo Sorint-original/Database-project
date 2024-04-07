@@ -2105,24 +2105,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\pssor\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\adria\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj",
+      "projectUniqueName": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj",
       "projectName": "SomerenModel",
-      "projectPath": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj",
-      "packagesPath": "C:\\Users\\pssor\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\pssor\\OneDrive\\Desktop\\work\\github\\Database-project\\SomerenApp\\SomerenModel\\obj\\",
+      "projectPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj",
+      "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenModel\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\pssor\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2130,7 +2125,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2143,11 +2137,6 @@
         "warnAsError": [
           "NU1605"
         ]
-      },
-      "restoreAuditProperties": {
-        "enableAudit": "true",
-        "auditLevel": "low",
-        "auditMode": "direct"
       }
     },
     "frameworks": {
@@ -2183,7 +2172,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.200\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

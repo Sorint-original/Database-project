@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("SomerenDAL")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+9985425f50928295a3c7cd37109d91b8fc9b0ac9")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+80620aaff7ffdd23a71cf1cb817a4d97f3f2dc48")]
 [assembly: System.Reflection.AssemblyProductAttribute("SomerenDAL")]
 [assembly: System.Reflection.AssemblyTitleAttribute("SomerenDAL")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

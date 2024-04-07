@@ -21,6 +21,25 @@ namespace SomerenService
             List<Lecturer> lecturers = lecturerDao.GetAllLecturers();
             return lecturers;
         }
+        public void DeleteByID(int id)
+        {
+            lecturerDao.DeleteById(id);
+        }
 
+        public Lecturer GetLecturerById(int id)
+        {
+            return lecturerDao.GetLecturerById(id);
+        }
+
+
+        public void AddLecturer(Lecturer lecturer)
+        {
+            lecturerDao.AddLecturer(lecturer);
+        }
+
+        public void UpdateLecturer(Lecturer lecturer)
+        {
+            lecturerDao.UpdateLecturer(lecturer);
+        }
     }
 }
