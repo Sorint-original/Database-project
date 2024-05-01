@@ -12,7 +12,7 @@ namespace SomerenDAL
     {
         public List<Activity> GetAllActivities()
         {
-            string query = "SELECT * FROM Activity";
+            string query = "SELECT ActivityID, Day, StartTime, EndTime, TypeActivity  FROM Activity";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
