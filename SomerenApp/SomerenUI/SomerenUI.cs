@@ -348,7 +348,7 @@ namespace SomerenUI
 
         }
 
-        private Quarter? GetSelectedYearAndQuarter()
+        private Quarter GetSelectedYearAndQuarter()
         {
             if (yearSelectorBox.SelectedItem == null || qSelectorBox.SelectedItem == null)
             {
@@ -462,6 +462,7 @@ namespace SomerenUI
             Quarter quarter = GetSelectedYearAndQuarter();
             quarterStart.Text = quarter.StartDate;
             quarterEnd.Text = quarter.EndDate;
+            CalculateVAT();
         }
 
         private void yearSelectorBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -469,8 +470,14 @@ namespace SomerenUI
             vatHigh.Text = "";
             vatLow.Text = "";
             vatTotal.Text = "";
-            quarterStart.Text = "";
-            quarterEnd.Text = "";
+            if (qSelectorBox.SelectedItem == null)
+            {
+                return;
+            }
+            Quarter quarter = GetSelectedYearAndQuarter();
+            quarterStart.Text = quarter.StartDate;
+            quarterEnd.Text = quarter.EndDate;
+            CalculateVAT();
 
         }
 

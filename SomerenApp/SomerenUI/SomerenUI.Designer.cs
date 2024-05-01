@@ -114,7 +114,6 @@
             label10 = new System.Windows.Forms.Label();
             quarterStart = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
-            calcVatButton = new System.Windows.Forms.Button();
             label8 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
             qSelectorBox = new System.Windows.Forms.ComboBox();
@@ -219,7 +218,7 @@
             // 
             pnlDashboard.Controls.Add(lblDashboard);
             pnlDashboard.Location = new System.Drawing.Point(22, 58);
-            pnlDashboard.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            pnlDashboard.Margin = new System.Windows.Forms.Padding(6);
             pnlDashboard.Name = "pnlDashboard";
             pnlDashboard.Size = new System.Drawing.Size(1742, 994);
             pnlDashboard.TabIndex = 1;
@@ -243,7 +242,7 @@
             pnlStudents.Controls.Add(listViewStudents);
             pnlStudents.Controls.Add(label1);
             pnlStudents.Location = new System.Drawing.Point(16, 42);
-            pnlStudents.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            pnlStudents.Margin = new System.Windows.Forms.Padding(6);
             pnlStudents.Name = "pnlStudents";
             pnlStudents.Size = new System.Drawing.Size(938, 466);
             pnlStudents.TabIndex = 2;
@@ -339,7 +338,7 @@
             pnlRooms.Controls.Add(listViewRooms);
             pnlRooms.Controls.Add(label2);
             pnlRooms.Location = new System.Drawing.Point(22, 54);
-            pnlRooms.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            pnlRooms.Margin = new System.Windows.Forms.Padding(6);
             pnlRooms.Name = "pnlRooms";
             pnlRooms.Size = new System.Drawing.Size(938, 466);
             pnlRooms.TabIndex = 3;
@@ -490,7 +489,7 @@
             pnlLecturers.Controls.Add(listViewLecturers);
             pnlLecturers.Controls.Add(label3);
             pnlLecturers.Location = new System.Drawing.Point(19, 36);
-            pnlLecturers.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            pnlLecturers.Margin = new System.Windows.Forms.Padding(6);
             pnlLecturers.Name = "pnlLecturers";
             pnlLecturers.Size = new System.Drawing.Size(938, 466);
             pnlLecturers.TabIndex = 4;
@@ -540,7 +539,7 @@
             // pictureBox3
             // 
             pictureBox3.Location = new System.Drawing.Point(1495, 0);
-            pictureBox3.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            pictureBox3.Margin = new System.Windows.Forms.Padding(6);
             pictureBox3.Name = "pictureBox3";
             pictureBox3.Size = new System.Drawing.Size(241, 262);
             pictureBox3.TabIndex = 2;
@@ -551,7 +550,7 @@
             listViewLecturers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader12, columnHeader13, columnHeader14, columnHeader15, columnHeader16, columnHeader17 });
             listViewLecturers.FullRowSelect = true;
             listViewLecturers.Location = new System.Drawing.Point(30, 42);
-            listViewLecturers.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            listViewLecturers.Margin = new System.Windows.Forms.Padding(6);
             listViewLecturers.Name = "listViewLecturers";
             listViewLecturers.Size = new System.Drawing.Size(752, 307);
             listViewLecturers.TabIndex = 1;
@@ -611,7 +610,7 @@
             pnlDrinks.Controls.Add(listViewDrinks);
             pnlDrinks.Controls.Add(label5);
             pnlDrinks.Location = new System.Drawing.Point(22, 42);
-            pnlDrinks.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            pnlDrinks.Margin = new System.Windows.Forms.Padding(6);
             pnlDrinks.Name = "pnlDrinks";
             pnlDrinks.Size = new System.Drawing.Size(938, 466);
             pnlDrinks.TabIndex = 5;
@@ -679,7 +678,7 @@
             // pictureBox7
             // 
             pictureBox7.Location = new System.Drawing.Point(1495, 0);
-            pictureBox7.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            pictureBox7.Margin = new System.Windows.Forms.Padding(6);
             pictureBox7.Name = "pictureBox7";
             pictureBox7.Size = new System.Drawing.Size(241, 262);
             pictureBox7.TabIndex = 2;
@@ -690,7 +689,7 @@
             listViewDrinks.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader23, columnHeader24, columnHeader25, columnHeader26, columnHeader27, columnHeader28 });
             listViewDrinks.FullRowSelect = true;
             listViewDrinks.Location = new System.Drawing.Point(30, 42);
-            listViewDrinks.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
+            listViewDrinks.Margin = new System.Windows.Forms.Padding(6);
             listViewDrinks.Name = "listViewDrinks";
             listViewDrinks.Size = new System.Drawing.Size(752, 307);
             listViewDrinks.TabIndex = 1;
@@ -750,7 +749,6 @@
             pnlVAT.Controls.Add(label10);
             pnlVAT.Controls.Add(quarterStart);
             pnlVAT.Controls.Add(label9);
-            pnlVAT.Controls.Add(calcVatButton);
             pnlVAT.Controls.Add(label8);
             pnlVAT.Controls.Add(label7);
             pnlVAT.Controls.Add(qSelectorBox);
@@ -758,7 +756,7 @@
             pnlVAT.Controls.Add(pictureBox8);
             pnlVAT.Controls.Add(pictureBox9);
             pnlVAT.Controls.Add(label6);
-            pnlVAT.Location = new System.Drawing.Point(19, 36);
+            pnlVAT.Location = new System.Drawing.Point(0, 0);
             pnlVAT.Name = "pnlVAT";
             pnlVAT.Size = new System.Drawing.Size(494, 225);
             pnlVAT.TabIndex = 6;
@@ -766,7 +764,7 @@
             // vatTotal
             // 
             vatTotal.AutoSize = true;
-            vatTotal.Location = new System.Drawing.Point(315, 82);
+            vatTotal.Location = new System.Drawing.Point(342, 196);
             vatTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             vatTotal.Name = "vatTotal";
             vatTotal.Size = new System.Drawing.Size(0, 15);
@@ -775,7 +773,7 @@
             // label13
             // 
             label13.AutoSize = true;
-            label13.Location = new System.Drawing.Point(113, 80);
+            label13.Location = new System.Drawing.Point(140, 196);
             label13.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label13.Name = "label13";
             label13.Size = new System.Drawing.Size(146, 15);
@@ -785,7 +783,7 @@
             // vatHigh
             // 
             vatHigh.AutoSize = true;
-            vatHigh.Location = new System.Drawing.Point(315, 59);
+            vatHigh.Location = new System.Drawing.Point(342, 149);
             vatHigh.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             vatHigh.Name = "vatHigh";
             vatHigh.Size = new System.Drawing.Size(0, 15);
@@ -794,7 +792,7 @@
             // label12
             // 
             label12.AutoSize = true;
-            label12.Location = new System.Drawing.Point(113, 60);
+            label12.Location = new System.Drawing.Point(140, 149);
             label12.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label12.Name = "label12";
             label12.Size = new System.Drawing.Size(178, 15);
@@ -804,7 +802,7 @@
             // vatLow
             // 
             vatLow.AutoSize = true;
-            vatLow.Location = new System.Drawing.Point(315, 45);
+            vatLow.Location = new System.Drawing.Point(342, 122);
             vatLow.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             vatLow.Name = "vatLow";
             vatLow.Size = new System.Drawing.Size(0, 15);
@@ -813,7 +811,7 @@
             // label11
             // 
             label11.AutoSize = true;
-            label11.Location = new System.Drawing.Point(113, 43);
+            label11.Location = new System.Drawing.Point(140, 122);
             label11.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label11.Name = "label11";
             label11.Size = new System.Drawing.Size(167, 15);
@@ -823,7 +821,7 @@
             // quarterEnd
             // 
             quarterEnd.AutoSize = true;
-            quarterEnd.Location = new System.Drawing.Point(315, 28);
+            quarterEnd.Location = new System.Drawing.Point(342, 90);
             quarterEnd.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             quarterEnd.Name = "quarterEnd";
             quarterEnd.Size = new System.Drawing.Size(67, 15);
@@ -833,7 +831,7 @@
             // label10
             // 
             label10.AutoSize = true;
-            label10.Location = new System.Drawing.Point(300, 28);
+            label10.Location = new System.Drawing.Point(322, 90);
             label10.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label10.Name = "label10";
             label10.Size = new System.Drawing.Size(21, 15);
@@ -843,7 +841,7 @@
             // quarterStart
             // 
             quarterStart.AutoSize = true;
-            quarterStart.Location = new System.Drawing.Point(230, 28);
+            quarterStart.Location = new System.Drawing.Point(251, 90);
             quarterStart.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             quarterStart.Name = "quarterStart";
             quarterStart.Size = new System.Drawing.Size(67, 15);
@@ -853,28 +851,17 @@
             // label9
             // 
             label9.AutoSize = true;
-            label9.Location = new System.Drawing.Point(113, 28);
+            label9.Location = new System.Drawing.Point(140, 90);
             label9.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label9.Name = "label9";
             label9.Size = new System.Drawing.Size(105, 15);
             label9.TabIndex = 16;
             label9.Text = "Quarter runs from:";
             // 
-            // calcVatButton
-            // 
-            calcVatButton.Location = new System.Drawing.Point(14, 196);
-            calcVatButton.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
-            calcVatButton.Name = "calcVatButton";
-            calcVatButton.Size = new System.Drawing.Size(109, 19);
-            calcVatButton.TabIndex = 15;
-            calcVatButton.Text = "Calculate VAT for selected period";
-            calcVatButton.UseVisualStyleBackColor = true;
-            calcVatButton.Click += calcVatButton_Click;
-            // 
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new System.Drawing.Point(16, 57);
+            label8.Location = new System.Drawing.Point(140, 50);
             label8.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label8.Name = "label8";
             label8.Size = new System.Drawing.Size(81, 15);
@@ -884,7 +871,7 @@
             // label7
             // 
             label7.AutoSize = true;
-            label7.Location = new System.Drawing.Point(16, 28);
+            label7.Location = new System.Drawing.Point(140, 18);
             label7.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             label7.Name = "label7";
             label7.Size = new System.Drawing.Size(63, 15);
@@ -895,7 +882,7 @@
             // 
             qSelectorBox.FormattingEnabled = true;
             qSelectorBox.Items.AddRange(new object[] { "Q1", "Q2", "Q3", "Q4" });
-            qSelectorBox.Location = new System.Drawing.Point(16, 68);
+            qSelectorBox.Location = new System.Drawing.Point(240, 50);
             qSelectorBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             qSelectorBox.Name = "qSelectorBox";
             qSelectorBox.Size = new System.Drawing.Size(67, 23);
@@ -905,7 +892,7 @@
             // yearSelectorBox
             // 
             yearSelectorBox.FormattingEnabled = true;
-            yearSelectorBox.Location = new System.Drawing.Point(16, 41);
+            yearSelectorBox.Location = new System.Drawing.Point(240, 12);
             yearSelectorBox.Margin = new System.Windows.Forms.Padding(2, 1, 2, 1);
             yearSelectorBox.Name = "yearSelectorBox";
             yearSelectorBox.Size = new System.Drawing.Size(67, 23);
@@ -945,8 +932,8 @@
             AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             ClientSize = new System.Drawing.Size(962, 497);
-            Controls.Add(pnlLecturers);
             Controls.Add(pnlVAT);
+            Controls.Add(pnlLecturers);
             Controls.Add(pnlDrinks);
             Controls.Add(pnlStudents);
             Controls.Add(pnlActivity);
@@ -1062,7 +1049,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox qSelectorBox;
         private System.Windows.Forms.ComboBox yearSelectorBox;
-        private System.Windows.Forms.Button calcVatButton;
         private System.Windows.Forms.Label quarterStart;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label13;
