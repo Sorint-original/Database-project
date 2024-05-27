@@ -23,8 +23,100 @@ namespace SomerenUI
             pnlLecturers.Hide();
             pnlDrinks.Hide();
             pnlVAT.Hide();
+            pnlSupervisors.Hide();
             // show dashboard
             pnlDashboard.Show();
+        }
+
+
+        private void ShowAcitvitySupervisorsPanel()
+        {
+            // hide all other panels
+            pnlActivity.Hide();
+            pnlStudents.Hide();
+            pnlRooms.Hide();
+            pnlLecturers.Hide();
+            pnlDrinks.Hide();
+            pnlVAT.Hide();
+            pnlDashboard.Hide();
+
+
+            pnlSupervisors.Show();
+            initializeSupervisorsPanel();
+        }
+
+        private void initializeSupervisorsPanel()
+        {
+            // clear the listview before filling it
+            activityBox.Items.Clear();
+            allSupervisors.Items.Clear();
+            currentSupervisors.Items.Clear();
+
+            // get and display all activities
+            ActivityService activityService = new ActivityService();
+            List<Activity> activities = activityService.GetActivities();
+            foreach (Activity activity in activities)
+            {
+                ListViewItem li = new ListViewItem(activity.id.ToString());
+                li.SubItems.Add(activity.name);
+              
+                li.Tag = activity;   // link activity object to listview item
+                activityBox.Items.Add(li);
+            }
+
+            // get and display all supervisors
+            LecturerService lecturerService = new LecturerService();
+            List<Lecturer> lecturers = lecturerService.GetLecturers();
+            foreach (Lecturer lecturer in lecturers)
+            {
+                ListViewItem li = new ListViewItem(lecturer.LecturerId.ToString());
+                li.SubItems.Add(lecturer.FirstName);
+                li.SubItems.Add(lecturer.LastName);
+               
+                li.Tag = lecturer;   // link lecturer object to listview item
+                allSupervisors.Items.Add(li);
+            }
+        }
+
+
+
+        private void updateSupervisorsForActivity()
+        {
+            // clear the listview before filling it
+            currentSupervisors.Items.Clear();
+            allSupervisors.Items.Clear();
+
+
+
+            int activityId = int.Parse(activityBox.SelectedItems[0].Text);
+            SuperviseService supervisesService = new SuperviseService();
+            List<Lecturer> supervisors = supervisesService.getSupervisorsForActivity(activityId);
+            foreach (Lecturer supervisor in supervisors)
+            {
+                ListViewItem li = new ListViewItem(supervisor.LecturerId.ToString());
+                li.SubItems.Add(supervisor.FirstName);
+                li.SubItems.Add(supervisor.LastName);
+              
+                li.Tag = supervisor;   // link lecturer object to listview item
+                currentSupervisors.Items.Add(li);
+            }
+        }
+
+
+        private void removeSupervisorFromActivity()
+        {
+            int activityId = int.Parse(activityBox.SelectedItems[0].Text);
+            int supervisorId = int.Parse(currentSupervisors.SelectedItems[0].Text);
+            SuperviseService supervisesService = new SuperviseService();
+            supervisesService.DeleteSupervisor(activityId, supervisorId);
+        }
+
+        private void addSupervisorToActivity()
+        {
+            int activityId = int.Parse(activityBox.SelectedItems[0].Text);
+            int supervisorId = int.Parse(allSupervisors.SelectedItems[0].Text);
+            SuperviseService supervisesService = new SuperviseService();
+            supervisesService.AddSupervisor(activityId, supervisorId);
         }
 
         private void ShowStudentsPanel()
@@ -36,6 +128,7 @@ namespace SomerenUI
             pnlDashboard.Hide();
             pnlDrinks.Hide();
             pnlVAT.Hide();
+            pnlSupervisors.Hide();
             // show students
             pnlStudents.Show();
 
@@ -58,7 +151,8 @@ namespace SomerenUI
             pnlLecturers.Hide();
             pnlDrinks.Hide();
             pnlVAT.Hide();
-
+            pnlDashboard.Hide();
+            pnlSupervisors.Hide();
             pnlStudents.Hide();
             pnlRooms.Show();
 
@@ -83,6 +177,7 @@ namespace SomerenUI
             pnlRooms.Hide();
             pnlStudents.Hide();
             pnlDrinks.Hide();
+            pnlSupervisors.Hide();
             pnlVAT.Hide();
             // show lecturers 
             pnlLecturers.Show();
@@ -108,6 +203,7 @@ namespace SomerenUI
             pnlDrinks.Hide();
             pnlStudents.Hide();
             pnlVAT.Hide();
+            pnlSupervisors.Hide();
             pnlActivity.Show();
             try
             {
@@ -132,6 +228,7 @@ namespace SomerenUI
             pnlStudents.Hide();
             pnlActivity.Hide();
             pnlVAT.Hide();
+            pnlSupervisors.Hide();
             pnlDrinks.Show();
 
 
@@ -159,6 +256,7 @@ namespace SomerenUI
             pnlStudents.Hide();
             pnlActivity.Hide();
             pnlDrinks.Hide();
+            pnlSupervisors.Hide();
 
             pnlVAT.Show();
             DisplayOrderYears();
@@ -401,6 +499,7 @@ namespace SomerenUI
             ShowDrinksPanel();
         }
 
+
         private void DrinkAddButton_Click(object sender, EventArgs e)
         {
 
@@ -600,6 +699,30 @@ namespace SomerenUI
             }
 
             ShowLecturersPanel();
+        }
+
+        private void removeSupervisor_Click(object sender, EventArgs e)
+        {
+            removeSupervisorFromActivity();
+
+
+        }
+
+        private void addSupervisor_Click(object sender, EventArgs e)
+        {
+            addSupervisorToActivity();
+
+        }
+
+        private void activityBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            updateSupervisorsForActivity();
+
+        }
+
+        private void activitySupervisorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowAcitvitySupervisorsPanel();
         }
     }
 }
