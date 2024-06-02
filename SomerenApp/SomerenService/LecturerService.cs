@@ -22,5 +22,13 @@ namespace SomerenService
             return lecturers;
         }
 
+        public Lecturer GetLecturerById(int id)
+        {
+
+            
+            Lecturer lecturer = lecturerDao.GetLecturerById(id);
+            return lecturer;
+        }
+
     }
 }

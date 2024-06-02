@@ -39,5 +39,27 @@ namespace SomerenDAL
             }
             return lecturers;
         }
+
+        private Lecturer ReadTable(DataTable dataTable)
+        {
+            Lecturer lecturer = new Lecturer()
+            {
+                LecturerId = (int)dataTable.Rows[0]["LecturerId"],
+                FirstName = (string)dataTable.Rows[0]["FirstName"],
+                LastName = (string)dataTable.Rows[0]["LastName"],
+                Age = (int)dataTable.Rows[0]["Age"],
+                PhoneNumber = (string)dataTable.Rows[0]["TelephoneNumber"],
+                RoomCode = (int)dataTable.Rows[0]["RoomCode"]
+            };
+            return lecturer;
+        }
+
+        public Lecturer GetLecturerById(int id)
+        {
+            string query = "SELECT LecturerId, FirstName, LastName, TelephoneNumber, Age, RoomCode FROM Lecturer WHERE LecturerId = @id";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@id", id);
+            return ReadTable(ExecuteSelectQuery(query, sqlParameters));
+        }
     }
 }
