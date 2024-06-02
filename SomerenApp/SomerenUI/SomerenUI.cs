@@ -194,8 +194,7 @@ namespace SomerenUI
             allSupervisorsView.Items.Clear();
             List<Lecturer> supervisors = lecturerService.GetLecturers();
 
-            allSupervisorsView.Columns.Add("ID", -2, HorizontalAlignment.Left);
-            allSupervisorsView.Columns.Add("Name", -2, HorizontalAlignment.Left);
+           
 
             foreach (Lecturer supervisor in supervisors)
             {
@@ -234,8 +233,7 @@ namespace SomerenUI
 
             List<Lecturer> supervisors = supervises.ConvertAll(supervise => lecturerService.GetLecturerById(supervise.lecturerID));
 
-            supervisorsView.Columns.Add("ID", -2, HorizontalAlignment.Left);
-supervisorsView.Columns.Add("Name", -2, HorizontalAlignment.Left);
+          
 
             foreach (Lecturer supervisor in supervisors)
             {
@@ -674,14 +672,21 @@ supervisorsView.Columns.Add("Name", -2, HorizontalAlignment.Left);
         private void RemoveSupervisor_Click(object sender, EventArgs e)
         {
             removeSupervisor();
-            try
+                  DialogResult result = MessageBox.Show(
+            $"Are you sure you want to remove this supervisor?",
+            "Confirm Remove",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+        );
+        if (result == DialogResult.Yes)
+         {   try
             {
                 displaySupervisorForActivity(int.Parse(activityView.SelectedItems[0].Text));
             }
             catch (Exception)
             {
                 return;
-            }
+            }}
           
 
         }

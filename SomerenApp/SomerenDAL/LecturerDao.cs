@@ -1,3 +1,4 @@
+﻿
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -40,26 +41,55 @@ namespace SomerenDAL
             return lecturers;
         }
 
-        private Lecturer ReadTable(DataTable dataTable)
+        public Lecturer GetLecturerById(int Id)
         {
-            Lecturer lecturer = new Lecturer()
+            string query = "SELECT LecturerId, FirstName, LastName, Age, TelephoneNumber, RoomCode FROM Lecturer WHERE LecturerId = @lecturerId";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@lecturerId", Id);
+            try
             {
-                LecturerId = (int)dataTable.Rows[0]["LecturerId"],
-                FirstName = (string)dataTable.Rows[0]["FirstName"],
-                LastName = (string)dataTable.Rows[0]["LastName"],
-                Age = (int)dataTable.Rows[0]["Age"],
-                PhoneNumber = (string)dataTable.Rows[0]["TelephoneNumber"],
-                RoomCode = (int)dataTable.Rows[0]["RoomCode"]
-            };
-            return lecturer;
+                return ReadTables(ExecuteSelectQuery(query, sqlParameters))[0];
+            }
+            catch
+            {
+                return null;
+            }
         }
 
-        public Lecturer GetLecturerById(int id)
+        public void DeleteById(int ID)
         {
-            string query = "SELECT LecturerId, FirstName, LastName, TelephoneNumber, Age, RoomCode FROM Lecturer WHERE LecturerId = @id";
+            string command = "DELETE FROM supervises WHERE LecturerID = @Id  ;DELETE FROM lecturer WHERE LecturerId = @Id ;";
             SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@id", id);
-            return ReadTable(ExecuteSelectQuery(query, sqlParameters));
+            sqlParameters[0] = new SqlParameter("@Id", ID);
+
+            ExecuteEditQuery(command, sqlParameters);
+        }
+        public void AddLecturer(Lecturer lecturer)
+        {
+            string command = "INSERT INTO Lecturer VALUES (@LecturerId, @FirstName, @SecondName, @Age, @TelephoneNumber, @RoomCode)";
+            SqlParameter[] sqlParameters = new SqlParameter[6];
+            sqlParameters[0] = new SqlParameter("@LecturerId", lecturer.LecturerId);
+            sqlParameters[1] = new SqlParameter("@FirstName", lecturer.FirstName);
+            sqlParameters[2] = new SqlParameter("@SecondName", lecturer.LastName);
+            sqlParameters[3] = new SqlParameter("@Age", lecturer.Age);
+            sqlParameters[4] = new SqlParameter("@TelephoneNumber", lecturer.PhoneNumber);
+            sqlParameters[5] = new SqlParameter("@RoomCode", lecturer.RoomCode);
+
+            ExecuteEditQuery(command, sqlParameters);
+        }
+
+        public void UpdateLecturer(Lecturer lecturer)
+        {
+            string command = "UPDATE  Lecturer SET FirstName = @FirstName, LastName =  @SecondName, Age = @Age, TelephoneNumber = @TelephoneNumber, RoomCode = @RoomCode WHERE LecturerId = @LecturerId";
+            SqlParameter[] sqlParameters = new SqlParameter[6];
+            sqlParameters[0] = new SqlParameter("@LecturerId", lecturer.LecturerId);
+            sqlParameters[1] = new SqlParameter("@FirstName", lecturer.FirstName);
+            sqlParameters[2] = new SqlParameter("@SecondName", lecturer.LastName);
+            sqlParameters[3] = new SqlParameter("@Age", lecturer.Age);
+            sqlParameters[4] = new SqlParameter("@TelephoneNumber", lecturer.PhoneNumber);
+            sqlParameters[5] = new SqlParameter("@RoomCode", lecturer.RoomCode);
+
+            ExecuteEditQuery(command, sqlParameters);
         }
     }
 }
