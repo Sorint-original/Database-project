@@ -6,13 +6,9 @@ using SomerenModel;
 namespace SomerenDAL {
     public class SupervisesDao : BaseDao {
         public List<Supervise> getSuperviseByActivityId(int activityId) {
-            /* string query = "SELECT * FROM Supervises WHERE ActivityID = @activityId";
-            SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@ActivityID", activityId);
-            return ReadTables(ExecuteSelectQuery(query, sqlParameters)); */
-       /*      return ReadTables(ExecuteSelectQuery(query, sqlParameters)); */
 
-            string query = "SELECT * FROM Supervises WHERE ActivityID = @activity";
+
+            string query = "SELECT LecturerID, ActivityID FROM Supervises WHERE ActivityID = @activity";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@activity", activityId);
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
@@ -20,7 +16,7 @@ namespace SomerenDAL {
         }
 
         public void addSupervisor(int lecturerId, int activityId) {
-            string query = "INSERT INTO Supervises (LecturerID, ActivityID) SELECT @lecturerId, @activityId WHERE NOT EXISTS (SELECT 1 FROM Supervises WHERE LecturerID = @lecturerId AND ActivityID = @activityId)";
+            string query = "INSERT INTO Supervises (LectureID, ActivityID) SELECT @lecturerId, @activityId WHERE NOT EXISTS (SELECT 1 FROM Supervises WHERE LectureID = @lecturerId AND ActivityID = @activityId)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@lecturerId", lecturerId);
             sqlParameters[1] = new SqlParameter("@activityId", activityId);
@@ -29,11 +25,11 @@ namespace SomerenDAL {
             
         }
 
-        public void removeSupervisor(int activityId, int lecturerId) {
-            string query = "DELETE FROM Supervises WHERE ActivityID = @activityId AND LecturerID = @lecturerId";
+        public void removeSupervisor(int activityId, int lectureId) {
+            string query = "DELETE FROM Supervises WHERE ActivityID = @activityId AND LectureID = @lectureId";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@activityId", activityId);
-            sqlParameters[1] = new SqlParameter("@lecturerId", lecturerId);
+            sqlParameters[1] = new SqlParameter("@lectureId", lectureId);
         
             ExecuteEditQuery(query, sqlParameters);
             
@@ -44,7 +40,7 @@ namespace SomerenDAL {
 
             foreach (DataRow dr in dataTable.Rows) {
                 Supervise supervise = new Supervise() {
-                    lecturerID = (int)dr["LecturerID"],
+                    lecturerID = (int)dr["LectureID"],
                     activityID = (int)dr["ActivityID"]
                 };
                 supervises.Add(supervise);
