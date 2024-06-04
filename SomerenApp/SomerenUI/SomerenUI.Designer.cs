@@ -560,6 +560,7 @@
             // listViewLecturers
             // 
             listViewLecturers.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader12, columnHeader13, columnHeader14, columnHeader15, columnHeader16, columnHeader17 });
+            listViewLecturers.FullRowSelect = true;
             listViewLecturers.Location = new System.Drawing.Point(56, 90);
             listViewLecturers.Margin = new System.Windows.Forms.Padding(11, 13, 11, 13);
             listViewLecturers.Name = "listViewLecturers";

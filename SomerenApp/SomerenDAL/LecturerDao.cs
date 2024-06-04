@@ -42,7 +42,7 @@ namespace SomerenDAL
 
         public Lecturer GetLecturerById(int Id)
         {
-            string query = "SELECT LecturerId, FirstName, LastName, Age, TelephoneNumber, RoomCode FROM Lecturer WHERE LcturerId = @lecturerId";
+            string query = "SELECT LecturerId, FirstName, LastName, Age, TelephoneNumber, RoomCode FROM Lecturer WHERE LecturerId = @LecturerId";
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@lecturerId", Id);
             try
@@ -57,9 +57,9 @@ namespace SomerenDAL
 
         public void DeleteById(int ID)
         {
-            string command = "DELETE FROM participates WHERE LecturerId = @Id  ;DELETE FROM buys WHERE LecturerId = @Id  ;DELETE FROM lecturer WHERE Lecturer = @Id ;";
+            string command = "DELETE FROM Lecturer WHERE LecturerId = @LecturerId";
             SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@Id", ID);
+            sqlParameters[0] = new SqlParameter("@LecturerId", ID);
 
             ExecuteEditQuery(command, sqlParameters);
         }
