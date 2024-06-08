@@ -50,62 +50,69 @@
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new System.Drawing.Point(21, 34);
+            label1.Location = new System.Drawing.Point(39, 73);
+            label1.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             label1.Name = "label1";
-            label1.Size = new System.Drawing.Size(101, 15);
+            label1.Size = new System.Drawing.Size(204, 32);
             label1.TabIndex = 0;
             label1.Text = "Student Number: ";
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Location = new System.Drawing.Point(21, 93);
+            label2.Location = new System.Drawing.Point(39, 198);
+            label2.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             label2.Name = "label2";
-            label2.Size = new System.Drawing.Size(70, 15);
+            label2.Size = new System.Drawing.Size(141, 32);
             label2.TabIndex = 1;
             label2.Text = "First Name: ";
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new System.Drawing.Point(21, 132);
+            label3.Location = new System.Drawing.Point(39, 282);
+            label3.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             label3.Name = "label3";
-            label3.Size = new System.Drawing.Size(69, 15);
+            label3.Size = new System.Drawing.Size(138, 32);
             label3.TabIndex = 2;
             label3.Text = "Last Name: ";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new System.Drawing.Point(21, 173);
+            label4.Location = new System.Drawing.Point(39, 369);
+            label4.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             label4.Name = "label4";
-            label4.Size = new System.Drawing.Size(91, 15);
+            label4.Size = new System.Drawing.Size(182, 32);
             label4.TabIndex = 3;
             label4.Text = "Phone Number:";
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new System.Drawing.Point(21, 214);
+            label5.Location = new System.Drawing.Point(39, 457);
+            label5.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             label5.Name = "label5";
-            label5.Size = new System.Drawing.Size(40, 15);
+            label5.Size = new System.Drawing.Size(79, 32);
             label5.TabIndex = 4;
             label5.Text = "Class: ";
             // 
             // label6
             // 
             label6.AutoSize = true;
-            label6.Location = new System.Drawing.Point(21, 247);
+            label6.Location = new System.Drawing.Point(39, 527);
+            label6.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
             label6.Name = "label6";
-            label6.Size = new System.Drawing.Size(70, 15);
+            label6.Size = new System.Drawing.Size(137, 32);
             label6.TabIndex = 5;
             label6.Text = "RoomCode:";
             // 
             // AddStudentB
             // 
-            AddStudentB.Location = new System.Drawing.Point(21, 300);
+            AddStudentB.Location = new System.Drawing.Point(39, 640);
+            AddStudentB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             AddStudentB.Name = "AddStudentB";
-            AddStudentB.Size = new System.Drawing.Size(91, 33);
+            AddStudentB.Size = new System.Drawing.Size(169, 70);
             AddStudentB.TabIndex = 6;
             AddStudentB.Text = "Add Student";
             AddStudentB.UseVisualStyleBackColor = true;
@@ -113,51 +120,58 @@
             // 
             // SNumberTB
             // 
-            SNumberTB.Location = new System.Drawing.Point(151, 31);
+            SNumberTB.Location = new System.Drawing.Point(280, 66);
+            SNumberTB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             SNumberTB.Name = "SNumberTB";
-            SNumberTB.Size = new System.Drawing.Size(128, 23);
+            SNumberTB.Size = new System.Drawing.Size(234, 39);
             SNumberTB.TabIndex = 7;
             // 
             // FirstNameTB
             // 
-            FirstNameTB.Location = new System.Drawing.Point(151, 90);
+            FirstNameTB.Location = new System.Drawing.Point(280, 192);
+            FirstNameTB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             FirstNameTB.Name = "FirstNameTB";
-            FirstNameTB.Size = new System.Drawing.Size(175, 23);
+            FirstNameTB.Size = new System.Drawing.Size(322, 39);
             FirstNameTB.TabIndex = 8;
             // 
             // LastNameTB
             // 
-            LastNameTB.Location = new System.Drawing.Point(151, 129);
+            LastNameTB.Location = new System.Drawing.Point(280, 275);
+            LastNameTB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             LastNameTB.Name = "LastNameTB";
-            LastNameTB.Size = new System.Drawing.Size(175, 23);
+            LastNameTB.Size = new System.Drawing.Size(322, 39);
             LastNameTB.TabIndex = 9;
             // 
             // PhoneNumberTB
             // 
-            PhoneNumberTB.Location = new System.Drawing.Point(151, 170);
+            PhoneNumberTB.Location = new System.Drawing.Point(280, 363);
+            PhoneNumberTB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             PhoneNumberTB.Name = "PhoneNumberTB";
-            PhoneNumberTB.Size = new System.Drawing.Size(175, 23);
+            PhoneNumberTB.Size = new System.Drawing.Size(322, 39);
             PhoneNumberTB.TabIndex = 10;
             // 
             // ClassTB
             // 
-            ClassTB.Location = new System.Drawing.Point(151, 211);
+            ClassTB.Location = new System.Drawing.Point(280, 450);
+            ClassTB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             ClassTB.Name = "ClassTB";
-            ClassTB.Size = new System.Drawing.Size(175, 23);
+            ClassTB.Size = new System.Drawing.Size(322, 39);
             ClassTB.TabIndex = 11;
             // 
             // RoomCodeTB
             // 
-            RoomCodeTB.Location = new System.Drawing.Point(151, 244);
+            RoomCodeTB.Location = new System.Drawing.Point(280, 521);
+            RoomCodeTB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             RoomCodeTB.Name = "RoomCodeTB";
-            RoomCodeTB.Size = new System.Drawing.Size(175, 23);
+            RoomCodeTB.Size = new System.Drawing.Size(322, 39);
             RoomCodeTB.TabIndex = 12;
             // 
             // UpdateB
             // 
-            UpdateB.Location = new System.Drawing.Point(226, 300);
+            UpdateB.Location = new System.Drawing.Point(420, 640);
+            UpdateB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             UpdateB.Name = "UpdateB";
-            UpdateB.Size = new System.Drawing.Size(100, 33);
+            UpdateB.Size = new System.Drawing.Size(186, 70);
             UpdateB.TabIndex = 13;
             UpdateB.Text = "Update Student";
             UpdateB.UseVisualStyleBackColor = true;
@@ -166,25 +180,27 @@
             // Updatepnl
             // 
             Updatepnl.Controls.Add(StudentCB);
-            Updatepnl.Location = new System.Drawing.Point(144, 21);
+            Updatepnl.Location = new System.Drawing.Point(267, 45);
+            Updatepnl.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             Updatepnl.Name = "Updatepnl";
-            Updatepnl.Size = new System.Drawing.Size(185, 63);
+            Updatepnl.Size = new System.Drawing.Size(344, 134);
             Updatepnl.TabIndex = 14;
             // 
             // StudentCB
             // 
             StudentCB.FormattingEnabled = true;
-            StudentCB.Location = new System.Drawing.Point(7, 10);
+            StudentCB.Location = new System.Drawing.Point(13, 21);
+            StudentCB.Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             StudentCB.Name = "StudentCB";
-            StudentCB.Size = new System.Drawing.Size(175, 23);
+            StudentCB.Size = new System.Drawing.Size(322, 40);
             StudentCB.TabIndex = 0;
             StudentCB.SelectedIndexChanged += StudentCB_SelectedIndexChanged;
             // 
             // AddStudent
             // 
-            AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
+            AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(341, 365);
+            ClientSize = new System.Drawing.Size(633, 779);
             Controls.Add(Updatepnl);
             Controls.Add(UpdateB);
             Controls.Add(RoomCodeTB);
@@ -200,6 +216,7 @@
             Controls.Add(label3);
             Controls.Add(label2);
             Controls.Add(label1);
+            Margin = new System.Windows.Forms.Padding(6, 6, 6, 6);
             Name = "AddStudent";
             Text = "Add Student";
             Updatepnl.ResumeLayout(false);

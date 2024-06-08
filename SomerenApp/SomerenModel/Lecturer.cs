@@ -13,7 +13,15 @@ namespace SomerenModel
         public string LastName { get; set; }
         public int Age { get; set; }
         public string PhoneNumber { get; set; }
-        public int RoomCode { get; set; } 
+        public int RoomCode { get; set; }
+
+
+        public override string ToString()
+        {
+            return $"{ FirstName} { LastName}";
+        }
 
     }
+
+
 }

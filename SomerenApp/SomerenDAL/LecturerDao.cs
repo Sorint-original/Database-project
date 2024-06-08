@@ -43,7 +43,9 @@ namespace SomerenDAL
 
         public Lecturer GetLecturerById(int Id)
         {
+
             string query = "SELECT LecturerId, FirstName, LastName, Age, TelephoneNumber, RoomCode FROM Lecturer WHERE LecturerId = @lecturerId";
+
             SqlParameter[] sqlParameters = new SqlParameter[1];
             sqlParameters[0] = new SqlParameter("@lecturerId", Id);
             try
@@ -58,11 +60,21 @@ namespace SomerenDAL
 
         public void DeleteById(int ID)
         {
-            string command = "DELETE FROM supervises WHERE LecturerID = @Id  ;DELETE FROM lecturer WHERE LecturerId = @Id ;";
+
+            string command = "DELETE FROM Lecturer WHERE LecturerId = @LecturerId";
             SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@Id", ID);
+            sqlParameters[0] = new SqlParameter("@LecturerId", ID);
+
 
             ExecuteEditQuery(command, sqlParameters);
+        }
+        
+        public void DeleteSupervisorById(int Id)
+        {
+         string command = "DELETE FROM supervises WHERE LecturerID = @Id  ;DELETE FROM lecturer WHERE LecturerId = @Id ;";
+            SqlParameter[] sqlParameters = new SqlParameter[1];
+            sqlParameters[0] = new SqlParameter("@Id", ID);
+             ExecuteEditQuery(command, sqlParameters);
         }
         public void AddLecturer(Lecturer lecturer)
         {
