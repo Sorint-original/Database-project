@@ -1,0 +1,13 @@
+Sprint 1 :
+	Sorin Petrescu : view all students, view all rooms
+	Aron Lakatos : view all activities
+	Adriano Saliasi : view all lcturers
+
+Sprint 2 :
+	Sorin Petrescu : Manage drinks, Process drink orders
+	Aron Lakatos : View Vat information
+	Adriano Saliasi : Generate revenue report
+Sprint 3 :
+	Sorin Petrescu : Manage students, Manage activity participants
+	Aron Lakatos : Manage activity supervisors
+	Adriano Saliasi : Manage lecturers
