@@ -724,6 +724,7 @@ namespace SomerenUI
         private void supervisorsToolStripMenuItem_Click(object sender, EventArgs e)
         {
             ShowSupervisorsPanel();
+        }
 
         private void addLectureB_Click(object sender, EventArgs e)
         {
@@ -774,6 +775,6 @@ namespace SomerenUI
             ShowLecturersPanel();
 
         }
+    
     }
-
 }

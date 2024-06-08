@@ -30,6 +30,8 @@ namespace SomerenService
 
 
 
+
+
         public Lecturer GetLecturerById(int id)
         {
 

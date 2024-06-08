@@ -1,20 +1,24 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenUI\\SomerenUI.csproj": {}
+    "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenUI\\SomerenUI.csproj": {}
   },
   "projects": {
-    "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenDAL\\SomerenDAL.csproj": {
+    "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenDAL\\SomerenDAL.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenDAL\\SomerenDAL.csproj",
+        "projectUniqueName": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenDAL\\SomerenDAL.csproj",
         "projectName": "SomerenDAL",
-        "projectPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenDAL\\SomerenDAL.csproj",
-        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenDAL\\obj\\",
+        "projectPath": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenDAL\\SomerenDAL.csproj",
+        "packagesPath": "C:\\Users\\aronlakatos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenDAL\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aronlakatos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -22,14 +26,15 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj": {
-                "projectPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj"
+              "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenModel\\SomerenModel.csproj": {
+                "projectPath": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenModel\\SomerenModel.csproj"
               }
             }
           }
@@ -38,6 +43,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -73,21 +83,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj": {
+    "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenModel\\SomerenModel.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj",
+        "projectUniqueName": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenModel\\SomerenModel.csproj",
         "projectName": "SomerenModel",
-        "projectPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj",
-        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenModel\\obj\\",
+        "projectPath": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenModel\\SomerenModel.csproj",
+        "packagesPath": "C:\\Users\\aronlakatos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenModel\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aronlakatos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -95,6 +109,7 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -107,6 +122,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -142,21 +162,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenService\\SomerenService.csproj": {
+    "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenService\\SomerenService.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenService\\SomerenService.csproj",
+        "projectUniqueName": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenService\\SomerenService.csproj",
         "projectName": "SomerenService",
-        "projectPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenService\\SomerenService.csproj",
-        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenService\\obj\\",
+        "projectPath": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenService\\SomerenService.csproj",
+        "packagesPath": "C:\\Users\\aronlakatos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenService\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aronlakatos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -164,17 +188,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenDAL\\SomerenDAL.csproj": {
-                "projectPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenDAL\\SomerenDAL.csproj"
+              "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenDAL\\SomerenDAL.csproj": {
+                "projectPath": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenDAL\\SomerenDAL.csproj"
               },
-              "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj": {
-                "projectPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj"
+              "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenModel\\SomerenModel.csproj": {
+                "projectPath": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenModel\\SomerenModel.csproj"
               }
             }
           }
@@ -183,6 +208,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -218,21 +248,25 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenUI\\SomerenUI.csproj": {
+    "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenUI\\SomerenUI.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenUI\\SomerenUI.csproj",
+        "projectUniqueName": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenUI\\SomerenUI.csproj",
         "projectName": "SomerenUI",
-        "projectPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenUI\\SomerenUI.csproj",
-        "packagesPath": "C:\\Users\\adria\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenUI\\obj\\",
+        "projectPath": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenUI\\SomerenUI.csproj",
+        "packagesPath": "C:\\Users\\aronlakatos\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenUI\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
+        ],
         "configFilePaths": [
-          "C:\\Users\\adria\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\aronlakatos\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -240,17 +274,18 @@
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0-windows7.0": {
             "targetAlias": "net6.0-windows",
             "projectReferences": {
-              "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj": {
-                "projectPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenModel\\SomerenModel.csproj"
+              "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenModel\\SomerenModel.csproj": {
+                "projectPath": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenModel\\SomerenModel.csproj"
               },
-              "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenService\\SomerenService.csproj": {
-                "projectPath": "C:\\Users\\adria\\OneDrive\\Documents\\GitHub\\Database-project\\SomerenApp\\SomerenService\\SomerenService.csproj"
+              "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenService\\SomerenService.csproj": {
+                "projectPath": "C:\\Users\\aronlakatos\\Desktop\\somerin project\\SomerenApp\\SomerenService\\SomerenService.csproj"
               }
             }
           }
@@ -259,6 +294,11 @@
           "warnAsError": [
             "NU1605"
           ]
+        },
+        "restoreAuditProperties": {
+          "enableAudit": "true",
+          "auditLevel": "low",
+          "auditMode": "direct"
         }
       },
       "frameworks": {
@@ -297,7 +337,7 @@
               "privateAssets": "none"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.102\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.300\\RuntimeIdentifierGraph.json"
         }
       }
     }

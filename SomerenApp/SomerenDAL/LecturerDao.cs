@@ -69,13 +69,7 @@ namespace SomerenDAL
             ExecuteEditQuery(command, sqlParameters);
         }
         
-        public void DeleteSupervisorById(int Id)
-        {
-         string command = "DELETE FROM supervises WHERE LecturerID = @Id  ;DELETE FROM lecturer WHERE LecturerId = @Id ;";
-            SqlParameter[] sqlParameters = new SqlParameter[1];
-            sqlParameters[0] = new SqlParameter("@Id", ID);
-             ExecuteEditQuery(command, sqlParameters);
-        }
+
         public void AddLecturer(Lecturer lecturer)
         {
             string command = "INSERT INTO Lecturer VALUES (@LecturerId, @FirstName, @SecondName, @Age, @TelephoneNumber, @RoomCode)";

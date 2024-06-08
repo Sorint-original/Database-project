@@ -48,3 +48,16 @@ C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenModel\obj\Debug\
 C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenModel\obj\Debug\net6.0\refint\SomerenModel.dll
 C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenModel\obj\Debug\net6.0\SomerenModel.pdb
 C:\Users\aronlakatos\Desktop\project database\SomerenApp\SomerenModel\obj\Debug\net6.0\ref\SomerenModel.dll
+C:\Users\aronlakatos\Desktop\somerin project\SomerenApp\SomerenModel\bin\Debug\net6.0\SomerenModel.deps.json
+C:\Users\aronlakatos\Desktop\somerin project\SomerenApp\SomerenModel\bin\Debug\net6.0\SomerenModel.dll
+C:\Users\aronlakatos\Desktop\somerin project\SomerenApp\SomerenModel\bin\Debug\net6.0\SomerenModel.pdb
+C:\Users\aronlakatos\Desktop\somerin project\SomerenApp\SomerenModel\obj\Debug\net6.0\SomerenModel.csproj.AssemblyReference.cache
+C:\Users\aronlakatos\Desktop\somerin project\SomerenApp\SomerenModel\obj\Debug\net6.0\SomerenModel.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\aronlakatos\Desktop\somerin project\SomerenApp\SomerenModel\obj\Debug\net6.0\SomerenModel.AssemblyInfoInputs.cache
+C:\Users\aronlakatos\Desktop\somerin project\SomerenApp\SomerenModel\obj\Debug\net6.0\SomerenModel.AssemblyInfo.cs
+C:\Users\aronlakatos\Desktop\somerin project\SomerenApp\SomerenModel\obj\Debug\net6.0\SomerenModel.csproj.CoreCompileInputs.cache
+C:\Users\aronlakatos\Desktop\somerin project\SomerenApp\SomerenModel\obj\Debug\net6.0\SomerenModel.sourcelink.json
+C:\Users\aronlakatos\Desktop\somerin project\SomerenApp\SomerenModel\obj\Debug\net6.0\SomerenModel.dll
+C:\Users\aronlakatos\Desktop\somerin project\SomerenApp\SomerenModel\obj\Debug\net6.0\refint\SomerenModel.dll
+C:\Users\aronlakatos\Desktop\somerin project\SomerenApp\SomerenModel\obj\Debug\net6.0\SomerenModel.pdb
+C:\Users\aronlakatos\Desktop\somerin project\SomerenApp\SomerenModel\obj\Debug\net6.0\ref\SomerenModel.dll

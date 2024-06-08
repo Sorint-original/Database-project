@@ -16,7 +16,7 @@ namespace SomerenDAL {
         }
 
         public void addSupervisor(int lecturerId, int activityId) {
-            string query = "INSERT INTO Supervises (LectureID, ActivityID) SELECT @lecturerId, @activityId WHERE NOT EXISTS (SELECT 1 FROM Supervises WHERE LectureID = @lecturerId AND ActivityID = @activityId)";
+            string query = "INSERT INTO Supervises (LecturerID, ActivityID) SELECT @lecturerId, @activityId WHERE NOT EXISTS (SELECT 1 FROM Supervises WHERE LecturerID = @lecturerId AND ActivityID = @activityId)";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@lecturerId", lecturerId);
             sqlParameters[1] = new SqlParameter("@activityId", activityId);
@@ -26,7 +26,7 @@ namespace SomerenDAL {
         }
 
         public void removeSupervisor(int activityId, int lectureId) {
-            string query = "DELETE FROM Supervises WHERE ActivityID = @activityId AND LectureID = @lectureId";
+            string query = "DELETE FROM Supervises WHERE ActivityID = @activityId AND LecturerID = @lectureId";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@activityId", activityId);
             sqlParameters[1] = new SqlParameter("@lectureId", lectureId);
@@ -40,7 +40,7 @@ namespace SomerenDAL {
 
             foreach (DataRow dr in dataTable.Rows) {
                 Supervise supervise = new Supervise() {
-                    lecturerID = (int)dr["LectureID"],
+                    lecturerID = (int)dr["LecturerID"],
                     activityID = (int)dr["ActivityID"]
                 };
                 supervises.Add(supervise);
