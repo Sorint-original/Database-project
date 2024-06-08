@@ -26,9 +26,16 @@ namespace SomerenService
             lecturerDao.DeleteById(id);
         }
 
+
+
+
+
         public Lecturer GetLecturerById(int id)
         {
-            return lecturerDao.GetLecturerById(id);
+
+            
+            Lecturer lecturer = lecturerDao.GetLecturerById(id);
+            return lecturer;
         }
 
 
@@ -41,5 +48,6 @@ namespace SomerenService
         {
             lecturerDao.UpdateLecturer(lecturer);
         }
+
     }
 }

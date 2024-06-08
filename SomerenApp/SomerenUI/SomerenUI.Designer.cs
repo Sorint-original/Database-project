@@ -39,6 +39,7 @@
             roomsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             drinksToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             vATToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            supervisorsToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             pnlDashboard = new System.Windows.Forms.Panel();
             lblDashboard = new System.Windows.Forms.Label();
             pnlStudents = new System.Windows.Forms.Panel();
@@ -114,7 +115,6 @@
             label10 = new System.Windows.Forms.Label();
             quarterStart = new System.Windows.Forms.Label();
             label9 = new System.Windows.Forms.Label();
-            calcVatButton = new System.Windows.Forms.Button();
             label8 = new System.Windows.Forms.Label();
             label7 = new System.Windows.Forms.Label();
             qSelectorBox = new System.Windows.Forms.ComboBox();
@@ -122,6 +122,23 @@
             pictureBox8 = new System.Windows.Forms.PictureBox();
             pictureBox9 = new System.Windows.Forms.PictureBox();
             label6 = new System.Windows.Forms.Label();
+            pnlSupervisor = new System.Windows.Forms.Panel();
+            AddSupervisor = new System.Windows.Forms.Button();
+            RemoveSupervisor = new System.Windows.Forms.Button();
+            supervisorsView = new System.Windows.Forms.ListView();
+            columnHeader33 = new System.Windows.Forms.ColumnHeader();
+            columnHeader34 = new System.Windows.Forms.ColumnHeader();
+            allSupervisorsView = new System.Windows.Forms.ListView();
+            columnHeader35 = new System.Windows.Forms.ColumnHeader();
+            columnHeader36 = new System.Windows.Forms.ColumnHeader();
+            pictureBox10 = new System.Windows.Forms.PictureBox();
+            pictureBox11 = new System.Windows.Forms.PictureBox();
+            activityView = new System.Windows.Forms.ListView();
+            columnHeader29 = new System.Windows.Forms.ColumnHeader();
+            columnHeader32 = new System.Windows.Forms.ColumnHeader();
+            label14 = new System.Windows.Forms.Label();
+            columnHeader30 = new System.Windows.Forms.ColumnHeader();
+            columnHeader31 = new System.Windows.Forms.ColumnHeader();
             menuStrip1.SuspendLayout();
             pnlDashboard.SuspendLayout();
             pnlStudents.SuspendLayout();
@@ -139,12 +156,15 @@
             pnlVAT.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            pnlSupervisor.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).BeginInit();
             SuspendLayout();
             // 
             // menuStrip1
             // 
             menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
-            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { dashboardToolStripMenuItem, studentsToolStripMenuItem, lecturersToolStripMenuItem, activitiesToolStripMenuItem, roomsToolStripMenuItem, drinksToolStripMenuItem, vATToolStripMenuItem });
+            menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] { dashboardToolStripMenuItem, studentsToolStripMenuItem, lecturersToolStripMenuItem, activitiesToolStripMenuItem, roomsToolStripMenuItem, drinksToolStripMenuItem, vATToolStripMenuItem, supervisorsToolStripMenuItem });
             menuStrip1.Location = new System.Drawing.Point(0, 0);
             menuStrip1.Name = "menuStrip1";
             menuStrip1.Padding = new System.Windows.Forms.Padding(20, 9, 0, 9);
@@ -214,6 +234,13 @@
             vATToolStripMenuItem.Size = new System.Drawing.Size(74, 36);
             vATToolStripMenuItem.Text = "VAT";
             vATToolStripMenuItem.Click += vATToolStripMenuItem_Click;
+            // 
+            // supervisorsToolStripMenuItem
+            // 
+            supervisorsToolStripMenuItem.Name = "supervisorsToolStripMenuItem";
+            supervisorsToolStripMenuItem.Size = new System.Drawing.Size(79, 19);
+            supervisorsToolStripMenuItem.Text = "Supervisors";
+            supervisorsToolStripMenuItem.Click += supervisorsToolStripMenuItem_Click;
             // 
             // pnlDashboard
             // 
@@ -766,7 +793,6 @@
             pnlVAT.Controls.Add(label10);
             pnlVAT.Controls.Add(quarterStart);
             pnlVAT.Controls.Add(label9);
-            pnlVAT.Controls.Add(calcVatButton);
             pnlVAT.Controls.Add(label8);
             pnlVAT.Controls.Add(label7);
             pnlVAT.Controls.Add(qSelectorBox);
@@ -877,17 +903,7 @@
             label9.TabIndex = 16;
             label9.Text = "Quarter runs from:";
             // 
-            // calcVatButton
-            // 
-            calcVatButton.Location = new System.Drawing.Point(26, 418);
-            calcVatButton.Margin = new System.Windows.Forms.Padding(4, 2, 4, 2);
-            calcVatButton.Name = "calcVatButton";
-            calcVatButton.Size = new System.Drawing.Size(202, 41);
-            calcVatButton.TabIndex = 15;
-            calcVatButton.Text = "Calculate VAT for selected period";
-            calcVatButton.UseVisualStyleBackColor = true;
-            calcVatButton.Click += calcVatButton_Click;
-            // 
+
             // label8
             // 
             label8.AutoSize = true;
@@ -959,11 +975,151 @@
             label6.TabIndex = 0;
             label6.Text = "VAT";
             // 
+            // pnlSupervisor
+            // 
+            pnlSupervisor.Controls.Add(AddSupervisor);
+            pnlSupervisor.Controls.Add(RemoveSupervisor);
+            pnlSupervisor.Controls.Add(supervisorsView);
+            pnlSupervisor.Controls.Add(allSupervisorsView);
+            pnlSupervisor.Controls.Add(pictureBox10);
+            pnlSupervisor.Controls.Add(pictureBox11);
+            pnlSupervisor.Controls.Add(activityView);
+            pnlSupervisor.Controls.Add(label14);
+            pnlSupervisor.Location = new System.Drawing.Point(12, 15);
+            pnlSupervisor.Margin = new System.Windows.Forms.Padding(6);
+            pnlSupervisor.Name = "pnlSupervisor";
+            pnlSupervisor.Size = new System.Drawing.Size(938, 466);
+            pnlSupervisor.TabIndex = 7;
+            // 
+            // AddSupervisor
+            // 
+            AddSupervisor.Location = new System.Drawing.Point(602, 379);
+            AddSupervisor.Name = "AddSupervisor";
+            AddSupervisor.Size = new System.Drawing.Size(75, 23);
+            AddSupervisor.TabIndex = 8;
+            AddSupervisor.Text = "+";
+            AddSupervisor.UseVisualStyleBackColor = true;
+            AddSupervisor.Click += AddSupervisor_Click;
+            // 
+            // RemoveSupervisor
+            // 
+            RemoveSupervisor.Location = new System.Drawing.Point(322, 379);
+            RemoveSupervisor.Name = "RemoveSupervisor";
+            RemoveSupervisor.Size = new System.Drawing.Size(75, 23);
+            RemoveSupervisor.TabIndex = 7;
+            RemoveSupervisor.Text = "-";
+            RemoveSupervisor.UseVisualStyleBackColor = true;
+            RemoveSupervisor.Click += RemoveSupervisor_Click;
+            // 
+            // supervisorsView
+            // 
+            supervisorsView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader33, columnHeader34 });
+            supervisorsView.Location = new System.Drawing.Point(274, 42);
+            supervisorsView.Margin = new System.Windows.Forms.Padding(6);
+            supervisorsView.Name = "supervisorsView";
+            supervisorsView.Size = new System.Drawing.Size(165, 307);
+            supervisorsView.TabIndex = 5;
+            supervisorsView.UseCompatibleStateImageBehavior = false;
+            supervisorsView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader33
+            // 
+            columnHeader33.Text = "Activity ID";
+            columnHeader33.Width = 100;
+            // 
+            // columnHeader34
+            // 
+            columnHeader34.Text = "Activity";
+            // 
+            // allSupervisorsView
+            // 
+            allSupervisorsView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader35, columnHeader36 });
+            allSupervisorsView.Location = new System.Drawing.Point(551, 49);
+            allSupervisorsView.Margin = new System.Windows.Forms.Padding(6);
+            allSupervisorsView.Name = "allSupervisorsView";
+            allSupervisorsView.Size = new System.Drawing.Size(165, 307);
+            allSupervisorsView.TabIndex = 6;
+            allSupervisorsView.UseCompatibleStateImageBehavior = false;
+            allSupervisorsView.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader35
+            // 
+            columnHeader35.Text = "Activity ID";
+            columnHeader35.Width = 100;
+            // 
+            // columnHeader36
+            // 
+            columnHeader36.Text = "Activity";
+            // 
+            // pictureBox10
+            // 
+            pictureBox10.Image = (System.Drawing.Image)resources.GetObject("pictureBox10.Image");
+            pictureBox10.Location = new System.Drawing.Point(805, 3);
+            pictureBox10.Name = "pictureBox10";
+            pictureBox10.Size = new System.Drawing.Size(130, 123);
+            pictureBox10.TabIndex = 4;
+            pictureBox10.TabStop = false;
+            // 
+            // pictureBox11
+            // 
+            pictureBox11.Location = new System.Drawing.Point(1495, 0);
+            pictureBox11.Margin = new System.Windows.Forms.Padding(6);
+            pictureBox11.Name = "pictureBox11";
+            pictureBox11.Size = new System.Drawing.Size(241, 262);
+            pictureBox11.TabIndex = 2;
+            pictureBox11.TabStop = false;
+            // 
+            // activityView
+            // 
+            activityView.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] { columnHeader29, columnHeader32 });
+            activityView.Location = new System.Drawing.Point(30, 42);
+            activityView.Margin = new System.Windows.Forms.Padding(6);
+            activityView.Name = "activityView";
+            activityView.Size = new System.Drawing.Size(165, 307);
+            activityView.TabIndex = 1;
+            activityView.UseCompatibleStateImageBehavior = false;
+            activityView.View = System.Windows.Forms.View.Details;
+            activityView.SelectedIndexChanged += activityView_SelectedIndexChanged;
+            // 
+            // columnHeader29
+            // 
+            columnHeader29.Text = "Activity ID";
+            columnHeader29.Width = 100;
+            // 
+            // columnHeader32
+            // 
+            columnHeader32.Text = "Activity";
+            // 
+            // label14
+            // 
+            label14.AutoSize = true;
+            label14.Font = new System.Drawing.Font("Segoe UI", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point);
+            label14.Location = new System.Drawing.Point(30, 7);
+            label14.Margin = new System.Windows.Forms.Padding(6, 0, 6, 0);
+            label14.Name = "label14";
+            label14.Size = new System.Drawing.Size(136, 32);
+            label14.TabIndex = 0;
+            label14.Text = "Supervisors";
+            label14.TextAlign = System.Drawing.ContentAlignment.TopRight;
+            // 
+            // columnHeader30
+            // 
+            columnHeader30.Text = "Activity ID";
+            columnHeader30.Width = 100;
+            // 
+            // columnHeader31
+            // 
+            columnHeader31.Text = "Activity ID";
+            columnHeader31.Width = 100;
+            // 
             // SomerenUI
             // 
             AutoScaleDimensions = new System.Drawing.SizeF(13F, 32F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            ClientSize = new System.Drawing.Size(1787, 1060);
+
+            ClientSize = new System.Drawing.Size(962, 497);
+            Controls.Add(pnlSupervisor);
+
             Controls.Add(pnlLecturers);
             Controls.Add(pnlVAT);
             Controls.Add(pnlDrinks);
@@ -1001,6 +1157,10 @@
             pnlVAT.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            pnlSupervisor.ResumeLayout(false);
+            pnlSupervisor.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox10).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox11).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -1082,7 +1242,6 @@
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.ComboBox qSelectorBox;
         private System.Windows.Forms.ComboBox yearSelectorBox;
-        private System.Windows.Forms.Button calcVatButton;
         private System.Windows.Forms.Label quarterStart;
         private System.Windows.Forms.Label label9;
         private System.Windows.Forms.Label label13;
@@ -1098,8 +1257,29 @@
         private System.Windows.Forms.Button DeleteStudentB;
         private System.Windows.Forms.Button UpdateStudentB;
         private System.Windows.Forms.Button ParticipantsB;
+
+        private System.Windows.Forms.ToolStripMenuItem supervisorsToolStripMenuItem;
+        private System.Windows.Forms.Panel pnlSupervisor;
+        private System.Windows.Forms.PictureBox pictureBox10;
+        private System.Windows.Forms.PictureBox pictureBox11;
+        private System.Windows.Forms.ListView activityView;
+        private System.Windows.Forms.ColumnHeader columnHeader29;
+        private System.Windows.Forms.Label label14;
+        private System.Windows.Forms.ListView supervisorsView;
+        private System.Windows.Forms.ColumnHeader columnHeader33;
+        private System.Windows.Forms.ColumnHeader columnHeader34;
+        private System.Windows.Forms.ListView allSupervisorsView;
+        private System.Windows.Forms.ColumnHeader columnHeader35;
+        private System.Windows.Forms.ColumnHeader columnHeader36;
+        private System.Windows.Forms.ColumnHeader columnHeader32;
+        private System.Windows.Forms.ColumnHeader columnHeader30;
+        private System.Windows.Forms.ColumnHeader columnHeader31;
+        private System.Windows.Forms.Button AddSupervisor;
+        private System.Windows.Forms.Button RemoveSupervisor;
+
         private System.Windows.Forms.Button deleteLectureB;
         private System.Windows.Forms.Button updateLecturerB;
         private System.Windows.Forms.Button addLectureB;
+
     }
 }

@@ -17,6 +17,7 @@ namespace SomerenUI
         private void ShowDashboardPanel()
         {
             // hide all other panels
+            pnlSupervisor.Hide();
             pnlActivity.Hide();
             pnlStudents.Hide();
             pnlRooms.Hide();
@@ -30,6 +31,7 @@ namespace SomerenUI
         private void ShowStudentsPanel()
         {
             // hide all other panels
+            pnlSupervisor.Hide();
             pnlActivity.Hide();
             pnlRooms.Hide();
             pnlLecturers.Hide();
@@ -55,6 +57,7 @@ namespace SomerenUI
         {
 
             pnlActivity.Hide();
+            pnlSupervisor.Hide();
             pnlLecturers.Hide();
             pnlDrinks.Hide();
             pnlVAT.Hide();
@@ -79,6 +82,7 @@ namespace SomerenUI
         {
             // hide all other panels
             pnlDashboard.Hide();
+            pnlSupervisor.Hide();
             pnlActivity.Hide();
             pnlRooms.Hide();
             pnlStudents.Hide();
@@ -103,6 +107,7 @@ namespace SomerenUI
         private void ShowActivityPanel()
         {
             pnlDashboard.Hide();
+            pnlSupervisor.Hide();
             pnlLecturers.Hide();
             pnlRooms.Hide();
             pnlDrinks.Hide();
@@ -126,6 +131,7 @@ namespace SomerenUI
 
         private void ShowDrinksPanel()
         {
+            pnlSupervisor.Hide();
             pnlDashboard.Hide();
             pnlLecturers.Hide();
             pnlRooms.Hide();
@@ -153,6 +159,7 @@ namespace SomerenUI
 
         private void ShowVATPanel()
         {
+            pnlSupervisor.Hide();
             pnlDashboard.Hide();
             pnlLecturers.Hide();
             pnlRooms.Hide();
@@ -164,6 +171,112 @@ namespace SomerenUI
             DisplayOrderYears();
         }
 
+        private void ShowSupervisorsPanel()
+        {
+            pnlDashboard.Hide();
+            pnlLecturers.Hide();
+            pnlRooms.Hide();
+            pnlStudents.Hide();
+            pnlActivity.Hide();
+            pnlDrinks.Hide();
+            pnlVAT.Hide();
+            pnlSupervisor.Show();
+
+            Supervisorsinit();
+        }
+
+        private void Supervisorsinit()
+        {
+            LecturerService lecturerService = new LecturerService();
+
+            ActivityService activityService = new ActivityService();
+
+            allSupervisorsView.Items.Clear();
+            List<Lecturer> supervisors = lecturerService.GetLecturers();
+
+           
+
+            foreach (Lecturer supervisor in supervisors)
+            {
+                ListViewItem li = new ListViewItem(supervisor.LecturerId.ToString());
+               
+                li.SubItems.Add($"{supervisor.FirstName} {supervisor.LastName}");
+                li.Tag = supervisor;
+                allSupervisorsView.Items.Add(li);
+            }
+
+            activityView.Items.Clear();
+            List<Activity> activities = activityService.GetActivities();
+            foreach (Activity activity in activities)
+            {
+                ListViewItem li = new ListViewItem(activity.id.ToString());
+                li.SubItems.Add(activity.name);
+                li.Tag = activity;
+                activityView.Items.Add(li);
+            }
+
+        }
+
+        private void displaySupervisorForActivity(int activityID)
+        {
+
+            if (activityID == null)
+            {
+                return;
+            }
+
+            SuperviseService superviseService = new SuperviseService();
+            LecturerService lecturerService = new LecturerService();
+
+            supervisorsView.Items.Clear();
+            List<Supervise> supervises = superviseService.getSuperviseByActivityId(activityID);
+
+            List<Lecturer> supervisors = supervises.ConvertAll(supervise => lecturerService.GetLecturerById(supervise.lecturerID));
+
+          
+
+            foreach (Lecturer supervisor in supervisors)
+            {
+                ListViewItem li = new ListViewItem(supervisor.LecturerId.ToString());
+                li.SubItems.Add($"{supervisor.FirstName} {supervisor.LastName}");
+
+                li.Tag = supervisor;
+                supervisorsView.Items.Add(li);
+            }
+
+        }
+
+        private void addSupervisor()
+        {
+
+            SuperviseService superviseService = new SuperviseService();
+
+            if (activityView.SelectedItems.Count == 0 || allSupervisorsView.SelectedItems.Count == 0)
+            {
+                return;
+            }
+
+            int activityID = int.Parse(activityView.SelectedItems[0].Text);
+            int supervisorID = int.Parse(allSupervisorsView.SelectedItems[0].Text);
+
+            superviseService.AddSupervisor(activityID, supervisorID);
+        }
+
+        private void removeSupervisor()
+        {
+
+
+            SuperviseService superviseService = new SuperviseService();
+            if (supervisorsView.SelectedItems.Count == 0)
+            {
+                return;
+            }
+
+            int activityID = int.Parse(activityView.SelectedItems[0].Text);
+            int supervisorID = int.Parse(supervisorsView.SelectedItems[0].Text);
+            superviseService.DeleteSupervisor(activityID, supervisorID);
+
+        }
         private void DisplayOrderYears()
         {
             yearSelectorBox.Items.Clear();
@@ -334,11 +447,11 @@ namespace SomerenUI
         private void CalculateVAT()
         {
             Quarter quarter = GetSelectedYearAndQuarter();
-            if (quarter == null)
+            if (quarter == null || yearSelectorBox.SelectedItem == null)
             {
                 return;
             }
-
+          
             OrderService orderService = new OrderService();
             var result = orderService.CalculateVAT(quarter);
             vatLow.Text = $"${result.Item1:0.00}";
@@ -449,9 +562,11 @@ namespace SomerenUI
             ShowVATPanel();
         }
 
+
+
         private void calcVatButton_Click(object sender, EventArgs e)
         {
-            CalculateVAT();
+          /*   CalculateVAT(); */
         }
 
         private void qSelectorBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -462,6 +577,7 @@ namespace SomerenUI
             Quarter quarter = GetSelectedYearAndQuarter();
             quarterStart.Text = quarter.StartDate;
             quarterEnd.Text = quarter.EndDate;
+            CalculateVAT();
         }
 
         private void yearSelectorBox_SelectedIndexChanged(object sender, EventArgs e)
@@ -471,6 +587,13 @@ namespace SomerenUI
             vatTotal.Text = "";
             quarterStart.Text = "";
             quarterEnd.Text = "";
+            if (qSelectorBox.SelectedItem != null)
+            {
+            Quarter quarter = GetSelectedYearAndQuarter();
+            quarterStart.Text = quarter.StartDate;
+            quarterEnd.Text = quarter.EndDate;
+            }
+            CalculateVAT();
 
         }
 
@@ -546,6 +669,62 @@ namespace SomerenUI
             ParticipantsForm.ShowDialog();
         }
 
+
+        private void RemoveSupervisor_Click(object sender, EventArgs e)
+        {
+            removeSupervisor();
+                  DialogResult result = MessageBox.Show(
+            $"Are you sure you want to remove this supervisor?",
+            "Confirm Remove",
+            MessageBoxButtons.YesNo,
+            MessageBoxIcon.Question
+        );
+        if (result == DialogResult.Yes)
+         {   try
+            {
+                displaySupervisorForActivity(int.Parse(activityView.SelectedItems[0].Text));
+            }
+            catch (Exception)
+            {
+                return;
+            }}
+          
+
+        }
+
+        private void AddSupervisor_Click(object sender, EventArgs e)
+        {
+            addSupervisor();
+            try
+            {
+                displaySupervisorForActivity(int.Parse(activityView.SelectedItems[0].Text));
+            }
+            catch (Exception)
+            {
+                return;
+            }
+        }
+
+        private void activityView_SelectedIndexChanged(object sender, EventArgs e)
+        {
+        
+
+         
+            try { 
+                   displaySupervisorForActivity(int.Parse(activityView.SelectedItems[0].Text));
+            }
+            catch (Exception)
+            {
+                return;
+            }
+
+
+        }
+
+        private void supervisorsToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            ShowSupervisorsPanel();
+
         private void addLectureB_Click(object sender, EventArgs e)
         {
             AddLecturer addLecturerForm = new AddLecturer(true);
@@ -593,6 +772,8 @@ namespace SomerenUI
             }
 
             ShowLecturersPanel();
+
         }
     }
+
 }

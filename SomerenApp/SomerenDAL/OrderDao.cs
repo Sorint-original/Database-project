@@ -29,7 +29,7 @@ namespace SomerenDAL
 
         public List<Order> GetAllOrders()
         {
-            string query = "SELECT * FROM buys";
+            string query = "SELECT StudentNumber, DrinkID, Amount, Date FROM buys";
             SqlParameter[] sqlParameters = new SqlParameter[0];
             return ReadTables(ExecuteSelectQuery(query, sqlParameters));
         }
@@ -70,7 +70,7 @@ namespace SomerenDAL
 
         public List<Order> GetOrdersForTimePeriod(DateTime startDate, DateTime endDate)
         {
-            string query = "SELECT * FROM buys WHERE Date BETWEEN @StartDate AND @EndDate";
+            string query = "SELECT StudentNumber, DrinkID, Amount, Date FROM buys WHERE Date BETWEEN @StartDate AND @EndDate";
             SqlParameter[] sqlParameters = new SqlParameter[2];
             sqlParameters[0] = new SqlParameter("@StartDate", startDate);
             sqlParameters[1] = new SqlParameter("@EndDate", endDate);

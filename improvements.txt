@@ -1,0 +1,11 @@
+improvements by 711510
+
+Assignment 2: View all activities:
+- The query does not use Select * From
+
+Assignment 3: VAT calculation:
+- The query does not use Select * From
+- VAT calculation is now automatic when both year and quarter is selected, calculation button removed
+
+Assignment 4: Managing Lecturers:
+- Lecturer management implemented
