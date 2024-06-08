@@ -9,3 +9,12 @@ Assignment 3: VAT calculation:
 
 Assignment 4: Managing Lecturers:
 - activity supervision implemented
+
+Improvments by 710173
+
+Assignment 3: Revenue Report 
+- Add it again the whole Revenue Report 
+- Fixed the calculation
+
+Assignment 4: Manage Lecturers
+- Add the whole Manage Lecturers and fixed it, you can now select and delete a lecturer, before you could only update and add one 
