@@ -8,4 +8,4 @@ Assignment 3: VAT calculation:
 - VAT calculation is now automatic when both year and quarter is selected, calculation button removed
 
 Assignment 4: Managing Lecturers:
-- Lecturer management implemented
+- activity supervision implemented
